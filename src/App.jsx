@@ -1,27 +1,25 @@
+import React from 'react';
+import Header from './components/Header';
+import HeaderCarousel from './components/HeaderCarousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Marquee from './components/Marquee';
+import PlacementSection from './components/PlacementSection';
+import Keypoints from './components/Keypoints';
+import PopCourses from './components/PopCourses';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Marquee />
+      <Header />
+      <HeaderCarousel />
+      <Marquee />
+      <Keypoints />
+      <PopCourses />
+      <PlacementSection />
+      
     </div>
   );
 }

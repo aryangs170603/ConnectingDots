@@ -1,0 +1,37 @@
+.placement-section {
+    padding: 6rem;
+    height: 100px;
+   
+    
+  }
+  
+  .section-title {
+    
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003366; /* Dark blue text color */
+    align-items: center;
+  }
+  
+  .placement-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 100px;
+    margin-right: 200px; /* Add some margin between cards */
+    width: 200px;
+    height: 340px;
+  }
+  
+  .student-image {
+    width: 200px; /* Make the image fit the card width */
+    height:150px;
+  }
+  
+  .company-logo {
+    width: 100px;
+    margin-top: 1rem;
+    max-width: 50%;
+  }
+  
