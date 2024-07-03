@@ -8,18 +8,15 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 
-
 function App() {
   return (
     <div className="App">
       <Marquee />
       <Header />
       <HeaderCarousel />
-      <Marquee />
       <Keypoints />
       <PopCourses />
       <PlacementSection />
-      
     </div>
   );
 }
