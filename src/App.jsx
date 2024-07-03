@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header';
-import HeaderCarousel from './components/HeaderCarousel';
+import HeaderCarousel from './components/Homepage/HeaderCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Marquee from './components/Marquee';
-import PlacementSection from './components/PlacementSection';
-import Keypoints from './components/Keypoints';
-import PopCourses from './components/PopCourses';
+import Marquee from './components/Homepage/Marquee';
+import PlacementSection from './components/Homepage/PlacementSection';
+import Keypoints from './components/Homepage/Keypoints';
+import PopCourses from './components/Homepage/PopCourses';
 
 
 function App() {

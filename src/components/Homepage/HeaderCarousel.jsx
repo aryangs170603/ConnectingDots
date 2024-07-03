@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import slideImage from '../Logos/file.png';
+import slideImage1 from '../Logos/file.png';
 import slideImage2 from '../Logos/file01.png';
 import slideImage3 from '../Logos/file02.png';
 import slideImage4 from '../Logos/file03.png';
@@ -26,7 +26,7 @@ const HeaderCarousel = () => {
               </div>
             </div>
             <div className="carousel-image">
-              <img src={slideImage} alt="Career Potential" />
+              <img src={slideImage1} alt="Career Potential" />
             </div>
           </div>
         </Carousel.Item>
