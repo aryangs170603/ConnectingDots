@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '/src/Logos/cderplogo white bg.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Header.css';
+import './Navbar.css';
 
 const Header = () => (
   <header> 
