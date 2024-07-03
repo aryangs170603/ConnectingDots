@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import amdocs from '../Logos/Companylogos/amdocs.png'
+import google from '../Logos/Companylogos/google.png'
+import tcs from '../Logos/Companylogos/tcs.png'
+import zenzar from '../Logos/Companylogos/zenzar.png'
 const CompanyLogos = () => {
   return (
     <Container className="text-center">
@@ -11,10 +14,10 @@ const CompanyLogos = () => {
         </Col>
       </Row>
       <Row className="my-4">
-        <Col><img src="amdocs.png" alt="Amdocs" /></Col>
-        <Col><img src="google.png" alt="Google" /></Col>
-        <Col><img src="tcs.png" alt="TCS" /></Col>
-        <Col><img src="zensar.png" alt="Zensar" /></Col>
+        <Col><img src={amdocs} alt="Amdocs" /></Col>
+        <Col><img src={google} alt="Google" /></Col>
+        <Col><img src={tcs} alt="TCS" /></Col>
+        <Col><img src={zenzar} alt="Zensar" /></Col>
       </Row>
     </Container>
   );

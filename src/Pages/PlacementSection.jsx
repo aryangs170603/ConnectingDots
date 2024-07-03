@@ -2,76 +2,76 @@ import React from 'react';
 import { Container, Carousel, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './PlacementSection.css';
-import OurClients from './Ourclients';
+
 
 const placements = [
   {
     name: 'Ranvijay Singh Rathore',
     course: 'SAP FICO',
     company: 'Microsoft',
-    image: 'src/Logos/front11.png',
+    image: 'src/Logos/Placementsection/front11.png',
     companyLogo: 'src/Logos/microsoft.png'
   },
   {
     name: 'Samar Singh',
     course: 'SAP FICO',
     company: 'Cognizant',
-    image: 'src/Logos/front3.png',
+    image: 'src/Logos/Placementsection/front3.png',
     companyLogo: 'src/Logos/cognizant.png'
   },
   {
     name: 'Adityanath Gupta',
     course: 'SAP FICO',
     company: 'Amdocs',
-    image: 'src/Logos/front4.png',
+    image: 'src/Logos/Placementsection/front4.png',
     companyLogo: 'src/Logos/amdocs.png'
   },
   {
     name: 'Student Four',
     course: 'Digital Marketing',
     company: 'Google',
-    image: 'src/Logos/front5.png',
+    image: 'src/Logos/Placementsection/front5.png',
     companyLogo: 'src/Logos/google.png'
   },
   {
     name: 'Student Five',
     course: 'Data Science',
     company: 'Amazon',
-    image: 'src/Logos/front6.png',
+    image: 'src/Logos/Placementsection/front6.png',
     companyLogo: 'src/Logos/amazon.png'
   },
   {
     name: 'Student Six',
     course: 'Cyber Security',
     company: 'Meta',
-    image: 'src/Logos/front7.png',
+    image: 'src/Logos/Placementsection/front7.png',
     companyLogo: 'src/Logos/meta.png'
   },
   {
     name: 'Student Seven',
     course: 'AI',
     company: 'TCS',
-    image: 'src/Logos/front8.png',
+    image: 'src/Logos/Placementsection/front8.png',
     companyLogo: 'src/Logos/tcs.png'
   },
   {
     name: 'Student Eight',
     course: 'IoT',
     company: 'Deloitte',
-    image: 'src/Logos/front9.png',
+    image: 'src/Logos/Placementsection/front9.png',
     companyLogo: 'src/Logos/deloitte.png'
   },
   {
     name: 'Student Nine',
     course: 'Blockchain',
     company: 'IBM',
-    image: 'src/Logos/front10.png',
+    image: 'src/Logos/Placementsection/front10.png',
     companyLogo: 'src/Logos/ibm.png'
   }
 ];
 
 const PlacementSection = () => {
-  // Function to chunk the placements array into subarrays of length 3
+  
   const chunkArray = (array, chunkSize) => {
     let results = [];
     for (let i = 0; i < array.length; i += chunkSize) {

@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from '/src/Logos/cderplogo white bg.jpg';
+import logo from '/src/Logos/Navbar/cderplogo white bg.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Navbar.css';
-
 const Header = () => (
   <header> 
     <div className="header">

@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../App.css'; // Ensure the CSS file is correctly imported
 
 const courses = [
-    { id: 1, title: 'SAP Courses', description: 'Learn from certified SAP professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
-    { id: 2, title: 'HR Courses', description: 'Learn from certified HR professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
-    { id: 3, title: 'Digital Marketing Courses', description: 'Learn from certified Digital Marketing professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
-    { id: 4, title: 'Finance Courses', description: 'Learn from certified Finance professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
-    { id: 5, title: 'Management Courses', description: 'Learn from certified Management professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
-    { id: 6, title: 'IT Courses', description: 'Learn from certified IT professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
+    { id: 1, title: 'SAP Courses', description: 'Learn from certified SAP professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
+    { id: 2, title: 'HR Courses', description: 'Learn from certified HR professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
+    { id: 3, title: 'Digital Marketing Courses', description: 'Learn from certified Digital Marketing professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
+    { id: 4, title: 'Finance Courses', description: 'Learn from certified Finance professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
+    { id: 5, title: 'Management Courses', description: 'Learn from certified Management professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
+    { id: 6, title: 'IT Courses', description: 'Learn from certified IT professionals.', seats: 25, image: 'src/Logos/Popcourses/grc img.jpg' },
 ];
 
 const PopCourses = () => {

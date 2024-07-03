@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Homepage/Navbar';
+import Header from './components/Navbar';
 import HeaderCarousel from './Pages/HeaderCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

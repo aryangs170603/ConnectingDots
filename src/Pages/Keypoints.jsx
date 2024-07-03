@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css'; // Make sure to create a corresponding CSS file
-import Image1 from '../Logos/stulogo.png';
-import Image2 from '../Logos/watachlogo.png';
-import Image3 from '../Logos/unilogo.png';
+import Image1 from '../Logos/Keypoints/stulogo.png';
+import Image2 from '../Logos/Keypoints/watchlogo.png';
+import Image3 from '../Logos/Keypoints/unilogo.png';
 
 const Keypoints = () => {
   return (
