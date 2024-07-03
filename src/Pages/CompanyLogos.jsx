@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import amdocs from '../Logos/Companylogos/amdocs.png'
-import google from '../Logos/Companylogos/google.png'
-import tcs from '../Logos/Companylogos/tcs.png'
-import zenzar from '../Logos/Companylogos/zenzar.png'
+import amdocs from '../Logos/Companylogos/amdocs.png';
+import google from '../Logos/Companylogos/google.png';
+import tcs from '../Logos/Companylogos/tcs.png';
+import zenzar from '../Logos/Companylogos/zensar.png';
 const CompanyLogos = () => {
   return (
     <Container className="text-center">
