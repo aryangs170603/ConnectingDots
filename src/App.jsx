@@ -9,6 +9,7 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
+import Branches from './Pages/Branches';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <Keypoints />
       <PopCourses />
       <PlacementSection />
-      
+      {/* <Branches /> */}
+      <Footer />
     </div>
   );
 }
