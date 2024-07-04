@@ -1,10 +1,11 @@
 import React from "react";
-
+import logo from '/src/Logos/Navbar/connecting dot erp logo.png';
 
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
-import logo from '/src/Logos/Navbar/connecting dot erp logo.png';
-const footerContainerClasses = "container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center";
+
+const footerContainerClasses =
+  "container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center";
 const sectionClasses = "mb-6 md:mb-0";
 const titleClasses = "font-bold ";
 const textClasses = "text-sm";
@@ -27,7 +28,8 @@ const Footer = () => {
             </div>
           </div>
           <p className={textClasses}>
-            Elevate Your Learning Journey with Cutting-Edge Education Technology.
+            Elevate Your Learning Journey with Cutting-Edge Education
+            Technology.
           </p>
         </div>
 
@@ -101,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8 text-sm border-primary-foreground pt-4">
+      <div className="text-center mt-8 text-sm  border-primary-foreground pt-4">
         © Copyright 2024, All Rights Reserved By Connecting dot erp
       </div>
     </footer>
