@@ -1,58 +1,41 @@
+// src/components/ClientCarousel.jsx
 import React from 'react';
-import { Container, Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
-
-const clients = [
-  { name: 'Amdocs', logo: 'src/Logos/amdocs.png' },
-  { name: 'Google', logo: 'src/Logos/google.png' },
-  { name: 'TCS', logo: 'src/Logos/tcs.png' },
-  { name: 'Zensar', logo: 'src/Logos/zensar.png' },
-  { name: 'IBM', logo: 'src/Logos/ibm.png' },
-  { name: 'Amazon', logo: 'src/Logos/amazon.png' },
-  { name: 'Microsoft', logo: 'src/Logos/microsoft.png' },
-  { name: 'Apple', logo: 'src/Logos/apple.png' },
-  { name: 'Facebook', logo: 'src/Logos/meta.png' },
-  { name: 'X', logo: 'src/Logos/twitter.png' },
-  { name: 'LinkedIn', logo: 'src/Logos/linkedin.png' },
-  { name: 'Salesforce', logo: 'src/Logos/salesforce.png' },
-  { name: 'Oracle', logo: 'src/Logos/oracle.png' },
-  { name: 'SAP', logo: 'src/Logos/grc.png' },
-  { name: 'Adobe', logo: 'src/Logos/adobe.png' }
-];
-
-const groupLogos = (logos, groupSize) => {
-  const groupedLogos = [];
-  for (let i = 0; i < logos.length; i += groupSize) {
-    groupedLogos.push(logos.slice(i, i + groupSize));
-  }
-  return groupedLogos;
-};
-
-const OurClients = () => {
-  const groupedClients = groupLogos(clients, 5);
+import { Carousel, Card } from 'react-bootstrap';
+import './Ourclients.css'; // Ensure this path is correct
+import amdocs from '../Logos/Companylogos/amdocs.png';
+import google from '../Logos/Companylogos/google.png';
+import tcs from '../Logos/Companylogos/tcs.png';
+import zenzar from '../Logos/Companylogos/zensar.png';
+const Ourclient = () => {
+  const clients = [
+    { imgSrc: require(amdocs), name: 'Amdocs' },
+    { imgSrc: require(google), name: 'Google' },
+    { imgSrc: require(tcs), name: 'TCS' },
+    { imgSrc: require(zenzar), name: 'Zensar' },
+    
+  ];
 
   return (
-    <Container fluid className="our-clients-section text-center">
-      <h2 className="section-title">Our Clients</h2>
-      <Carousel className="clients-carousel" indicators={false} interval={3000}>
-        {groupedClients.map((group, index) => (
-          <Carousel.Item key={index} className="client-slide">
-            <div className="d-flex justify-content-center">
-              {group.map((client, idx) => (
-                <img
-                  key={idx}
-                  src={client.logo}
-                  alt={client.name}
-                  className="client-logo mx-2"
-                />
+    <div className="client-carousel">
+      <h2 className="carousel-title">Our Clients</h2>
+      <Carousel>
+        {[...Array(3)].map((_, idx) => (
+          <Carousel.Item key={idx}>
+            <div className="d-flex justify-content-around">
+              {clients.map((client, i) => (
+                <Card key={i}>
+                  <Card.Img variant="top" src={client.imgSrc} alt={`Client ${i + 1}`} />
+                  <Card.Body>
+                    <Card.Title>{client.name}</Card.Title>
+                  </Card.Body>
+                </Card>
               ))}
             </div>
           </Carousel.Item>
         ))}
       </Carousel>
-    </Container>
+    </div>
   );
 };
 
-export default OurClients;
+export default Ourclient;

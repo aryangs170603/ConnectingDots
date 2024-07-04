@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '/src/Logos/Navbar/cderplogo white bg.jpg';
+import logo from '/src/Logos/Navbar/connecting dot erp logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Navbar.css';

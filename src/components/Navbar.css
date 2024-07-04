@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
   
   body {
@@ -15,7 +16,6 @@
     justify-content: space-between;
     padding: 0.1px 20px;
     background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
   }
   
   .logo {
@@ -24,8 +24,8 @@
   }
   
   .logo img {
-    height: 360px;
-    width: 180px;
+    max-height: 70px;
+    width: auto;
     margin-right: 40px;
   }
   
@@ -36,13 +36,13 @@
   
   .main {
     width: 400px;
-    border: 2px solid #555bc1fa;
+    border: 2px solid #20224afa;
     height: 30px;
-    background: #e1eaef;
+    background-color: #d8d7d7;
     border-radius: 50px;
     padding-left: 35px;
     font-size: 13px;
-    color: #555;
+    color: #313131;
     
   }
   
@@ -90,7 +90,7 @@
     border-radius: 10px;
     font-size: 18px;
     line-height: 45px;
-    height: 35px;
+    height: 45px;
     width: 130px;
     text-align: center;
     display: flex;

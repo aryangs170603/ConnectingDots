@@ -10,63 +10,63 @@ const placements = [
     course: 'SAP FICO',
     company: 'Microsoft',
     image: 'src/Logos/Placementsection/front11.png',
-    companyLogo: 'src/Logos/microsoft.png'
+    companyLogo: 'src/Logos/Placementsection/microsoft.png'
   },
   {
     name: 'Samar Singh',
     course: 'SAP FICO',
     company: 'Cognizant',
     image: 'src/Logos/Placementsection/front3.png',
-    companyLogo: 'src/Logos/cognizant.png'
+    companyLogo: 'src/Logos/Placementsection/cognizant.png'
   },
   {
     name: 'Adityanath Gupta',
     course: 'SAP FICO',
     company: 'Amdocs',
     image: 'src/Logos/Placementsection/front4.png',
-    companyLogo: 'src/Logos/amdocs.png'
+    companyLogo: 'src/Logos/Placementsection/amdocs.png'
   },
   {
     name: 'Student Four',
     course: 'Digital Marketing',
     company: 'Google',
     image: 'src/Logos/Placementsection/front5.png',
-    companyLogo: 'src/Logos/google.png'
+    companyLogo: 'src/Logos/Placementsection/google.png'
   },
   {
     name: 'Student Five',
     course: 'Data Science',
     company: 'Amazon',
     image: 'src/Logos/Placementsection/front6.png',
-    companyLogo: 'src/Logos/amazon.png'
+    companyLogo: 'src/Logos/Placementsection/amazon.png'
   },
   {
     name: 'Student Six',
     course: 'Cyber Security',
     company: 'Meta',
     image: 'src/Logos/Placementsection/front7.png',
-    companyLogo: 'src/Logos/meta.png'
+    companyLogo: 'src/Logos/Placementsection/meta.png'
   },
   {
     name: 'Student Seven',
     course: 'AI',
     company: 'TCS',
     image: 'src/Logos/Placementsection/front8.png',
-    companyLogo: 'src/Logos/tcs.png'
+    companyLogo: 'src/Logos/Placementsection/tcs.png'
   },
   {
     name: 'Student Eight',
     course: 'IoT',
     company: 'Deloitte',
     image: 'src/Logos/Placementsection/front9.png',
-    companyLogo: 'src/Logos/deloitte.png'
+    companyLogo: 'src/Logos/Placementsection/deloitte.png'
   },
   {
     name: 'Student Nine',
     course: 'Blockchain',
     company: 'IBM',
     image: 'src/Logos/Placementsection/front10.png',
-    companyLogo: 'src/Logos/ibm.png'
+    companyLogo: 'src/Logos/Placementsection/ibm.png'
   }
 ];
 

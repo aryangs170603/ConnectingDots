@@ -9,90 +9,14 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.carousel-content {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.carousel-content h2 {
-  color: #4498dd;
-}
-
-.carousel-content h3 {
-  color: #63c2f1;
-}
-
-.carousel-content p {
-  color: #555;
-}
-
-.carousel-content button {
-  margin: 10px;
-}
-.carousel
-
-.header {
-  background-color: #e3e9f0;
-}
-
-.logo img {
-  max-height: 60px;
-}
-
-.search-container input {
-  width: 200px;
-}
-
-.nav a {
-  margin-left: 15px;
-}
-
-.carousel-content {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.carousel-content h2 {
-  color: #4498dd;
-}
-
-.carousel-content h3 {
-  color: #63c2f1;
-}
-
-.carousel-content p {
-  color: #555;
-}
-
-.carousel-content button {
-  margin: 10px;
-}
-
-.header {
-  background-color: #e3e9f0;
-}
-
-.logo img {
-  max-height: 60px;
-}
-
-.search-container input {
-  width: 200px;
-}
-
-.nav a {
-  margin-left: 15px;
-}
-
 /*Main carousle*/
 .carousel-slide {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 600px; 
-  padding: 50px;
-  background: linear-gradient(to right, #5e60ce, #48CAE4, #739fd2, #4cc9f0);
+  padding: 50px; 
+  background-color: #E5E5ED ;
 }
 
 .carousel-text {
@@ -153,29 +77,6 @@ body {
 }
 
 
-.carousel-control-prev-icon
-{
-  background-color: rgba(19, 18, 18, 0.5);
-  border-radius: 30%;
-  padding: 10px;
-  margin-top: 500px;
-  margin-right: 150px;
-}
-.carousel-control-next-icon {
-  background-color: rgba(19, 18, 18, 0.5);
-  border-radius: 30%;
-  padding: 10px;
-  margin-top: 500px;
-  margin-left: 150px;
-}
-
-.carousel-control-next-icon {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" fill%3D"%23fff" viewBox%3D"0 0 8 8"%3E%3Cpath d%3D"M5.5 0l-.5.5 3 3-3 3 .5.5 3.5-3.5z"/%3E%3C/svg%3E');
-}
-
-.carousel-control-prev-icon {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" fill%3D"%23fff" viewBox%3D"0 0 8 8"%3E%3Cpath d%3D"M2.5 0l.5.5-3 3 3 3-.5.5-3.5-3.5z"/%3E%3C/svg%3E');
-}
 
 
 /* Keypoints CSS */
@@ -183,7 +84,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  background-color: #fffbfb;
+  background-color: #efefef;
 }
 
 .keypoint {
