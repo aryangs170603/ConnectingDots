@@ -1,9 +1,9 @@
 import React from "react";
 
-import Logo from "../assets/logo.png";
+
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
-
+import logo from '/src/Logos/Navbar/connecting dot erp logo.png';
 const footerContainerClasses = "container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center";
 const sectionClasses = "mb-6 md:mb-0";
 const titleClasses = "font-bold ";
@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={footerContainerClasses}>
         <div className={sectionClasses + " md:w-1/2"}>
           <div className="flex items-center mb-4">
-            <img src={Logo} alt="Company Logo" className="mr-3 h-16 " />
+            <img src={logo} alt="Company Logo" className="mr-3 h-16 " />
             <div>
               <h1 className={titleClasses}>CONNECTING DOTS ERP</h1>
               <p className={textClasses}>Preparing Students for Success</p>

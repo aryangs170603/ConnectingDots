@@ -10,6 +10,7 @@ import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
 import Branches from './Pages/Branches';
+import Footer from './Pages/Footer';
 
 function App() {
   return (
