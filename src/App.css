@@ -18,6 +18,27 @@ body {
   padding: 50px; 
   background-color: #E5E5ED ;
 }
+.carousel-image img {
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: 100px;
+  margin-left: 100px;
+  object-fit: cover;
+  height: 600px;
+  width: auto;
+}
+.carousel-slide3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 700px; 
+  padding: 50px; 
+  background-color: #E5E5ED ;
+}
+.carousel-image3 img{
+  width: auto;
+  height: 500px;
+}
 
 .logostrip img{
   height: 130px;
@@ -28,13 +49,18 @@ body {
 
 .carousel-slide4 img{
   height: 100%;
-  width: 1500px;
-  margin-left: 170px;
-   
+  width: 1300px;
+  margin-left: 120px;
+
 }
 
 .carousel-slide4{
   background-color:#E5E5ED ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 700px; 
+  padding: 50px
 }
 .carousel-text {
   width: 50%;
@@ -87,17 +113,11 @@ body {
   text-align: right;
 }
 
-.carousel-image img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  height: 700px;
-  width: auto;
-}
+
 /*custom button*/
 button {
   margin: 20px;
- 
+
 }
 
 .custom-btn {
@@ -119,7 +139,7 @@ button {
               7px 7px 20px 0px rgba(0, 0, 0, .1),
               4px 4px 5px 0px rgba(0, 0, 0, .1);
   outline: none;
-  
+
 }
 
 .btn-3 {
@@ -212,99 +232,115 @@ button {
 
 
 /* Keypoints CSS */
-.keypoints {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: #efefef;
-}
-
-.keypoint {
-  display: flex;
-  align-items: center;
-  width: 30%;
-  text-align: left;
-}
-.keypoint:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 50px;
-  border-right: 2px solid #000;
-}
-
-.keylogo img {
-  width: 100px; /* Adjust the width to decrease the size */
-  height: auto; /* Maintain aspect ratio */
-}
-.text h4 {
-  margin: 0;
-}
-
-.text p {
-  margin: 0;
-}
 
 /* pop cpourses */
+.courses {
+  background-color: #ebebeb;
+}
 
-.pop-courses {
+.courses-container {
   text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  padding-bottom: 40px;
-  align-items: center;
+  margin: 20px;
+}
+
+.courses-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-card {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+  margin: 10px;
+  transition: 0.5s;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 15%);
+  position: relative;
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
   
 }
 
-.courses {
-  margin: 20px 0;
-}
-
-.course {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  height: auto;
-  width: 250px;
-  margin: 5px; 
-  display: inline-block;
-  vertical-align: top; 
-  margin-top: 40px;
-}
-
-.course-image img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.course-info {
-  text-align: left;
-}
-
-.actions {
-  margin-top: 20px;
-}
-
-.actions button {
-  margin: 5px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: white;
+.course-card:hover {
+  background-color: #43c0df; /* Change to desired hover color */
   cursor: pointer;
 }
 
-.actions button:hover {
-  background-color: #0056b3;
+.course-card:hover h3,
+.course-card:hover p {
+  color: white;
 }
 
-.actions .btn-secondary:hover {
-  background-color: #4f5d75;
+.course-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #a0a9ab;
+  padding: 15px;
+  margin: auto;
 }
+
+.course-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.outline-btn {
+  border: 2px solid #1eb2a6;
+  box-shadow: none;
+  margin: 0;
+  transition: 0.5s;
+  width: 70%;
+  height: auto;
+  background-color: transparent;
+  color: #1eb2a6;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.course-card:hover .outline-btn {
+  background-color: white;
+  color: #1eb2a6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+
 
 /* Carousel control buttons */
 .carousel-control-prev, .carousel-control-next {
@@ -335,4 +371,89 @@ button {
 .client-logo.mx-2 {
   margin: 0 10px;
 }
+/* FEEDBACK SECTION */
+.feedback-section {
+  padding: 50px 0;
+}
 
+.section-title {
+  color: #1eb2a6;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.feedback-card {
+  padding-bottom: 20px;
+  transition: 0.5s;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  text-align: left;
+  width: 300px;
+  height: 300px;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.fa-quote-left.icon {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  background-color: #43c0df;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.review-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.review-post {
+  color: #43c0df;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.review-text {
+  color: grey;
+}
+
+.feedback-card:hover {
+  background-color: #43c0df;
+  color: #fff;
+  cursor: pointer;
+}
+
+.feedback-card:hover .review-post,
+.feedback-card:hover .review-text {
+  color: #fff;
+}
+
+.feedback-card:hover .fa-quote-left.icon {
+  background-color: #fff;
+  color: #43c0df;
+}

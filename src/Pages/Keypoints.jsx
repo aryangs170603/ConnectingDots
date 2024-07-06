@@ -1,41 +1,55 @@
-import React from 'react';
-import '../App.css'; // Make sure to create a corresponding CSS file
-import Image1 from '../Logos/Keypoints/stulogo.png';
-import Image2 from '../Logos/Keypoints/watchlogo.png';
-import Image3 from '../Logos/Keypoints/unilogo.png';
+import React from "react";
+import "./Keypoints.css"; 
 
-const Keypoints = () => {
+const AboutCard = () => {
+  const homeAbout = [
+    {
+      cover: "src/Logos/Keypoints/stulogo.png", 
+      title: "Industry Expert Trainers",
+      desc: "Highly Qualified and Industry Experience Professionals for providing Real-Time Scenario Based Training."
+    },
+    {
+      cover: "src/Logos/Keypoints/watchlogo.png", 
+      title: "Flexible Batches",
+      desc: "Multiple Batches & Support Systems to make sure you can learn according to your convenience."
+    },
+    {
+      cover: "src/Logos/Keypoints/unilogo.png",
+      title: "Placement Assistance",
+      desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual."
+    }
+  ];
+
   return (
-    <div className="keypoints">
-      <div className="keypoint">
-        <div className="keylogo">
-          <img src={Image1} alt="stu" />
+    <>
+      <section className='aboutHome'>
+        <div className='container flexSB'>
+          <div className='left-row'>
+            <img src='src/Logos/Keypoints/Keypoints.png' alt='Online Learning' /> 
+          </div>
+          <div className='right row'>
+            
+            <h1>Keypoints</h1>
+            <div className='items'>
+              {homeAbout.map((val, index) => {
+                return (
+                  <div className='item flexSB' key={index}>
+                    <div className='img'>
+                      <img src={val.cover} alt={val.title} />
+                    </div>
+                    <div className='text'>
+                      <h2>{val.title}</h2>
+                      <p>{val.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-        <div className="text">
-          <h4>Industry Expert Trainers</h4>
-          <p>Highly Qualified and Industry Experience Professionals for providing Real-Time Scenario Based Training.</p>
-        </div>
-      </div>
-      <div className="keypoint">
-        <div className="keylogo">
-          <img src={Image2} alt="watch" />
-        </div>
-        <div className="text">
-          <h4>Flexible Batches</h4>
-          <p>Multiple Batches & Support Systems to make sure you can learn according to your convenience.</p>
-        </div>
-      </div>
-      <div className="keypoint">
-        <div className="keylogo">
-          <img src={Image3} alt="uni" />
-        </div>
-        <div className="text">
-          <h4>Placement Assistance</h4>
-          <p>After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual.</p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
-export default Keypoints;
+export default AboutCard;

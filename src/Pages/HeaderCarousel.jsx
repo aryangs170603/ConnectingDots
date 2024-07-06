@@ -78,7 +78,7 @@ const HeaderCarousel = () => {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="carousel-slide">
+          <div className="carousel-slide3">
             <div className="carousel-text4">
               <h1>
                 <TextTransition springConfig={presets.wobbly}>
@@ -87,7 +87,7 @@ const HeaderCarousel = () => {
               </h1>
               <br></br>
               <br></br>
-              
+
               <div>
                 <h3>
                   <TextTransition springConfig={presets.wobbly}>
@@ -100,14 +100,13 @@ const HeaderCarousel = () => {
                 <CustomButton text="Get Details" onClick={() => alert('Details!')} /> */}
               </div>
             </div>
-            <div className="carousel-image">
+            <div className="carousel-image3">
               <img src={SAPmod} alt="Future Starts Here" />
             </div>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="carousel-slide4">
-
             <img src={slide4} alt="Career Potential" />
           </div>
         </Carousel.Item>

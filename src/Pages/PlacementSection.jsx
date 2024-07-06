@@ -3,7 +3,6 @@ import { Container, Carousel, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './PlacementSection.css';
 
-
 const placements = [
   {
     name: 'Ranvijay Singh Rathore',
@@ -71,7 +70,7 @@ const placements = [
 ];
 
 const PlacementSection = () => {
-  
+
   const chunkArray = (array, chunkSize) => {
     let results = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -90,7 +89,7 @@ const PlacementSection = () => {
           <Carousel.Item key={index}>
             <Row className="justify-content-center">
               {chunk.map((student, idx) => (
-                <Col key={idx} md={4}>
+                <Col key={idx} md={4} className="d-flex justify-content-center">
                   <Card className="placement-card">
                     <Card.Img variant="top" src={student.image} className="student-image" />
                     <Card.Body>
@@ -104,11 +103,8 @@ const PlacementSection = () => {
               ))}
             </Row>
           </Carousel.Item>
-          
         ))}
       </Carousel>
-      
-      
     </Container>
   );
 };
