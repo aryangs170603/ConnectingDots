@@ -116,13 +116,16 @@ const Header = () => {
                             </li>
                           </ul>
                         </li>
-                        <li><a className="dropdown-item" href="#">Submenu item 2</a></li>
-                        <li>
-                          <a className="dropdown-item" href="#">Submenu item 3 &raquo;</a>
+                        <li><a className="dropdown-item" href="#">Full Stack &raquo;</a>
                           <ul className="dropdown-menu dropdown-submenu">
-                            <li><a className="dropdown-item" href="#">Multi level 1</a></li>
-                            <li><a className="dropdown-item" href="#">Multi level 2</a></li>
-                          </ul>
+                            <li><a className="dropdown-item" href="#">Full Stack Python </a></li>
+                            <li><a className="dropdown-item" href="#">Full Stack Java</a></li>
+                            <li><a className="dropdown-item" href="#">MERN Stack </a></li>
+                            <li><a className="dropdown-item" href="#">MEAN S</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
                         </li>
                       </ul>
                     </li>
@@ -148,13 +151,35 @@ const Header = () => {
                         Digital Marketing &raquo;
                       </a>
                       <ul className="dropdown-menu dropdown-submenu">
-                        <li><a className="dropdown-item" href="#">POWER BI</a></li>
-                        <li><a className="dropdown-item" href="#">TABLEAU</a></li>
+                        <li><a className="dropdown-item" href="#">Advance Digital Marketing</a></li>
+                        <li><a className="dropdown-item" href="#">Pay Per Click Training </a></li>
                         <li>
-                          <a className="dropdown-item" href="#"> MySQL </a>
+                          <a className="dropdown-item" href="#"> Search Engine Optimization </a>
 
                         </li>
-                        <li><a className="dropdown-item" href="#">Microsoft SQL</a></li>
+                        <li><a className="dropdown-item" href="#"> Social Media Marketing</a></li>
+                        <li><a className="dropdown-item" href="#"> Advance Analytics Training </a></li>
+                        <li>
+                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        HR Courses &raquo;
+                      </a>
+                      <ul className="dropdown-menu dropdown-submenu">
+                        <li><a className="dropdown-item" href="#">Core HR</a></li>
+                        <li><a className="dropdown-item" href="#">HR Payroll </a></li>
+                        <li>
+                          <a className="dropdown-item" href="#"> HR Management </a>
+
+                        </li>
+                        <li><a className="dropdown-item" href="#"> SAP HR(HCM)</a></li>
+                        <li><a className="dropdown-item" href="#"> HR Analytics </a></li>
+                        <li><a className="dropdown-item" href="#"> Advance HR Analytics  </a></li>
+                        <li><a className="dropdown-item" href="#"> PMS Training  </a></li>
                         <li>
                           <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
                         </li>

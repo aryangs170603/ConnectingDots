@@ -1,24 +1,39 @@
-/* src/App.css */
-.client-carousel .carousel-item {
+.our-clients-section {
+  padding: 40px 0;
+  height: 300px;
+}
+
+.clients-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  margin-top: 40px;
+  box-shadow: 8px 8px 15px rgb(125, 125, 125, 0.5);
+}
+
+.clients-marquee-track {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: calc(100% * 2); /* Double the width of the container */
+  animation: marquee 25s linear infinite;
 }
 
-.client-carousel .card {
-  width: 200px;
-  margin: 0 10px;
-  text-align: center;
+.client-logo-container {
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.client-carousel .card img {
-  max-height: 100px;
-  object-fit: contain;
+.client-logo {
+  max-height: 70px;
+  width: auto;
 }
 
-.carousel-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

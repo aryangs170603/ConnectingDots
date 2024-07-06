@@ -1,41 +1,66 @@
-// src/components/ClientCarousel.jsx
 import React from 'react';
-import { Carousel, Card } from 'react-bootstrap';
-import './Ourclients.css'; // Ensure this path is correct
-import amdocs from '../Logos/Companylogos/amdocs.png';
-import google from '../Logos/Companylogos/google.png';
-import tcs from '../Logos/Companylogos/tcs.png';
-import zenzar from '../Logos/Companylogos/zensar.png';
-const Ourclient = () => {
-  const clients = [
-    { imgSrc: require(amdocs), name: 'Amdocs' },
-    { imgSrc: require(google), name: 'Google' },
-    { imgSrc: require(tcs), name: 'TCS' },
-    { imgSrc: require(zenzar), name: 'Zensar' },
-    
-  ];
+import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Ourclients.css';
 
+import amdocsLogo from '../Logos/Ourclients/amdocs.png';
+import googleLogo from '../Logos/Ourclients/google.png';
+import tcsLogo from '../Logos/Ourclients/tcs.png';
+import zensarLogo from '../Logos/Ourclients/zensar.png';
+import ibmLogo from '../Logos/Ourclients/ibm.png';
+import microsoftLogo from '../Logos/Ourclients/microsoft.png';
+import cognizantLogo from '../Logos/Ourclients/cognizant.png';
+import infosysLogo from '../Logos/Ourclients/infosys.png';
+import deloiteLogo from '../Logos/Ourclients/deloitte.png';
+import adobeLogo from '../Logos/Ourclients/adobe.png';
+import accentureLogo from '../Logos/Ourclients/accenture.png';
+import wiproLogo from '../Logos/Ourclients/wipro.png';
+import techMahindraLogo from '../Logos/Ourclients/techmahindra.png';
+
+const clients = [
+  { name: 'Amdocs', logo: amdocsLogo },
+  { name: 'Google', logo: googleLogo },
+  { name: 'TCS', logo: tcsLogo },
+  { name: 'Zensar', logo: zensarLogo },
+  { name: 'IBM', logo: ibmLogo },
+  { name: 'Microsoft', logo: microsoftLogo },
+  { name: 'Cognizant', logo: cognizantLogo },
+  { name: 'Infosys', logo: infosysLogo },
+  { name: 'Deloitte', logo: deloiteLogo },
+  { name: 'Adobe', logo: adobeLogo },
+  { name: 'Accenture', logo: accentureLogo },
+  { name: 'Wipro', logo: wiproLogo },
+  { name: 'Tech Mahindra', logo: techMahindraLogo },
+];
+
+const OurClients = () => {
   return (
-    <div className="client-carousel">
-      <h2 className="carousel-title">Our Clients</h2>
-      <Carousel>
-        {[...Array(3)].map((_, idx) => (
-          <Carousel.Item key={idx}>
-            <div className="d-flex justify-content-around">
-              {clients.map((client, i) => (
-                <Card key={i}>
-                  <Card.Img variant="top" src={client.imgSrc} alt={`Client ${i + 1}`} />
-                  <Card.Body>
-                    <Card.Title>{client.name}</Card.Title>
-                  </Card.Body>
-                </Card>
-              ))}
+    <Container fluid className="our-clients-section text-center">
+      <h2 className="section-title">Our Clients</h2>
+      <div className="clients-marquee">
+        <div className="clients-marquee-track">
+          {clients.map((client, index) => (
+            <div key={index} className="client-logo-container">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="client-logo"
+              />
             </div>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </div>
+          ))}
+          {clients.map((client, index) => (
+            <div key={index + clients.length} className="client-logo-container">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="client-logo"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
   );
 };
 
-export default Ourclient;
+export default OurClients;

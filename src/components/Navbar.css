@@ -1,4 +1,4 @@
-/* General reset and body styling */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +16,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background-color: #ffffff; 
+  border-bottom: 1px solid #007bff; 
   height: 70px;
   width: 100%;
   z-index: 1000;
@@ -35,7 +35,7 @@ body {
 }
 
 .gin-button {
-  background-color: #009970;
+  background-color: #007bff; 
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;
@@ -45,7 +45,7 @@ body {
 }
 
 .gin-button:hover {
-  background-color: #00b383;
+  background-color: #0056b3; 
 }
 
 .navbar-toggler {
@@ -62,14 +62,14 @@ body {
 .nav-link {
   color: #666777;
   font-weight: 500;
-  font-size: 20px; /* Increased font size */
-  margin-right: 50px; /* Increased distance between links */
-  position: relative; /* Ensure pseudo-elements are positioned correctly */
+  font-size: 20px;
+  margin-right: 50px; 
+  position: relative; 
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #000;
+  color: #007bff; 
 }
 
 @media (min-width: 991px) {
@@ -81,7 +81,7 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #009970;
+    background-color: #007bff; 
     visibility: hidden;
     transition: 0.3s ease-in-out;
   }
@@ -94,7 +94,8 @@ body {
 }
 
 .navbar-nav {
-  margin-right: 200px; /* Align links to the right */
+  margin-right: 200px;
+
 }
 
 .search {
@@ -109,7 +110,8 @@ body {
   align-items: center;
   transition: border-color var(--transition-time-icon) linear,
     padding var(--transition-time-input) var(--easing);
-  margin-left: 400px; /* Align to the center */
+  margin-left: 400px;
+
 
   &:not(:focus-within) {
     --transition-time-input: 0.2s 0s;
@@ -145,7 +147,7 @@ body {
 .search__submit {
   color: var(--color);
   cursor: pointer;
-  display: block;
+
   height: 100%;
   padding: 0;
   position: absolute;
@@ -215,61 +217,20 @@ body {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px) {
-  .navbar-nav {
-    margin-right: 0;
-  }
-
-  .nav-link {
-    font-size: 18px; /* Decrease font size for smaller screens */
-    margin-right: 20px; /* Decrease distance between links */
-  }
-
   .search {
     margin-left: 0;
     margin-right: auto;
-    order: 2; /* Ensure search bar is centered between logo and nav links */
+    order: 2;
   }
 }
 
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 16px; /* Further decrease font size for smaller screens */
-    margin-right: 15px; /* Decrease distance between links */
-  }
-
-  .header {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  .search {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%; /* Make search bar full width */
-    justify-content: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .nav-link {
-    font-size: 14px; /* Further decrease font size for smaller screens */
-    margin-right: 10px; /* Decrease distance between links */
-  }
-
-  .search__input {
-    width: 150px; /* Decrease input width for smaller screens */
-  }
-}
-
-/* Dropdown CSS */
 .dropdown-menu li {
   position: relative;
+}
+.dropdown-menu{
+  background-color: #ffffff; 
+  border: 2px solid #007bff; 
 }
 
 .dropdown-menu .dropdown-submenu {
@@ -277,6 +238,8 @@ body {
   position: absolute;
   left: 100%;
   top: -7px;
+  background-color: #ffffff; 
+  border: 2px solid #007bff; 
 }
 
 .dropdown-menu .dropdown-submenu-left {
@@ -287,14 +250,25 @@ body {
 .dropdown-menu > li:hover > .dropdown-submenu {
   display: block;
 }
-
-/* View More CSS */
+.dropdown-menu li {
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
 .view-more {
   font-weight: bold;
-  color: #009970;
+  color: #000000;
 }
 
 .view-more:hover {
-  color: #00b383;
+  color: #000000;
   text-decoration: underline;
+}
+@media (max-width: 991px) {
+  .logo img {
+    max-height: 50px;
+    margin-right: 20px;
+  }
 }

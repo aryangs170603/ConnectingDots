@@ -1,11 +1,12 @@
 .aboutHome {
   padding: 50px 0;
+  background-color: #f5f5f5;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow the container to wrap */
+  flex-wrap: wrap; 
 }
 
 .left-row img {
@@ -16,7 +17,7 @@
 
 .right {
   max-width: 600px;
-  width: 100%; /* Make sure the right section takes full width on small screens */
+  width: 100%; 
 }
 
 .right h3 {
@@ -26,8 +27,9 @@
 }
 
 .right h1 {
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 20px;
+ 
 }
 
 .items .item {

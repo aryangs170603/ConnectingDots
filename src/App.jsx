@@ -11,10 +11,12 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
-import Branches from './Pages/Branches';
+
 import Footer from './Pages/Footer';
 import FeedbackandReviews from './Pages/FeedbackandReviews';
 import FAQComponent from './Pages/FAQComponent';
+import Achievements from './Pages/Achievements';
+
 
 
 function App() {
@@ -27,10 +29,14 @@ function App() {
       <Keypoints />
       <PopCourses />
       {/* <PlacementSection /> */}
+      <Ourclients />
       <FeedbackandReviews />
+      <Achievements />
       <FAQComponent />
-      {/* <Branches /> */}
+      
+    
       {/* <Footer /> */}
+      
     </div>
   );
 }

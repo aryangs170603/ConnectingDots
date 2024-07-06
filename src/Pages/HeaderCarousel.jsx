@@ -16,7 +16,7 @@ const HeaderCarousel = () => {
   const [index, setIndex] = React.useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000); // every 3 seconds
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000); //  3 seconds
     return () => clearInterval(intervalId);
   }, []);
 

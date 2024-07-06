@@ -6,24 +6,24 @@ import premImage from "../Logos/FeedbackandReviews/review image.png";
 
 const reviews = [
   {
-    name: "Roger Scott",
+    name: "Tejas Pimple",
     post: "Marketing Manager",
     review:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "This is the best institute for learning various SAP modules. All the trainers are well experienced and the way of teaching is very good all theory topics are taught from the basics concept and the practice is done on the system server which makes it more easier to learn.100% placement assistance is also provided for every course.",
     image: premImage,
   },
   {
-    name: "Roger Scott",
+    name: "Dhanashree Gabhane",
     post: "Marketing Manager",
     review:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "Connecting Dots ERP is the best digital marketing institute in Pune. The trainers deliver thorough practical training on important concepts like SEO, SEM, and social media marketing. The institute offers 100% placement assistance and a supportive learning experience. Highly recommended for a career in digital marketing.",
     image: premImage,
   },
   {
-    name: "Roger Scott",
+    name: "Yogita Kharpude",
     post: "Marketing Manager",
     review:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "This is the best institute for learning various SAP modules. All the trainers are well experienced and the way of teaching is very good all theory topics are taught from the basics concept and the practice is done on the system server which makes it more easier to learn.100% placement assistance is also provided for every course.",
     image: premImage,
   },
 ];
