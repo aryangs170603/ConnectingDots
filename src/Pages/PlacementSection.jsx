@@ -70,7 +70,6 @@ const placements = [
 ];
 
 const PlacementSection = () => {
-
   const chunkArray = (array, chunkSize) => {
     let results = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -83,15 +82,17 @@ const PlacementSection = () => {
 
   return (
     <Container className="placement-section text-center">
-      <h2 className="section-title">OUR STUDENT PLACED AT</h2>
-      <Carousel indicators={false} controls={true}>
+      <h2 className="section-title">OUR STUDENTS PLACED AT</h2>
+      <Carousel indicators={false} controls={false} interval={3000} pause={false}>
         {placementChunks.map((chunk, index) => (
-          <Carousel.Item key={index}>
+          <Carousel.Item key={index} className="carousel-item">
             <Row className="justify-content-center">
               {chunk.map((student, idx) => (
-                <Col key={idx} md={4} className="d-flex justify-content-center">
+                <Col key={idx} md={4} sm={6} xs={12} className="d-flex justify-content-center">
                   <Card className="placement-card">
-                    <Card.Img variant="top" src={student.image} className="student-image" />
+                    <div className="card-img-wrapper">
+                      <Card.Img variant="top" src={student.image} className="student-image" />
+                    </div>
                     <Card.Body>
                       <Card.Title>{student.name}</Card.Title>
                       <Card.Text>Trained on - {student.course}</Card.Text>

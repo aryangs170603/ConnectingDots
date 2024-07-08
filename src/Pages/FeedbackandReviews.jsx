@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
+import "./FeedbackandReviews.css";
 import premImage from "../Logos/FeedbacksandReviews/review image.png";
 
 const reviews = [

@@ -13,17 +13,15 @@ const Founder = () => {
         <h1>Founder's Message</h1>
         </div>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          With over a decade of experience as a Techno and SD Consultant, I witnessed the struggles young professionals faced in securing jobs. Driven by a vision to upskill the youth and make them job-ready, I founded Connecting Dots ERP, a leading IT institute. Utilizing my IT expertise, I established an institution that has successfully trained over 10,000+ students in rewarding careers.
+          At Connecting Dots ERP, we are dedicated to empowering the next generation with the skills and knowledge required to excel in the competitive tech industry. Our mission is to bridge the gap between education and employment, ensuring that our students are well-prepared to meet industry demands.
+          
         </p>
         <p>
-          More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          Join us at Connecting Dots ERP and take the next step towards a successful and fulfilling career in SAP ,Data Science and other  IT courses
         </p>
-        <p className="signature">Abhishek Singh</p>
+        <br></br>
+        <p className="signature">~N.K. Singh</p>
       </div>
     </div>
   );

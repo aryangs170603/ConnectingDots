@@ -3,7 +3,7 @@
   align-items: center;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
   border-radius: 10px;
 }
 
@@ -15,10 +15,11 @@
   margin-left: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.7);
 }
 
 .founder-name{
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   
 }
 
@@ -26,17 +27,16 @@
   flex: 1;
 }
 
-
-
 .founder-message p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 10px;
+  margin-right: 80px;
   
 }
 
 .signature {
   font-family: 'Brush Script MT', cursive;
-  font-size: 24px;
-  color: #000;
+  font-size: 34px;
+  color: #0f0b0b;
 }

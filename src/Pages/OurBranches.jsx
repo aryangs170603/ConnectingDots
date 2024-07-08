@@ -18,7 +18,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const branches = [
   {
     city: 'Pune',
-    address: '1st Floor,101, Police Wireless Colony, Vishal Nagar, Pimple Nilakh, Pimpri-Chinchwad, Pune',
+    address: '1st Floor,101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad, Maharashtra 411027',
     position: [18.586392186498944, 73.78140166973165],
     mapLink: 'https://maps.app.goo.gl/ntqgJmX5nYwLmwbH6',
   },
@@ -46,7 +46,7 @@ const Branches = () => {
             <MapContainer center={branch.position} zoom={13} scrollWheelZoom={true} className="map-container">
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+               
               />
               <Marker position={branch.position}>
                 <Popup>

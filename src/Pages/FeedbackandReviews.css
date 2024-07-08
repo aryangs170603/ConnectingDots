@@ -3,7 +3,6 @@
 }
 
 
-}
 
 .section-subtitle {
   font-size: 2rem;
@@ -14,10 +13,10 @@
 .feedback-card {
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
   background-color: #fff;
-  border: none;
-  border-radius: 0px;
+  border: 1px solid #000000;
+  border-radius: 30px;
   text-align: left;
-  width: 400px; 
+  width: 1000px; 
   max-height: 295px; 
   overflow: hidden; 
   padding: 20px; 
@@ -53,12 +52,12 @@
   border-radius: 50%;
 }
 
-.review-name {
+.review-namef {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.review-post {
+.review-postf {
   color: #43c0df;
   font-size: 1rem;
   margin-bottom: 10px; 

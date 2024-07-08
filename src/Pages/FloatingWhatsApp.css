@@ -1,0 +1,48 @@
+.floating-whatsapp {
+  position: fixed;
+  bottom: 140px; /* Adjust this as needed */
+  right: 20px;
+  background-color: #13c955;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.dropdownW {
+  position: absolute;
+  bottom: 60px; /* Adjust this based on the size of your button */
+  right: 0; /* Ensuring the dropdown stays within the screen */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(-10%); /* This will shift the dropdown to the left */
+  overflow: hidden;
+  width: 160px;
+  height: auto;
+}
+
+.dropdownW button {
+  display: block;
+  width: 80%;
+  
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #45b557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.dropdownW button:hover {
+  background-color: #046c27;
+}

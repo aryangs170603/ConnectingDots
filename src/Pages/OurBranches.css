@@ -1,6 +1,7 @@
 .branches-section {
   text-align: center;
   padding: 20px;
+ 
 }
 
 .branches-title {
@@ -17,13 +18,21 @@
 }
 
 .branch-card {
-  background-color: #f8f9fa;
-  border: 1px solid #007bff;
+  background-color: #4F4D8C;
+  border: 1px solid #4F4D8C;
   border-radius: 8px;
   padding: 20px;
   margin: 10px;
   width: 300px;
   text-align: center;
+  position: relative;
+  z-index: 1; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease; 
+}
+
+.branch-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .map-container {
@@ -34,12 +43,12 @@
 }
 
 .branch-card h3 {
-  color: #0056b3;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .branch-card a {
-  color: black;
+  color: white; 
   text-decoration: none;
   font-weight: bold;
 }
@@ -48,3 +57,13 @@
   color: #007bff;
   text-decoration: underline;
 }
+
+
+.leaflet-control-zoom a {
+  color: black !important; 
+}
+
+.leaflet-control-attribution {
+  color: black !important; 
+}
+

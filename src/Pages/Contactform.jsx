@@ -71,6 +71,7 @@ const ContactForm = () => {
                 name="contact"
                 value={formData.contact}
                 onChange={handleChange}
+                maxLength={10}
                 required
               />
             </div>
@@ -86,11 +87,11 @@ const ContactForm = () => {
                 <option value="" disabled selected>
                   Select a course
                 </option>
-                <option value="course1">Course 1</option>
-                <option value="course2">Course 2</option>
-                <option value="course3">Course 3</option>
-                <option value="course4">Course 4</option>
-                <option value="course5">Course 5</option>
+                <option value="course1">SAP</option>
+                <option value="course2">IT Courses</option>
+                <option value="course3">Digital Marketing</option>
+                <option value="course4">Data Visualisation</option>
+                <option value="course5">HR Courses</option>
               </select>
             </div>
             <div className="form-group">

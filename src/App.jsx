@@ -12,7 +12,7 @@ import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
 import Footer from './components/Footer';
-import FeedbacksandReviews from './Pages/FeedbacksandReviews';
+
 import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
 import Training2P from './Pages/Training2P';
@@ -20,6 +20,8 @@ import Contactform from './Pages/Contactform';
 import Certificate from './Pages/Certificate';
 import OurBranches from './Pages/OurBranches';
 import Founders from './Pages/Founder';
+import Whatsapp from './Pages/FloatingWhatsApp';
+import FeedbackandReviews from './Pages/FeedbackandReviews';
 
 function App() {
   return (
@@ -31,20 +33,21 @@ function App() {
       <Marquee2 />
       <Keypoints />
       <PopCourses />
-      {/* <PlacementSection /> */}
       <Ourclients />
+      {/* <PlacementSection /> */}
       <Certificate />
+          <FeedbackandReviews />
       <Founders />
-      {/* <FeedbacksandReviews /> */}
+     
       <Achievements />
       <FAQComponent />
-      {/* <Training2P /> */}
-         <OurBranches />
-     
+      <Training2P />
+         <OurBranches />   
       </main>
-      
       <Contactform />
       <Footer />
+      
+      <Whatsapp />
       
     </div>
   );
