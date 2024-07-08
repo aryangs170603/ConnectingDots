@@ -1,9 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "src/components/Footer.jsx",  // Adjust this based on your project structure
+  ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-

@@ -11,17 +11,9 @@ body {
 }
 
 
-
-
-
-/* Keypoints CSS */
-
-/* pop cpourses */
-
-
-
-/* Carousel control buttons */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 

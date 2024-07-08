@@ -35,7 +35,7 @@ const clients = [
 
 const OurClients = () => {
   return (
-    <Container fluid className="our-clients-section text-center">
+    <Container fluid className="k text-center">
       <h2 className="section-title">Our Clients</h2>
       <div className="clients-marquee">
         <div className="clients-marquee-track">

@@ -11,31 +11,40 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
-import Footer from './Pages/Footer';
+import Footer from './components/Footer';
 import FeedbacksandReviews from './Pages/FeedbacksandReviews';
 import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
 import Training2P from './Pages/Training2P';
-
+import Contactform from './Pages/Contactform';
+import Certificate from './Pages/Certificate';
+import OurBranches from './Pages/OurBranches';
+import Founders from './Pages/Founder';
 
 function App() {
   return (
     <div className="App">
       <Marquee1 />
       <Navbar />
+       <main>
       <HeaderCarousel />
       <Marquee2 />
       <Keypoints />
       <PopCourses />
       {/* <PlacementSection /> */}
       <Ourclients />
-      
+      <Certificate />
+      <Founders />
+      {/* <FeedbacksandReviews /> */}
       <Achievements />
       <FAQComponent />
       {/* <Training2P /> */}
-      <FeedbacksandReviews />
-    
-      {/* <Footer /> */}
+         <OurBranches />
+     
+      </main>
+      
+      <Contactform />
+      <Footer />
       
     </div>
   );

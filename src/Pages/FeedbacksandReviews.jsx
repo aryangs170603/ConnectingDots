@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./FeedbacksandReviews.css";
+import "../App.css";
 import premImage from "../Logos/FeedbacksandReviews/review image.png";
 
 const reviews = [
@@ -26,13 +26,10 @@ const reviews = [
 ];
 
 const FeedbackAndReviews = () => {
-  const [expanded, setExpanded] = useState({});
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleReadMore = (index) => {
-    setExpanded((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
@@ -41,7 +38,7 @@ const FeedbackAndReviews = () => {
       <Row className="justify-content-center">
         {reviews.map((review, index) => (
           <Col key={index} md={4} className="d-flex justify-content-center mb-4">
-            <Card className="feedback-card shadow">
+            <Card className={`feedback-card shadow ${expandedIndex === index ? "expanded" : ""}`}>
               <Card.Body>
                 <div className="img-container">
                   <img
@@ -53,7 +50,7 @@ const FeedbackAndReviews = () => {
                 </div>
                 <Card.Title className="review-name">{review.name}</Card.Title>
                 <Card.Text className="review-text">
-                  {expanded[index]
+                  {expandedIndex === index
                     ? review.review
                     : `${review.review.substring(0, 100)}...`}
                 </Card.Text>
@@ -62,7 +59,7 @@ const FeedbackAndReviews = () => {
                   className="read-more"
                   onClick={() => toggleReadMore(index)}
                 >
-                  {expanded[index] ? "Read Less" : "Read More"}
+                  {expandedIndex === index ? "Read Less" : "Read More"}
                 </Button>
               </Card.Body>
             </Card>

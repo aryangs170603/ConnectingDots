@@ -3,6 +3,7 @@
 }
 
 
+}
 
 .section-subtitle {
   font-size: 2rem;
@@ -11,34 +12,41 @@
 }
 
 .feedback-card {
-  transition: 0.5s;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
   background-color: #fff;
   border: none;
   border-radius: 0px;
   text-align: left;
-  width: 400px; /* Adjusted width to fit better */
-  min-height: 295px; /* Adjusted height to fit better */
+  width: 400px; 
+  max-height: 295px; 
+  overflow: hidden; 
+  padding: 20px; 
+}
+
+.feedback-card.expanded {
+  max-height: 1000px; 
+  padding: 20px; 
 }
 
 .img-container {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px; 
 }
 
 .review-image {
-  width: 80px; /* Adjusted size to fit better */
-  height: 80px; /* Adjusted size to fit better */
+  width: 80px; 
+  height: 80px; 
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px; /* Reduced margin */
+  margin-right: 10px; 
 }
 
 .fa-quote-left.icon {
   position: absolute;
   bottom: 0;
-  left: 70px; /* Adjusted position */
+  left: 70px; 
   background-color: #43c0df;
   color: #fff;
   padding: 10px;
@@ -53,13 +61,20 @@
 .review-post {
   color: #43c0df;
   font-size: 1rem;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px; 
 }
 
 .review-text {
   color: grey;
   justify-content: within;
   font-size: 15px;
+  max-height: 100px; 
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.feedback-card.expanded .review-text {
+  max-height: 1000px; 
 }
 
 .feedback-card:hover {

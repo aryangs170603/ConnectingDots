@@ -1,0 +1,42 @@
+.founder-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.founder-image img {
+  border-radius: 10px;
+  height: auto;
+  width: 450px;
+  margin-right: 100px;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.founder-name{
+  margin-bottom: 70px;
+  
+}
+
+.founder-message {
+  flex: 1;
+}
+
+
+
+.founder-message p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 24px;
+  color: #000;
+}
