@@ -8,6 +8,9 @@
 .faq-container h2 {
   text-align: center;
 }
+.faq-container p {
+  text-align: center;
+}
 
 .faq-columns {
   display: flex;

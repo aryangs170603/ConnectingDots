@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Carousel, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
+import './HeaderCarousel.css';
 import TextTransition, { presets } from 'react-text-transition';
 import slideImage1 from '../Logos/Headercarousel/file.png';
 import slideImage2 from '../Logos/Headercarousel/file01.png';
@@ -60,23 +60,7 @@ const HeaderCarousel = () => {
             </div>
           </div>
         </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-slide">
-            <div className="carousel-text">
-              <h2>Empower your career with us</h2>
-              <h3>Comprehensive Training Programs</h3>
-              <p>This is 2nd Slide</p>
-              <div>
-                <CustomButton text="Join Now" onClick={() => alert('Join Now clicked!')} />
-                <CustomButton text="Learn More" onClick={() => alert('More knowledge!')} />
-              </div>
-
-            </div>
-            <div className="carousel-image">
-              <img src={slideImage2} alt="Empower Career" />
-            </div>
-          </div>
-        </Carousel.Item>
+      
         <Carousel.Item>
           <div className="carousel-slide3">
             <div className="carousel-text4">
@@ -108,6 +92,23 @@ const HeaderCarousel = () => {
         <Carousel.Item>
           <div className="carousel-slide4">
             <img src={slide4} alt="Career Potential" />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-slide">
+            <div className="carousel-text">
+              <h2>Empower your career with us</h2>
+              <h3>Comprehensive Training Programs</h3>
+              <p>This is 2nd Slide</p>
+              <div>
+                <CustomButton text="Join Now" onClick={() => alert('Join Now clicked!')} />
+                <CustomButton text="Learn More" onClick={() => alert('More knowledge!')} />
+              </div>
+
+            </div>
+            <div className="carousel-image">
+              <img src={slideImage2} alt="Empower Career" />
+            </div>
           </div>
         </Carousel.Item>
       </Carousel>

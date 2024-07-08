@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css'; // Create and import a CSS file for styling
+import './PopCourses.css'; 
 
 const courses = [
   { name: 'SAP FICO Courses', count: 25 },

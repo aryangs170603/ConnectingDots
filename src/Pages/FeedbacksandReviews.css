@@ -1,0 +1,90 @@
+.feedback-section {
+  padding: 50px 0;
+}
+
+
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.feedback-card {
+  transition: 0.5s;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  text-align: left;
+  width: 400px; /* Adjusted width to fit better */
+  min-height: 295px; /* Adjusted height to fit better */
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.review-image {
+  width: 80px; /* Adjusted size to fit better */
+  height: 80px; /* Adjusted size to fit better */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Reduced margin */
+}
+
+.fa-quote-left.icon {
+  position: absolute;
+  bottom: 0;
+  left: 70px; /* Adjusted position */
+  background-color: #43c0df;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.review-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.review-post {
+  color: #43c0df;
+  font-size: 1rem;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.review-text {
+  color: grey;
+  justify-content: within;
+  font-size: 15px;
+}
+
+.feedback-card:hover {
+  background-color: #43c0df;
+  color: #fff;
+  cursor: pointer;
+}
+
+.feedback-card:hover .review-post,
+.feedback-card:hover .review-text {
+  color: #fff;
+}
+
+.feedback-card:hover .fa-quote-left.icon {
+  background-color: #fff;
+  color: #43c0df;
+}
+
+.read-more {
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  color: #000000;
+  text-decoration: underline;
+}

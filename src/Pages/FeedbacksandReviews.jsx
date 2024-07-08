@@ -1,34 +1,40 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
-import premImage from "../Logos/FeedbackandReviews/review image.png";
+import "./FeedbacksandReviews.css";
+import premImage from "../Logos/FeedbacksandReviews/review image.png";
 
 const reviews = [
   {
     name: "Tejas Pimple",
-    post: "Marketing Manager",
     review:
       "This is the best institute for learning various SAP modules. All the trainers are well experienced and the way of teaching is very good all theory topics are taught from the basics concept and the practice is done on the system server which makes it more easier to learn.100% placement assistance is also provided for every course.",
     image: premImage,
   },
   {
     name: "Dhanashree Gabhane",
-    post: "Marketing Manager",
     review:
       "Connecting Dots ERP is the best digital marketing institute in Pune. The trainers deliver thorough practical training on important concepts like SEO, SEM, and social media marketing. The institute offers 100% placement assistance and a supportive learning experience. Highly recommended for a career in digital marketing.",
     image: premImage,
   },
   {
     name: "Yogita Kharpude",
-    post: "Marketing Manager",
     review:
-      "This is the best institute for learning various SAP modules. All the trainers are well experienced and the way of teaching is very good all theory topics are taught from the basics concept and the practice is done on the system server which makes it more easier to learn.100% placement assistance is also provided for every course.",
+      "Connecting Dots ERP is one of the best authorized institutes for SAP Training. The training program was well planned. All staff members are very supportive. I am happy by Placement Assistance offered by Delphi. They make sure they provide calls till the candidate is placed which makes them stand different in the market.",
     image: premImage,
   },
 ];
 
 const FeedbackAndReviews = () => {
+  const [expanded, setExpanded] = useState({});
+
+  const toggleReadMore = (index) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
     <Container fluid className="feedback-section text-center">
       <h3 className="section-subtitle">Feedbacks & Reviews</h3>
@@ -46,10 +52,18 @@ const FeedbackAndReviews = () => {
                   <i className="fa fa-quote-left icon"></i>
                 </div>
                 <Card.Title className="review-name">{review.name}</Card.Title>
-                <Card.Subtitle className="review-post">
-                  {review.post}
-                </Card.Subtitle>
-                <Card.Text className="review-text">{review.review}</Card.Text>
+                <Card.Text className="review-text">
+                  {expanded[index]
+                    ? review.review
+                    : `${review.review.substring(0, 100)}...`}
+                </Card.Text>
+                <Button
+                  variant="link"
+                  className="read-more"
+                  onClick={() => toggleReadMore(index)}
+                >
+                  {expanded[index] ? "Read Less" : "Read More"}
+                </Button>
               </Card.Body>
             </Card>
           </Col>

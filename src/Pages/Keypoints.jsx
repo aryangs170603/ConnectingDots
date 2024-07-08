@@ -27,23 +27,20 @@ const AboutCard = () => {
           <div className='left-row'>
             <img src='src/Logos/Keypoints/Keypoints.png' alt='Online Learning' /> 
           </div>
-          <div className='right row'>
-            
+          <div className='right-row'>
             <h1>Keypoints</h1>
             <div className='items'>
-              {homeAbout.map((val, index) => {
-                return (
-                  <div className='item flexSB' key={index}>
-                    <div className='img'>
-                      <img src={val.cover} alt={val.title} />
-                    </div>
-                    <div className='text'>
-                      <h2>{val.title}</h2>
-                      <p>{val.desc}</p>
-                    </div>
+              {homeAbout.map((val, index) => (
+                <div className='item flexSB' key={index}>
+                  <div className='img'>
+                    <img src={val.cover} alt={val.title} />
                   </div>
-                );
-              })}
+                  <div className='text'>
+                    <h2>{val.title}</h2>
+                    <p>{val.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

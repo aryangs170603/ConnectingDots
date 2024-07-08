@@ -11,12 +11,11 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
-
 import Footer from './Pages/Footer';
-import FeedbackandReviews from './Pages/FeedbackandReviews';
+import FeedbacksandReviews from './Pages/FeedbacksandReviews';
 import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
-
+import Training2P from './Pages/Training2P';
 
 
 function App() {
@@ -30,10 +29,11 @@ function App() {
       <PopCourses />
       {/* <PlacementSection /> */}
       <Ourclients />
-      <FeedbackandReviews />
+      
       <Achievements />
       <FAQComponent />
-      
+      {/* <Training2P /> */}
+      <FeedbacksandReviews />
     
       {/* <Footer /> */}
       

@@ -17,10 +17,11 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #ffffff; 
-  border-bottom: 1px solid #007bff; 
+  
   height: 70px;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 30%);
 }
 
 .logo {
