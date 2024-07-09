@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .certificate-title {
@@ -13,13 +14,16 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .certificate-content {
   display: flex;
+  flex-direction: row; 
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 .certificate-image {
@@ -42,8 +46,10 @@
 .certificate-text {
   flex: 2;
   margin-left: 20px;
-  font-family: 'Times New Roman', sans-serif;
-  font-size: 1.2rem; 
+  font-family: 'Forum', serif;
+  font-weight: 400;
+  font-size: 1.5rem; 
+  font-style: normal;
 }
 
 .certificate-text h2 {
@@ -55,23 +61,24 @@
 .certificate-text p {
   font-size: 1rem;
   margin-bottom: 20px; 
+}
 
 @media (max-width: 768px) {
   .certificate-content {
-    flex-direction: column;
+    flex-direction: column; /* Change this for mobile view */
   }
 
   .certificate-text {
     margin-left: 0;
-    font-size: 3vw; 
+    font-size: 1rem; 
+    text-align: center; /* Center-align text on mobile */
   }
 
   .certificate-text h2 {
-    font-size: 4vw; 
+    font-size: 1.2rem; 
   }
 
   .certificate-text p {
-    font-size: 2.5vw; 
+    font-size: 0.9rem; 
   }
-}
 }

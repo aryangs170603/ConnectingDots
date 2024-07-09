@@ -3,6 +3,8 @@ import './Training2P.css'; // Make sure to create this CSS file or include style
 
 const Card = ({ number, title, description }) => {
   return (
+      
+      
       <div className={`card card-${number}`}>
           <div className="card-number">{number}</div>
           <div className="card-title">{title}</div>
@@ -10,9 +12,10 @@ const Card = ({ number, title, description }) => {
       </div>
   );
 };
-
+ 
 const Cards = () => {
   const cardData = [
+      
       {
           number: '01',
           title: 'Career Advice',
@@ -46,6 +49,7 @@ const Cards = () => {
   ];
 
   return (
+      
       <div className="cards-container">
           {cardData.map(card => (
               <Card 

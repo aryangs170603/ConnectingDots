@@ -1,44 +1,71 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./FeedbackandReviews.css";
-import premImage from "../Logos/FeedbacksandReviews/review image.png";
+import premImage1 from "../Logos/FeedbacksandReviews/review image 1.png";
+import premImage2 from "../Logos/FeedbacksandReviews/review image 2.jpg";
+import premImage3 from "../Logos/FeedbacksandReviews/review image 3.jpg";
 
 const reviews = [
   {
-    name: "Tejas Pimple",
+    name: "Niveath P",
     review:
-      "This is the best institute for learning various SAP modules. All the trainers are well experienced and the way of teaching is very good all theory topics are taught from the basics concept and the practice is done on the system server which makes it more easier to learn.100% placement assistance is also provided for every course.",
-    image: premImage,
+      "I have completed the SAP HCM course in Connecting Dots ERP in Mumbai, and I must say it was a truly world's best experience. The instructors have next level of expertise, guiding us through the complexities of SAP with clarity and patience. The course structure was well-designed, covering all essential modules comprehensively. I have recommended the course to my friends also.",
+    image: premImage3,
   },
   {
-    name: "Dhanashree Gabhane",
+    name: "Bharat Tyagi",
     review:
-      "Connecting Dots ERP is the best digital marketing institute in Pune. The trainers deliver thorough practical training on important concepts like SEO, SEM, and social media marketing. The institute offers 100% placement assistance and a supportive learning experience. Highly recommended for a career in digital marketing.",
-    image: premImage,
+      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. Connecting dots stands out as the best choice for those looking to advance their careers in sap experience the benefits of their exceptional training and placement services",
+    image: premImage2,
   },
   {
-    name: "Yogita Kharpude",
+    name: "Shweta Udainiya",
     review:
-      "Connecting Dots ERP is one of the best authorized institutes for SAP Training. The training program was well planned. All staff members are very supportive. I am happy by Placement Assistance offered by Delphi. They make sure they provide calls till the candidate is placed which makes them stand different in the market.",
-    image: premImage,
+      "Connecting Dots Advancements complete projects, master coaches, adaptable learning choices, and solid position support make them the best online SAP preparing establishment in Mumbai. I did my SAP SD Course from here. I prescribe you to join Connecting Dots Advancements for best online SAP SD Course and venture out towards a fruitful vocation in SAP.",
+    image: premImage1,
   },
 ];
 
 const FeedbackAndReviews = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const containerRef = useRef(null);
 
   const toggleReadMore = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  const handleClickOutside = (event) => {
+    if (containerRef.current && !containerRef.current.contains(event.target)) {
+      setExpandedIndex(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside); // for mobile
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside); // for mobile
+    };
+  }, []);
+
   return (
-    <Container fluid className="feedback-section text-center">
+    <Container fluid className="feedback-section text-center" ref={containerRef}>
       <h3 className="section-subtitle">Feedbacks & Reviews</h3>
       <Row className="justify-content-center">
         {reviews.map((review, index) => (
           <Col key={index} md={4} className="d-flex justify-content-center mb-4">
-            <Card className={`feedback-card shadow ${expandedIndex === index ? "expanded" : ""}`}>
+            <Card
+              className={`feedback-card shadow ${
+                expandedIndex === index ? "expanded" : ""
+              }`}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleReadMore(index);
+              }}
+            >
               <Card.Body>
                 <div className="img-container">
                   <img
@@ -52,12 +79,15 @@ const FeedbackAndReviews = () => {
                 <Card.Text className="review-text">
                   {expandedIndex === index
                     ? review.review
-                    : `${review.review.substring(0, 100)}...`}
+                    : `${review.review.substring(0, 80)}...`}
                 </Card.Text>
                 <Button
                   variant="link"
                   className="read-more"
-                  onClick={() => toggleReadMore(index)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleReadMore(index);
+                  }}
                 >
                   {expandedIndex === index ? "Read Less" : "Read More"}
                 </Button>

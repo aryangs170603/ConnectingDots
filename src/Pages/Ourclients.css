@@ -1,6 +1,7 @@
 .our-clients-section {
   padding: 60px 0;
   height: 300px;
+  font-family: 'Lato', sans-serif;
 }
 
 .section-title {
@@ -10,6 +11,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
 }
 
 .clients-marquee {

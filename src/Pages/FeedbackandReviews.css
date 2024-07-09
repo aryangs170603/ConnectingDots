@@ -1,8 +1,7 @@
 .feedback-section {
   padding: 50px 0;
+  font-family: 'Lato', sans-serif;
 }
-
-
 
 .section-subtitle {
   font-size: 2rem;
@@ -13,67 +12,70 @@
 .feedback-card {
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
   background-color: #fff;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   border-radius: 30px;
   text-align: left;
-  width: 1000px; 
-  max-height: 295px; 
-  overflow: hidden; 
-  padding: 20px; 
+  width: 800px;
+  max-height: 295px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feedback-card.expanded {
-  max-height: 1000px; 
-  padding: 20px; 
+  max-height: 1000px;
+  padding: 20px;
 }
 
 .img-container {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .review-image {
-  width: 80px; 
-  height: 80px; 
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .fa-quote-left.icon {
   position: absolute;
   bottom: 0;
-  left: 70px; 
+  left: 70px;
   background-color: #43c0df;
   color: #fff;
   padding: 10px;
   border-radius: 50%;
 }
 
-.review-namef {
+.review-name {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.review-postf {
+.review-post {
   color: #43c0df;
   font-size: 1rem;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .review-text {
   color: grey;
   justify-content: within;
-  font-size: 15px;
-  max-height: 100px; 
+  font-size: 14px;
+  max-height: 100px;
   transition: max-height 0.5s ease-in-out;
   overflow: hidden;
 }
 
 .feedback-card.expanded .review-text {
-  max-height: 1000px; 
+  max-height: 1000px;
 }
 
 .feedback-card:hover {
@@ -96,6 +98,7 @@
   color: #000000;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .read-more:hover {

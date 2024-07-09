@@ -1,17 +1,21 @@
 .courses {
-  background-color: #ebebeb;
+  background-color: #29298e;
+  font-family: 'Lato', sans-serif;
 }
 
 .courses-container {
   text-align: center;
   margin: 20px;
+  font-family: 'Lato', sans-serif;
+  background-color: #29298e;
 }
 
 .courses-title h2 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #333;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
 }
 
 .courses-grid {
@@ -31,6 +35,7 @@
   width: 300px;
   height: auto;
   border-radius: 5px;
+  font-family: 'Lato', sans-serif;
 
 }
 

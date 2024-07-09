@@ -12,11 +12,14 @@ const Founder = () => {
         <div className="founder-name">
         <h1>Founder's Message</h1>
         </div>
-        <p>
-          With over a decade of experience as a Techno and SD Consultant, I witnessed the struggles young professionals faced in securing jobs. Driven by a vision to upskill the youth and make them job-ready, I founded Connecting Dots ERP, a leading IT institute. Utilizing my IT expertise, I established an institution that has successfully trained over 10,000+ students in rewarding careers.
-          At Connecting Dots ERP, we are dedicated to empowering the next generation with the skills and knowledge required to excel in the competitive tech industry. Our mission is to bridge the gap between education and employment, ensuring that our students are well-prepared to meet industry demands.
+        <p1>
+          I have worked as a Technical and SD Consultant for more than ten years, during which time I have seen firsthand the difficulties young professionals get employment. Having established Connecting Dots ERP, a renowned IT institute, my goal is to upskill and prepare young people for the workforce. 
+          Connecting Dots ERP is committed to equipping the upcoming generation with the necessary abilities and knowledge to succeed in the fiercely competitive technology sector. Our goal is to close the skills and employment gaps by making sure our students are equipped with the knowledge and skills needed to succeed in the workforce.
+
           
-        </p>
+        </p1> 
+        <br>
+        </br>
         <p>
           Join us at Connecting Dots ERP and take the next step towards a successful and fulfilling career in SAP ,Data Science and other  IT courses
         </p>

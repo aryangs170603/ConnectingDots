@@ -58,6 +58,7 @@ const ContactForm = () => {
                 type="text"
                 id="name"
                 name="name"
+                placeholder="Eg:Ram"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -69,6 +70,7 @@ const ContactForm = () => {
                 type="text"
                 id="contact"
                 name="contact"
+                placeholder="Eg: +91-1234567890"
                 value={formData.contact}
                 onChange={handleChange}
                 maxLength={10}

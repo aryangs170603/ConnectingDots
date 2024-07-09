@@ -7,7 +7,7 @@ const courses = [
   { name: 'Masters in Data Science', count: 60 },
   { name: 'Digital Marketing', count: 30 },
   { name: 'HR payroll', count: 80 },
-  { name: 'Core Hr', count: 120 },
+  { name: 'Core HR', count: 120 },
   { name: 'Mern Stack', count: 17 },
   { name: 'UI/UX', count: 17 },
 ];

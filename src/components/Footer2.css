@@ -1,0 +1,144 @@
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+}
+
+.footer-logo img {
+  width: auto;
+  height: 60px;
+  margin-left: 30px;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 220px;
+  padding: 0 15px;
+}
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.headline h3 {
+  border-bottom: 2px solid #ff8c00;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: #ff8c00;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-list li {
+  margin-bottom: 5px;
+}
+
+.footer-contact-list .fa {
+  margin-right: 10px;
+}
+
+.footer-contact-list.contact-footer-brdr {
+  border-top: 1px solid #004cff;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+footer .social-icons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #ff8c00;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ff8c00;
+}
+
+footer .footer-bottom p {
+  margin: 0;
+}
+
+footer .footer-bottom a {
+  color: #ff8c00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-widget {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    padding-top: 10px;
+  }
+}

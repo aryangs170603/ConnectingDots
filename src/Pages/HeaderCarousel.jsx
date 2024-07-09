@@ -8,7 +8,8 @@ import slideImage2 from '../Logos/Headercarousel/file01.png';
 import slideImage3 from '../Logos/Headercarousel/file02.png';
 import slide4 from '../Logos/Headercarousel/slide4 img.png';
 import logostrip from '../Logos/Headercarousel/logo strip.png';
-import SAPmod from '../Logos/Headercarousel/SAP module1.png'
+import SAPmod from '../Logos/Headercarousel/SAP module1.png';
+
 const TEXTS1 = ['SAP Training ', 'DATA Science', 'IT Courses'];
 const TEXTS2 = ['SAP Functional & Technical Courses ', 'Data Analytics & Business Analytics', 'Full Stack & Software Testing'];
 
@@ -52,7 +53,7 @@ const HeaderCarousel = () => {
                 <CustomButton text="Professionals" onClick={() => alert('Professionals clicked!')} />
               </div>
               <div className="logostrip">
-              <img src={logostrip} alt="companies"/>
+                <img src={logostrip} alt="companies" />
               </div>
             </div>
             <div className="carousel-image">
@@ -60,7 +61,7 @@ const HeaderCarousel = () => {
             </div>
           </div>
         </Carousel.Item>
-      
+
         <Carousel.Item>
           <div className="carousel-slide3">
             <div className="carousel-text4">
@@ -99,7 +100,7 @@ const HeaderCarousel = () => {
             <div className="carousel-text">
               <h2>Empower your career with us</h2>
               <h3>Comprehensive Training Programs</h3>
-              <p>This is 2nd Slide</p>
+              <p>This is 4th Slide</p>
               <div>
                 <CustomButton text="Join Now" onClick={() => alert('Join Now clicked!')} />
                 <CustomButton text="Learn More" onClick={() => alert('More knowledge!')} />

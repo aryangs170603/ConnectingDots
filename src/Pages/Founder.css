@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #fff;
-  
+  background-color: #29298e;
   border-radius: 10px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .founder-image img {
@@ -15,28 +15,100 @@
   margin-left: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 15px rgb(0, 0, 0, 0.7);
 }
 
-.founder-name{
-  margin-bottom: 100px;
-  
+.founder-name {
+  margin-bottom: 80px;
 }
 
 .founder-message {
   flex: 1;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: #fff;
 }
 
 .founder-message p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 10px;
   margin-right: 80px;
-  
+  font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
 .signature {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 34px;
+  font-family: 'Lato', cursive;
+  font-size: 40px;
   color: #0f0b0b;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .founder-image img {
+    width: 300px;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .founder-message p {
+    font-size: 14px;
+    
+  }
+
+  .signature {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder-image img {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  .founder-message p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-image img {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .founder-message p {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+  }
+  .founder-message p1 {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    
+  }
+  .founder-name{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .signature {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  
 }

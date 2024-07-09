@@ -8,7 +8,9 @@ const FloatingWhatsApp = () => {
   const dropdownRef = useRef(null);
 
   const handleWhatsAppClick = (phoneNumber) => {
-    window.open(`https://wa.me/${phoneNumber}`, '_blank');
+    // Ensure phone number is in international format and has no special characters or spaces
+    const formattedPhoneNumber = phoneNumber.replace(/[^0-9]/g, '');
+    window.open(`https://wa.me/${formattedPhoneNumber}`, '_blank');
   };
 
   const toggleDropdown = () => {
@@ -37,11 +39,11 @@ const FloatingWhatsApp = () => {
       />
       {isDropdownOpen && (
         <div className="dropdownW">
-          <button onClick={() => handleWhatsAppClick('9004002958')}>
-            Contact 9004002958
+          <button onClick={() => handleWhatsAppClick('+919004002958')}>
+            Contact +91 9004002958
           </button>
-          <button onClick={() => handleWhatsAppClick('9004002941')}>
-            Contact 9004002941
+          <button onClick={() => handleWhatsAppClick('+919004002941')}>
+            Contact +91 9004002941
           </button>
         </div>
       )}

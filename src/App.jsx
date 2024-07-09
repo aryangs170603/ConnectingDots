@@ -11,7 +11,11 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
-import Footer from './components/Footer';
+// import Footer2 from './components/Footer2';
+//import foooter from './components/foooter';
+//import foooter from './components/foooter';
+import Footer1 from './components/Footer1';
+
 
 import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
@@ -40,12 +44,13 @@ function App() {
       <Founders />
      
       <Achievements />
-      <FAQComponent />
+      
       <Training2P />
+         <FAQComponent />
          <OurBranches />   
       </main>
       <Contactform />
-      <Footer />
+      <Footer1 />
       
       <Whatsapp />
       
