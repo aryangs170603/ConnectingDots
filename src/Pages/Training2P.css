@@ -12,6 +12,19 @@
   font-family: 'Lato', sans-serif;
 }
 
+.heading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: rgb(1,1,98);
+  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 7px;
+}
+
 .card {
   flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
   height: 400px;
@@ -49,44 +62,44 @@
   margin-top: 170px;
   background-color: #ffffff;
 }
-.card-01:hover{
-  background-color:#47a3ff ;
+.card-01:hover {
+  background-color: #47a3ff;
 }
 .card-02 {
   margin-top: 230px;
   background-color: #47a3ff;
   height: 380px;
 }
-.card-02:hover{
-  background-color:#ffffff ;
+.card-02:hover {
+  background-color: #ffffff;
 }
 .card-03 {
   margin-top: 170px;
   background-color: #ffffff;
 }
-.card-03:hover{
-  background-color:#47a3ff ;
+.card-03:hover {
+  background-color: #47a3ff;
 }
 .card-04 {
   margin-top: 230px;
   background-color: #47a3ff;
 }
-.card-04:hover{
-  background-color:#ffffff ;
+.card-04:hover {
+  background-color: #ffffff;
 }
 .card-05 {
   background-color: #ffffff;
   margin-top: 170px;
 }
-.card-05:hover{
-  background-color:#47a3ff ;
+.card-05:hover {
+  background-color: #47a3ff;
 }
 .card-06 {
   background-color: #47a3ff;
   margin-top: 230px;
 }
-.card-06:hover{
-  background-color:#ffffff ;
+.card-06:hover {
+  background-color: #ffffff;
 }
 
 @media (max-width: 1200px) {
@@ -108,6 +121,17 @@
 }
 
 @media (max-width: 480px) {
+  .cards-container {
+    flex-direction: column;
+    background-image: none; /* Remove the background image on small screens */
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
   .card-number {
     font-size: 20px;
   }

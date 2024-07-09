@@ -4,7 +4,7 @@
   padding: 20px;
   background-color: #29298e;
   border-radius: 10px;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .founder-image img {
@@ -20,6 +20,7 @@
 
 .founder-name {
   margin-bottom: 80px;
+  letter-spacing: 8px;
 }
 
 .founder-message {

@@ -31,10 +31,16 @@
 }
 
 .right-row h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 7px;
+  margin-bottom: 50px;
   margin-left: 80px;
   font-family: 'Lato', sans-serif;
+  background: rgb(1,1,98);
+  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .items .item {

@@ -1,5 +1,5 @@
 .courses {
-  background-color: #29298e;
+  background-color: #ffffff;
   font-family: 'Lato', sans-serif;
 }
 
@@ -7,7 +7,7 @@
   text-align: center;
   margin: 20px;
   font-family: 'Lato', sans-serif;
-  background-color: #29298e;
+  background-color: #ffffff;
 }
 
 .courses-title h2 {
@@ -16,6 +16,12 @@
   margin-bottom: 30px;
   color: #ffffff;
   font-family: 'Lato', sans-serif;
+  letter-spacing: 8px;
+  background: rgb(1,1,98);
+  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  -webkit-background-clip: text;
+  color: transparent;
+  
 }
 
 .courses-grid {
