@@ -4,6 +4,8 @@ import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState('');
@@ -27,17 +29,12 @@ const Header = () => {
         <div className="logo">
           <img src={logo} alt="Connecting Dots ERP" />
         </div>
-        <form action="" className="search">
-          <input className="search__input" type="search" placeholder="Search" id="searchInput" />
-          <div className="search__icon-container">
-            <label htmlFor="searchInput" className="search__label" aria-label="Search">
-              <svg viewBox="0 0 1000 1000" title="Search"><path fill="currentColor" d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z"/></svg>
-            </label>
-            <button className="search__submit" aria-label="Search">
-              <svg viewBox="0 0 1000 1000" title="Search"><path fill="currentColor" d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z"/></svg>
-            </button>
-          </div>
-        </form>
+        <div className="search-bar">
+          <input type="text" className="search-bar__input" placeholder="Search..." />
+          <button className="search-bar__button">
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
+        </div>
 
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -189,20 +186,26 @@ const Header = () => {
                   </ul>
                 )}
               </div>
-              <Nav.Link
-                className={`mx-lg-2 ${activeLink === 'placements' ? 'active' : ''}`}
-                href="#"
-                onClick={() => handleNavClick('placements')}
-              >
-                Placements
-              </Nav.Link>
-              <Nav.Link
-                className={`mx-lg-2 ${activeLink === 'blogs' ? 'active' : ''}`}
-                href="#"
-                onClick={() => handleNavClick('blogs')}
-              >
-                Blogs
-              </Nav.Link>
+              <div className="nav-links-container">
+                <Nav.Link
+                  className={`mx-lg-2 ${activeLink === 'placements' ? 'active' : ''}`}
+                  href="#"
+                  onClick={() => handleNavClick('placements')}
+                  
+                >
+               
+                  Placements
+                </Nav.Link>
+                </div >
+                <div className="nav-links-container2">
+                <Nav.Link
+                  className={`mx-lg-2 ${activeLink === 'Corporate Training' ? 'active' : ''}`}
+                  href="#"
+                  onClick={() => handleNavClick('Corporate Training')}
+                >
+                  Corporate Training
+                </Nav.Link>
+              </div>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

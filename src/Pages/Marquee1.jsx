@@ -8,12 +8,12 @@ const Marquee = () => {
         <div className="main-container__marquee-items">
           <span className="main-container__marquee-item">SAP FICO Batch Starting Soon!</span>
           <span className="main-container__marquee-item">Data Science A1 batch starting from 5th July!</span>
-          <span className="main-container__marquee-item">HR Payroll Admissions have started!</span>
+          
         </div>
         <div aria-hidden="true" className="main-container__marquee-items">
           <span className="main-container__marquee-item">Get exciting benefits by registering before 1st July!</span>
           <span className="main-container__marquee-item">SAP HANA batch commencing soon!</span>
-          <span className="main-container__marquee-item">Enroll in our best Digital marketing course!</span>
+          
         </div>
       </div>
     </div>

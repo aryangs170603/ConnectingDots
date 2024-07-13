@@ -3,17 +3,17 @@ import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Ourclients.css';
 
-import amdocsLogo from '../Logos/Ourclients/amdocs.png';
-import googleLogo from '../Logos/Ourclients/google.png';
-import tcsLogo from '../Logos/Ourclients/tcs.png';
+import amdocsLogo from '../Logos/Ourclients/amdocs1.png';
+import googleLogo from '../Logos/Ourclients/google1.png';
+import tcsLogo from '../Logos/Ourclients/tcs1.png';
 import zensarLogo from '../Logos/Ourclients/zensar.png';
-import ibmLogo from '../Logos/Ourclients/ibm.png';
-import microsoftLogo from '../Logos/Ourclients/microsoft.png';
-import cognizantLogo from '../Logos/Ourclients/cognizant.png';
-import infosysLogo from '../Logos/Ourclients/infosys.png';
+import ibmLogo from '../Logos/Ourclients/ibm1.png';
+import microsoftLogo from '../Logos/Ourclients/microsoft1.png';
+import cognizantLogo from '../Logos/Ourclients/cognizant1.png';
+import infosysLogo from '../Logos/Ourclients/infosys2.png';
 import deloiteLogo from '../Logos/Ourclients/deloitte.png';
-import adobeLogo from '../Logos/Ourclients/adobe.png';
-import accentureLogo from '../Logos/Ourclients/accenture.png';
+import adobeLogo from '../Logos/Ourclients/adobe1.png';
+import accentureLogo from '../Logos/Ourclients/accenture1.png';
 import wiproLogo from '../Logos/Ourclients/wipro.png';
 import techMahindraLogo from '../Logos/Ourclients/techmahindra.png';
 

@@ -1,5 +1,13 @@
 {
   "files": {
+    "src/Pages/PlacementSection.css": [
+      {
+        "id": "6e4e90d2-adbe-4e11-a7ad-0f2d5bef982c",
+        "line": 1,
+        "version": 1262,
+        "index": 0
+      }
+    ],
     "src/trysample/HeaderCrouse.jsx": [
       {
         "id": "0e162f69-b1e3-45e7-a372-f615f6857280",

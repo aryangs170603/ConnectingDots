@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Contactform.css";
+import "./Stickyform.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

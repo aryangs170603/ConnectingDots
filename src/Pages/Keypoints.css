@@ -4,34 +4,37 @@
   font-family: 'Lato', sans-serif;
 }
 
-.container {
+.container1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap; 
-  align-items: center; 
   font-family: 'Lato', sans-serif;
 }
 
 .left-row {
   flex: 1; 
   display: flex;
-  justify-content: center; 
-  font-family: 'Lato', sans-serif;
+   font-family: 'Lato', sans-serif;
+  float: left;
 }
 
 .left-row img {
   width: auto;
-  height: 520px;
+  height: 420px;
+  margin-left: 200px;
 }
 
 .right-row {
   flex: 1; 
   max-width: 600px;
   font-family: 'Lato', sans-serif;
+  
+  float:right;
+  
 }
 
 .right-row h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 7px;
   margin-bottom: 50px;
@@ -39,13 +42,14 @@
   font-family: 'Lato', sans-serif;
   background: rgb(1,1,98);
   background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  background-clip: text; 
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .items .item {
   display: flex;
-  align-items: center;
+
   margin-bottom: 20px;
 }
 
@@ -84,7 +88,7 @@
     margin-right: 0;
     margin-bottom: 30px;
     width: 100%;
-    text-align: center;
+    
   }
 
   .left-row img {

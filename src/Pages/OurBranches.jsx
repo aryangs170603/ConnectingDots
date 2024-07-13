@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './OurBranches.css';
 import L from 'leaflet';
 
-// Fix default icon issue with Webpack
+
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
@@ -39,7 +39,7 @@ const branches = [
 const Branches = () => {
   return (
     <div className="branches-section">
-      <h2 className="branches-title">Our Branches</h2>
+      <h2 className="branches-title">OUR BRANCHES</h2>
       <div className="branches-container">
         {branches.map((branch, index) => (
           <div className="branch-card" key={index}>

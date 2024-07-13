@@ -12,6 +12,10 @@ const FAQComponent = () => {
     { question: 'What is SAP?', answer: ' SAP is a software corporation that manages business operations and customer relations. It is a leading software provider in the world, with over 40,000 employees and more than 200,000 customers.' },
     { question: 'What is SAP software used for?', answer: 'SAP software is used for enterprise resource planning (ERP) to manage business operations and customer relations.' },
     { question: 'What are the different types of SAP Modules?', answer: 'There are several SAP modules including SAP ERP, SAP CRM, SAP SCM, SAP PLM, and SAP SRM.' },
+    { question: 'What are the different types of SAP Modules?', answer: 'There are several SAP modules including SAP ERP, SAP CRM, SAP SCM, SAP PLM, and SAP SRM.' },
+    { question: 'What are the different types of SAP Modules?', answer: 'There are several SAP modules including SAP ERP, SAP CRM, SAP SCM, SAP PLM, and SAP SRM.' },
+    { question: 'What is SAP software used for?', answer: 'SAP software is used for enterprise resource planning (ERP) to manage business operations and customer relations.' },
+    { question: 'What is SAP software used for?', answer: 'SAP software is used for enterprise resource planning (ERP) to manage business operations and customer relations.' },
     { question: 'What is SAP software used for?', answer: 'SAP software is used for enterprise resource planning (ERP) to manage business operations and customer relations.' },
   ];
 
@@ -25,7 +29,7 @@ const FAQComponent = () => {
 
   return (
     <div className="faq-container">
-      <h2>Frequently Asked Questions</h2>
+      <h2>FREQUENTLY ASKED QUESTIONS</h2>
       <p>Got a Question? We are here to Answer</p>
       <div className="faq-columns">
         <div className="faq-column">

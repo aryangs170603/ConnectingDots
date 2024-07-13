@@ -11,7 +11,7 @@ import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
-// import Footer2 from './components/Footer2';
+import Footer2 from './components/Footer2';
 //import foooter from './components/foooter';
 //import foooter from './components/foooter';
 import Footer1 from './components/Footer1';
@@ -20,7 +20,7 @@ import Footer1 from './components/Footer1';
 import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
 import Training2P from './Pages/Training2P';
-import Contactform from './Pages/Contactform';
+import Stickyform from './Pages/Stickyform';
 import Certificate from './Pages/Certificate';
 import OurBranches from './Pages/OurBranches';
 import Founders from './Pages/Founder';
@@ -35,23 +35,25 @@ function App() {
        <main>
       <HeaderCarousel />
       <Marquee2 />
-      <Keypoints />
+      {/* <Keypoints /> */}
       <PopCourses />
-      <Ourclients />
-      {/* <PlacementSection /> */}
+      
+         <PlacementSection />
       <Certificate />
-          <FeedbackandReviews />
+         <Ourclients />
+         
       <Founders />
-     
+         
       <Achievements />
       
       <Training2P />
+          <FeedbackandReviews />
          <FAQComponent />
          <OurBranches />   
       </main>
-      <Contactform />
-      <Footer1 />
-      
+      <Stickyform />
+      {/* <Footer1 /> */}
+      <Footer2 />
       <Whatsapp />
       
     </div>

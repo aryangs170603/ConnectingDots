@@ -23,12 +23,12 @@ const AboutCard = () => {
   return (
     <>
       <section className='aboutHome'>
-        <div className='container flexSB'>
+        <div className='container1 flexSB'>
           <div className='left-row'>
-            <img src='src/Logos/Keypoints/Keypoints.png' alt='Online Learning' /> 
+           <img src='src/Logos/Keypoints/Keypoints.png' alt='Online Learning' /> 
           </div>
           <div className='right-row'>
-            <h1>Keypoints</h1>
+            <h1>KEYPOINTS</h1>
             <div className='items'>
               {homeAbout.map((val, index) => (
                 <div className='item flexSB' key={index}>

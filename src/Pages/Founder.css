@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #29298e;
+  background-color: #FFFF;
   border-radius: 10px;
   flex-wrap: wrap; 
+  margin-top: 100px;
 }
 
 .founder-image img {
@@ -18,16 +19,20 @@
   box-shadow: 8px 8px 15px rgb(0, 0, 0, 0.7);
 }
 
-.founder-name {
+.founder-name h1 {
   margin-bottom: 80px;
   letter-spacing: 8px;
+  font-weight: bold;
+   font-size: 2.5rem;
+  font-family: 'Lato', sans-serif;
 }
 
 .founder-message {
   flex: 1;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  color: #fff;
+  color: #000000;
+  
 }
 
 .founder-message p {
@@ -36,7 +41,7 @@
   margin-bottom: 10px;
   margin-right: 80px;
   font-family: 'Lato', sans-serif;
-  color: #fff;
+  color: #000000;
 }
 
 .signature {

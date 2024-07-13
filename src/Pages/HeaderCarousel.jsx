@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
-import { Carousel, Col } from 'react-bootstrap';
+import { Carousel, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HeaderCarousel.css';
 import TextTransition, { presets } from 'react-text-transition';
-import slideImage1 from '../Logos/Headercarousel/file.png';
-import slideImage2 from '../Logos/Headercarousel/file01.png';
 import slideImage3 from '../Logos/Headercarousel/file02.png';
 import slide4 from '../Logos/Headercarousel/slide4 img.png';
 import logostrip from '../Logos/Headercarousel/logo strip.png';
-import SAPmod from '../Logos/Headercarousel/SAP module1.png';
+import SAPmodule1 from '../Logos/Headercarousel/SAP module1.png';
+import DSh from '../Logos/Headercarousel/DSh.png';
+import DGM from '../Logos/Headercarousel/DGM.png';
+import IT from '../Logos/Headercarousel/IT.png';
 
-const TEXTS1 = ['SAP Training ', 'DATA Science', 'IT Courses'];
-const TEXTS2 = ['SAP Functional & Technical Courses ', 'Data Analytics & Business Analytics', 'Full Stack & Software Testing'];
+const TEXTS1 = ['SAP Training', 'DATA Science', 'IT Courses', 'Digital Marketing'];
+const TEXTS2 = ['SAP Functional & Technical Courses', 'Data Analytics & Business Analytics', 'Full Stack & Software Testing', 'Digital Marketing'];
+const IMAGES = [SAPmodule1, DSh, IT, DGM];
 
 const HeaderCarousel = () => {
   const [index, setIndex] = React.useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000); //  3 seconds
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000); // 3 seconds
     return () => clearInterval(intervalId);
   }, []);
 
@@ -70,9 +72,8 @@ const HeaderCarousel = () => {
                   {TEXTS1[index % TEXTS1.length]}
                 </TextTransition>
               </h1>
-              <br></br>
-              <br></br>
-
+              <br />
+              <br />
               <div>
                 <h3>
                   <TextTransition springConfig={presets.wobbly}>
@@ -80,36 +81,41 @@ const HeaderCarousel = () => {
                   </TextTransition>
                 </h3>
               </div>
-              <div>
-                {/* <CustomButton text="Enroll Today" onClick={() => alert('Enroll Today clicked!')} />
-                <CustomButton text="Get Details" onClick={() => alert('Details!')} /> */}
-              </div>
             </div>
             <div className="carousel-image3">
-              <img src={SAPmod} alt="Future Starts Here" />
+              
+              <Card className="static-cardH">
+                <Card.Img
+                  className="transition-image"
+                  variant="top"
+                  src={IMAGES[index % IMAGES.length]}
+                  alt="Future Starts Here"
+                />
+              </Card>
             </div>
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
-          <div className="carousel-slide4">
-            <img src={slide4} alt="Career Potential" />
+          <div className="carousel-slideB">
+            <div className="carousel-slide4">
+              <img src={slide4} alt="Career Potential" />
+            </div>
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <div className="carousel-slide">
             <div className="carousel-text">
-              <h2>Empower your career with us</h2>
-              <h3>Comprehensive Training Programs</h3>
-              <p>This is 4th Slide</p>
+              <h2>This is the Quiz</h2>
+              <h3>Slide</h3>
+              <p></p>
               <div>
                 <CustomButton text="Join Now" onClick={() => alert('Join Now clicked!')} />
                 <CustomButton text="Learn More" onClick={() => alert('More knowledge!')} />
               </div>
-
             </div>
-            <div className="carousel-image">
-              <img src={slideImage2} alt="Empower Career" />
-            </div>
+            <div className="carousel-image"></div>
           </div>
         </Carousel.Item>
       </Carousel>

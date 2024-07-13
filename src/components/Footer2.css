@@ -1,5 +1,5 @@
 footer {
-  background-color: #333;
+  background-color: #4F4D8C;
   color: #fff;
   padding: 40px 0;
   font-size: 14px;
@@ -41,7 +41,7 @@ footer {
 }
 
 .headline h3 {
-  border-bottom: 2px solid #ff8c00;
+  border-bottom: 2px solid #69ccdd;
   display: inline-block;
   padding-bottom: 5px;
   margin: 0;
@@ -107,7 +107,7 @@ footer .social-icons a:hover {
 footer .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #ff8c00;
+  border-top: 1px solid #69ccdd;
 }
 
 footer .footer-bottom p {
@@ -115,7 +115,7 @@ footer .footer-bottom p {
 }
 
 footer .footer-bottom a {
-  color: #ff8c00;
+  color: #69ccdd;
   text-decoration: none;
   transition: color 0.3s;
 }

@@ -10,7 +10,7 @@ const Founder = () => {
       </div>
       <div className="founder-message">
         <div className="founder-name">
-        <h1>Founder's Message</h1>
+        <h1>FOUNDER'S MESSAGE</h1>
         </div>
         <p1>
           I have worked as a Technical and SD Consultant for more than ten years, during which time I have seen firsthand the difficulties young professionals get employment. Having established Connecting Dots ERP, a renowned IT institute, my goal is to upskill and prepare young people for the workforce. 

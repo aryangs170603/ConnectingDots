@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./FeedbackandReviews.css";
 import premImage1 from "../Logos/FeedbacksandReviews/review image 1.png";
-import premImage2 from "../Logos/FeedbacksandReviews/review image 2.jpg";
+import premImage2 from "../Logos/FeedbacksandReviews/review image 2.png";
 import premImage3 from "../Logos/FeedbacksandReviews/review image 3.jpg";
 
 const reviews = [
@@ -14,7 +14,7 @@ const reviews = [
     image: premImage3,
   },
   {
-    name: "Bharat Tyagi",
+    name: "Seshu Tamma",
     review:
       "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. Connecting dots stands out as the best choice for those looking to advance their careers in sap experience the benefits of their exceptional training and placement services",
     image: premImage2,
@@ -40,20 +40,20 @@ const FeedbackAndReviews = () => {
       setExpandedIndex(null);
     }
   };
-
+  // for mobile
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside); // for mobile
+    document.addEventListener("touchstart", handleClickOutside); 
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside); // for mobile
+      document.removeEventListener("touchstart", handleClickOutside); 
     };
   }, []);
 
   return (
     <Container fluid className="feedback-section text-center" ref={containerRef}>
-      <h3 className="section-subtitle">Feedbacks & Reviews</h3>
+      <h3 className="section-subtitle">FEEDBACKS & REVIEWS</h3>
       <Row className="justify-content-center">
         {reviews.map((review, index) => (
           <Col key={index} md={4} className="d-flex justify-content-center mb-4">

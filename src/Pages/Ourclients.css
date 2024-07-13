@@ -5,9 +5,7 @@
 }
 
 .section-title {
-  
-  
-  font-size: 30px;
+  font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -24,8 +22,7 @@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
+  background: linear-gradient(to right,  #DFF9FE, #DFF9FE,#DFF9FE);
   margin-top: 40px;
 }
 
@@ -33,11 +30,11 @@
   display: flex;
   animation: marquee 25s linear infinite;
 }
-.our-clients-section-title{
-  font-size: 30px;
+
+.our-clients-section-title h2 {
+  font-size: 3rem;
   margin-bottom: 40px;
 }
-
 
 .clients-marquee-items {
   display: flex;
@@ -59,6 +56,18 @@
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+  }
+}
+
+/* Increase marquee speed on mobile devices */
+@media (max-width: 768px) {
+  .clients-marquee-track {
+    animation: marquee 15s linear infinite;
+  }
+
+  .clients-marquee-track {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }

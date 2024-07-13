@@ -4,7 +4,7 @@ import './Achievements.css';
 const Achievements = () => {
   return (
     <div className="achievements">
-      <h1>Our Achievements</h1>
+      <h1>OUR ACHIEVEMENTS</h1>
       <div className="achievements-grid">
         <div className="achievement-item">
           <img src="src/Logos/Acheivements/Achiv1.jpg" alt="Achievement 1" />
