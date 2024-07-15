@@ -5,8 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-logo">
-        <img src={"src/Logos/Footer/cderp.jpg"} alt="Connecting Dots ERP Logo" />
-
+        <img src={"src/Logos/Navbar/connecting dot erp logo.png"} alt="Connecting Dots ERP Logo" />
       </div>
       <div className="container">
         <div className="row">
@@ -35,6 +34,8 @@ const Footer = () => {
                 <li className="menu-item"><a href="#">Salesforce</a></li>
               </ul>
             </div>
+          </div>
+          <div className="col">
             <div className="widget">
               <div className="headline"><h3>Software Courses</h3></div>
               <ul className="menu">
@@ -95,7 +96,7 @@ const Footer = () => {
               <a href="#"><i className="fa fa-instagram"></i></a>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2022 SevenMentor Pvt. Ltd | All Rights Reserved. Designed And Developed By SevenMentor & Training Pvt. Ltd.</p>
+              <p>&copy; 2022 Ltd.</p>
             </div>
           </div>
         </div>

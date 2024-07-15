@@ -73,13 +73,16 @@
 
 @media (max-width: 768px) {
   .certificate-content {
-    flex-direction: column; /* Change this for mobile view */
+    flex-direction: column;
   }
-
+.certificate-title{
+  font-size: 19px;
+}
   .certificate-text {
     margin-left: 0;
     font-size: 1rem; 
-    text-align: center; /* Center-align text on mobile */
+    text-align: center;
+    
   }
 
   .certificate-text h2 {

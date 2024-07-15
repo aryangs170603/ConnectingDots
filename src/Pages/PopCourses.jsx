@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PopCourses.css';
 import ContactForm from './ContactForm';
 import { Button } from 'react-bootstrap';
@@ -28,6 +28,18 @@ const Courses = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [showModal]);
+
   const handleEnrollNowClick = (course) => {
     setSelectedCourse(course);
     setShowModal(true);
@@ -52,7 +64,6 @@ const Courses = () => {
             <h3>{course.name}</h3>
             <p>{course.count} Seats Left</p>
             <button className="outline-btn1">ENROLL!</button>
-             {showModal && <ContactForm onClose={handleCloseModal} course={selectedCourse} />}
           </div>
         ))}
       </div>
@@ -60,8 +71,7 @@ const Courses = () => {
         <Button className="outline-btn mr-3">Download Brochure</Button>
         <Button className="outline-btn">Book Demo</Button>
       </div>
-      {/* <h2 className="section-title">OUR STUDENTS PLACED AT</h2> */}
-     
+      {showModal && <ContactForm onClose={handleCloseModal} course={selectedCourse} />}
     </div>
   );
 };

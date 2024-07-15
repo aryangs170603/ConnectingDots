@@ -35,28 +35,34 @@ const clients = [
 
 const OurClients = () => {
   return (
-    <Container fluid className="k text-center">
-      <h2 className="section-title">Our Clients</h2>
-      <div className="clients-marquee">
-        <div className="clients-marquee-track">
-          {clients.map((client, index) => (
-            <div key={index} className="client-logo-container">
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="client-logo"
-              />
-            </div>
-          ))}
-          {clients.map((client, index) => (
-            <div key={index + clients.length} className="client-logo-container">
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="client-logo"
-              />
-            </div>
-          ))}
+    <Container fluid className="our-clients-section text-center">
+      <h2 className="section-titleC">Our Clients</h2>
+      <div className="marquee-container">
+        <div className="clients-marquee">
+          <div className="clients-marquee-track">
+            {clients.concat(clients).map((client, index) => (
+              <div key={index} className="client-logo-container">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="client-logo"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="clients-marquee reverse">
+          <div className="clients-marquee-track">
+            {clients.concat(clients).map((client, index) => (
+              <div key={index + clients.length} className="client-logo-container">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="client-logo"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Container>

@@ -4,7 +4,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.section-title {
+.section-titleC {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -15,6 +15,7 @@
   background: rgb(1,1,98);
   background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -31,14 +32,8 @@
   animation: marquee 25s linear infinite;
 }
 
-.our-clients-section-title h2 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.clients-marquee-items {
-  display: flex;
-  align-items: center;
+.clients-marquee.reverse .clients-marquee-track {
+  animation: marquee-reverse 25s linear infinite;
 }
 
 .client-logo-container {
@@ -52,22 +47,38 @@
 }
 
 @keyframes marquee {
-  from {
+  0% {
     transform: translateX(0%);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-/* Increase marquee speed on mobile devices */
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 @media (max-width: 768px) {
   .clients-marquee-track {
     animation: marquee 15s linear infinite;
   }
 
-  .clients-marquee-track {
-    display: flex;
-    flex-wrap: nowrap;
+  .clients-marquee.reverse .clients-marquee-track {
+    animation: marquee-reverse 15s linear infinite;
+  }
+
+  .section-titleC {
+    font-size: 19px;
+  }
+
+  .client-logo {
+    width: auto;
+    height: 30px;
   }
 }

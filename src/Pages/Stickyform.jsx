@@ -1,7 +1,8 @@
+// src/SContactForm.js
 import React, { useState, useEffect } from "react";
 import "./Stickyform.css";
 
-const ContactForm = () => {
+const SContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -33,9 +34,28 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    try {
+      const response = await fetch("http://localhost:3000/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log("Form data submitted successfully");
+        setFormData({ name: "", contact: "", course: "" });
+        // Optionally, show a success message or reset form fields
+      } else {
+        console.error("Error submitting form data:", response.status);
+        // Optionally, show an error message to the user
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Optionally, show an error message to the user
+    }
   };
 
   const toggleFormVisibility = () => {
@@ -50,7 +70,7 @@ const ContactForm = () => {
         </button>
       )}
       {isFormVisible && (
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit} className="contact-formS">
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -86,14 +106,12 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled selected>
-                  Select a course
-                </option>
-                <option value="course1">SAP</option>
-                <option value="course2">IT Courses</option>
-                <option value="course3">Digital Marketing</option>
-                <option value="course4">Data Visualisation</option>
-                <option value="course5">HR Courses</option>
+                <option value="" disabled>Select a course</option>
+                <option value="SAP">SAP</option>
+                <option value="IT Courses">IT Courses</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Data Visualisation">Data Visualisation</option>
+                <option value="HR Courses">HR Courses</option>
               </select>
             </div>
             <div className="form-group">
@@ -106,4 +124,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default SContactForm;

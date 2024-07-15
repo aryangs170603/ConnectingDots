@@ -1,38 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './ContactForm.css';
 
-const ContactForm = ({ onClose, heading, buttonText, formType, course }) => {
+const ContactForm = ({ onClose, course }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add form submission logic here (e.g., sending data to backend, handling locally)
-    onClose(); // Close the form after submission
+
+    emailjs.send(
+      'service_mbz2yyi', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      {
+        course,
+        name: formData.name,
+        mobile: formData.mobile,
+        email: formData.email,
+        to_email: 'manishshinde19996@gmail.com', // The email address to send the form data to
+      },
+      'YOUR_USER_ID' // Replace with your EmailJS user ID
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      onClose(); // Close the form after successful submission
+    }).catch((err) => {
+      console.error('FAILED...', err);
+    });
   };
 
   return (
     <div className="modal">
       <div className="modal-content">
         <span className="close-btn" onClick={onClose}>&times;</span>
-        <h2 className='headinn'>Enroll</h2>
+        <h2 className='headinn'>Enroll in {course}</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label htmlFor="mobile">Mobile Number:</label>
-            <input type="text" id="mobile" name="mobile" required />
+            <input type="text" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email ID:</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
           </div>
-          {formType === 'brochure' && (
-            <div className="form-group">
-              <label htmlFor="course">Course:</label>
-              <input type="text" id="course" name="course" value={course} readOnly />
-            </div>
-          )}
-          <button type="submit" className="submit-btn">{buttonText}</button>
+          <button type="submit" className="submit-btn">Enroll</button>
         </form>
       </div>
     </div>

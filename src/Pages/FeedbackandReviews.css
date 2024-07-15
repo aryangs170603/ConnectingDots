@@ -12,11 +12,10 @@
   background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
   -webkit-background-clip: text;
   color: transparent;
-  
 }
 
 .feedback-card {
-  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: max-height 0.5s ease, padding 0.5s ease;
   background-color: #fff;
   border: 1px solid #ffffff;
   border-radius: 30px;
@@ -47,7 +46,7 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
+  margin-left: -60px;
 }
 
 .fa-quote-left.icon {
@@ -58,12 +57,14 @@
   color: #fff;
   padding: 10px;
   border-radius: 50%;
+  margin-left: -70px;
 }
 
 .review-name {
   font-size: 1.2rem;
   font-weight: bold;
-  
+  margin-left: -85px;
+  margin-top: 20px;
 }
 
 .review-post {
@@ -77,38 +78,35 @@
   justify-content: within;
   font-size: 14px;
   max-height: 100px;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out, color 0.5s ease-in-out;
   overflow: hidden;
+  margin-left: -50px;
 }
 
 .feedback-card.expanded .review-text {
   max-height: 1000px;
 }
 
-.feedback-card:hover {
-  background-color: #43c0df;
-  color: #fff;
-  cursor: pointer;
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-
-.feedback-card:hover .review-post,
-.feedback-card:hover .review-text {
-  color: #fff;
-}
-
-.feedback-card:hover .fa-quote-left.icon {
-  background-color: #fff;
-  color: #43c0df;
-}
-
-.read-more {
+.read-more{
   color: #000000;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 2px;
 }
 
-.read-more:hover {
-  color: #000000;
-  text-decoration: underline;
+/* Hide radio buttons on mobile devices */
+@media (max-width: 768px) {
+  .radio-buttons {
+    display: none;
+  }
+}
+
+/* Ensure single column layout on mobile devices */
+@media (max-width: 768px) {
+  .feedback-card {
+    width: 100%;
+    max-width: none;
+  }
 }

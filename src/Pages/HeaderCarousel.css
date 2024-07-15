@@ -18,6 +18,7 @@
   width: auto;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 .carousel-slide3 {
   display: flex;
   align-items: center;
@@ -26,38 +27,72 @@
   padding: 50px;
   background-color: #E5E5ED;
 }
-.static-cardH {
-  width: 550px;
- background-color: #878787;
-  box-shadow: 0 4px 8px rgb(31, 31, 31, 0.4);
-  border-radius: 30%;
- 
-}
-.carousel-image3 img {
-  width: auto;
-  height: 375px;
 
+.cardBox {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  margin-right: 80px;
 }
+
+.cardH {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  background: #ffffff;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #000000;
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.7) 0px 8px 6px -8px inset;
+}
+
+.cardH .content {
+  transform: translateY(0);
+  opacity: 1;
+  transition: none;
+}
+
+.cardBox::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 150%;
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  background: linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  
+  transform-origin: center;
+  animation: glowing 5s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .transition-image {
-  width: 80%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   transition: opacity 0.5s ease-in-out;
 }
-
-.transition-image.exiting {
-  opacity: 0;
-}
-
-.transition-image.entering {
-  opacity: 1;
-}
-.image-card {
-  max-width: 80%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
 
 .logostrip img {
   height: 130px;
@@ -108,7 +143,9 @@
 .carousel-text4 {
   color: #110626;
   margin-left: 90px;
-  text-align: center;
+  text-align: top;
+  max-width: 600px;
+  
 }
 
 .carousel-text button {
@@ -174,7 +211,7 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  display: flex;
+  
   align-items: center;
   justify-content: center;
 }
@@ -243,6 +280,105 @@ button {
 .btn-3 span:hover:after {
   width: 100%;
 }
+
+/*slde4*/ 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.carousel-slide4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 580px;
+  padding: 0px;
+  background-color: #E5E5ED;
+}
+
+.left-sideH {
+  flex: 1;
+  padding: 50px;
+}
+
+.left-sideH h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.left-sideH p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.quiz-options {
+  display: flex;
+  gap: 20px;
+}
+
+.quiz-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-option .circular-button {
+  color: black;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.highlight {
+  color: #2277d3; /* Or any other highlighting style you prefer */
+  font-weight: bold;
+}
+
+
+.circular-button:hover {
+  background-color: #0fb3a8;
+  
+}
+
+.quiz-option span {
+  font-size: 16px;
+}
+
+.right-sideH {
+  flex: 1;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 50%;
+  height: 580px;
+}
+
+
+.go-button {
+  color: black;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 150px;
+}
+
+.go-button:hover {
+  background-color: #0fb3a8;
+}
+
+/*responsive*/
 @media (max-width: 768px) {
   .carousel-slide, .carousel-slide3, .carousel-slide4 {
     flex-direction: column;
@@ -262,7 +398,15 @@ button {
     width: 100%;
     height: auto;
   }
-
+  .cardBox {
+      width: 70%;
+    height: 60%;
+      margin: 10px ;
+    margin-bottom: 60px;
+    
+    }
+  
+  
   .logostrip img {
     width: 100%;
     height: auto;
@@ -285,7 +429,7 @@ button {
   }
   .custom-btn {
     width: auto;
-    height : 30px;
+    height : 50px;
   }
   .carousel-image3 img{
      width: auto;
@@ -293,9 +437,11 @@ button {
   }
 .carousel-text4 h1{
   font-size: 14px;
+  display: none;
 }
 .carousel-text4 h3{
   font-size: 10px;
+  display: none;
 }
 .carousel-slide{
   height: 340px;
@@ -303,6 +449,8 @@ button {
 
   .carousel-slide3{
     height: 340px;
+    
+    justify-content: center;
   }
   .carousel-slideB {
     height: 340px;
@@ -312,4 +460,44 @@ button {
   .carousel-slide4 img{
     margin-top: 50px;
   }
-}
+ 
+  .carousel-slide4{
+    height: 340px;
+  }
+
+  .left-sideH {
+    padding: 2px;
+    text-align: center;
+  }
+
+  .left-sideH h1 {
+    font-size: 32px;
+  }
+
+  .left-sideH p {
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .quiz-options {
+    justify-content: center; 
+    width: 100%;
+  }
+
+  .quiz-option {
+    margin-bottom: 10px;
+  }
+
+  .right-sideH {
+    display: none;
+  }
+
+  .go-button {
+    position: static;
+    margin-top: 20px;
+    display: block;
+    align-self: center; 
+  }
+  }
+

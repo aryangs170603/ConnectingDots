@@ -2,13 +2,17 @@
   background-color: #ffffff;
   font-family: 'Lato', sans-serif;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .courses-container {
   text-align: center;
   margin: 20px;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
-  
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 .courses-title h2 {
@@ -89,7 +93,7 @@
 .outline-btn {
   width: 20%;
   height: 40px;
-  color: #fff;
+  color: #ffffff;
   border-radius: 5px;
   padding: 0;
   font-family: 'Lato', sans-serif;
@@ -168,15 +172,43 @@
 .outline-btn1:hover {
   background-color: #1f95d1;
 }
-
+/*responsive*/
 @media screen and (max-width: 768px) {
   .courses-grid {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .course-card {
-    width: 80%;
+    width: 45%;
+    height: auto;
     margin: 10px 0;
+  }
+
+  .outline-btn {
+    font-size: 12px;
+    width: 70%;
+  }
+  
+.outline-btn1{
+  width: 90%;
+  font-size: 13px;
+}
+  .courses-title h2 {
+    font-size: 19px;
+  }
+
+  .course-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .course-card h3 {
+    font-size: 18px;
+  }
+
+  .course-card p {
+    font-size: 14px;
   }
 }

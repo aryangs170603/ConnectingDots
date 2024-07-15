@@ -1,4 +1,4 @@
-.contact-form {
+.contact-formS {
   position: -webkit-sticky; 
   position: sticky;
   bottom: 0;
@@ -14,7 +14,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.contact-form h2 {
+.contact-formS h2 {
   margin-bottom: 20px;
 }
 

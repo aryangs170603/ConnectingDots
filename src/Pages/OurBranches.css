@@ -24,10 +24,10 @@
 }
 
 .branch-card {
-  background-color: #4F4D8C;
+   background-color: #022674;
   border: 1px solid #4F4D8C;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px;  
   margin: 10px;
   width: 300px;
   text-align: center;
@@ -74,4 +74,9 @@
 .leaflet-control-attribution {
   color: black !important; 
 }
-
+@media (max-width: 768px){
+  .branches-title{
+    font-size: 19px;
+  }
+  
+}

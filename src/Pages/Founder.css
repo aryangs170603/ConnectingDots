@@ -81,7 +81,10 @@
     width: 80%;
     margin: 20px 0;
   }
-
+  .founder-name h1{
+    font-size: 19px;
+  }
+  
   .founder-message p {
     margin-top: 10px;
   }

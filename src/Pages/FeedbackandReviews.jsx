@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./FeedbackandReviews.css";
 import premImage1 from "../Logos/FeedbacksandReviews/review image 1.png";
@@ -16,7 +16,7 @@ const reviews = [
   {
     name: "Seshu Tamma",
     review:
-      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. Connecting dots stands out as the best choice for those looking to advance their careers in sap experience the benefits of their exceptional training and placement services",
+      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. ",
     image: premImage2,
   },
   {
@@ -27,8 +27,11 @@ const reviews = [
   },
 ];
 
+const duplicateReviews = [...reviews, ...reviews];
+
 const FeedbackAndReviews = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const containerRef = useRef(null);
 
   const toggleReadMore = (index) => {
@@ -40,62 +43,150 @@ const FeedbackAndReviews = () => {
       setExpandedIndex(null);
     }
   };
-  // for mobile
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside); 
+    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside); 
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, []);
+
+  const handleSelect = (selectedIndex, e) => {
+    setSelectedIndex(selectedIndex);
+  };
+
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <Container fluid className="feedback-section text-center" ref={containerRef}>
       <h3 className="section-subtitle">FEEDBACKS & REVIEWS</h3>
-      <Row className="justify-content-center">
-        {reviews.map((review, index) => (
-          <Col key={index} md={4} className="d-flex justify-content-center mb-4">
-            <Card
-              className={`feedback-card shadow ${
-                expandedIndex === index ? "expanded" : ""
-              }`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleReadMore(index);
-              }}
-            >
-              <Card.Body>
-                <div className="img-container">
-                  <img
-                    src={review.image}
-                    alt={review.name}
-                    className="review-image"
-                  />
-                  <i className="fa fa-quote-left icon"></i>
-                </div>
-                <Card.Title className="review-name">{review.name}</Card.Title>
-                <Card.Text className="review-text">
-                  {expandedIndex === index
-                    ? review.review
-                    : `${review.review.substring(0, 80)}...`}
-                </Card.Text>
-                <Button
-                  variant="link"
-                  className="read-more"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleReadMore(index);
-                  }}
-                >
-                  {expandedIndex === index ? "Read Less" : "Read More"}
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <Carousel
+        activeIndex={selectedIndex}
+        onSelect={handleSelect}
+        indicators={false}
+        controls={false}
+      >
+        {isMobile
+          ? duplicateReviews.map((review, index) => (
+              <Carousel.Item key={index}>
+                <Row className="justify-content-center">
+                  <Col xs={12} className="d-flex justify-content-center mb-4">
+                    <Card
+                      className={`feedback-card shadow ${
+                        expandedIndex === index ? "expanded" : ""
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleReadMore(index);
+                      }}
+                    >
+                      <div className="card-body-wrapper">
+                        <Card.Body>
+                          <div className="img-container">
+                            <img
+                              src={review.image}
+                              alt={review.name}
+                              className="review-image"
+                            />
+                            <i className="fa fa-quote-left icon"></i>
+                          </div>
+                          <Card.Title className="review-name">{review.name}</Card.Title>
+                          <Card.Text className="review-text">
+                            {expandedIndex === index
+                              ? review.review
+                              : `${review.review.substring(0, 80)}...`}
+                          </Card.Text>
+                          <Button
+                            variant="link"
+                            className="read-more"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleReadMore(index);
+                            }}
+                          >
+                            {expandedIndex === index ? "Read Less" : "Read More"}
+                          </Button>
+                        </Card.Body>
+                      </div>
+                    </Card>
+                  </Col>
+                </Row>
+              </Carousel.Item>
+            ))
+          : duplicateReviews.map((review, index) => (
+              <Carousel.Item key={index}>
+                <Row className="justify-content-center">
+                  {[index, index + 1, index + 2].map((i) => (
+                    <Col key={i} md={4} xs={12} className="d-flex justify-content-center mb-4">
+                      {duplicateReviews[i] && (
+                        <Card
+                          className={`feedback-card shadow ${
+                            expandedIndex === i ? "expanded" : ""
+                          }`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleReadMore(i);
+                          }}
+                        >
+                          <div className="card-body-wrapper">
+                            <Card.Body>
+                              <div className="img-container">
+                                <img
+                                  src={duplicateReviews[i].image}
+                                  alt={duplicateReviews[i].name}
+                                  className="review-image"
+                                />
+                                <i className="fa fa-quote-left icon"></i>
+                              </div>
+                              <Card.Title className="review-name">{duplicateReviews[i].name}</Card.Title>
+                              <Card.Text className="review-text">
+                                {expandedIndex === i
+                                  ? duplicateReviews[i].review
+                                  : `${duplicateReviews[i].review.substring(0, 80)}...`}
+                              </Card.Text>
+                              <Button
+                                variant="link"
+                                className="read-more"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleReadMore(i);
+                                }}
+                              >
+                                {expandedIndex === i ? "Read Less" : "Read More"}
+                              </Button>
+                            </Card.Body>
+                          </div>
+                        </Card>
+                      )}
+                    </Col>
+                  ))}
+                </Row>
+              </Carousel.Item>
+            ))}
+      </Carousel>
+      {!isMobile && (
+        <div className="radio-buttons">
+          <label>
+            <input
+              type="radio"
+              name="review-set"
+              checked={selectedIndex === 0}
+              onChange={() => handleSelect(0)}
+            />
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="review-set"
+              checked={selectedIndex === 1}
+              onChange={() => handleSelect(1)}
+            />
+          </label>
+        </div>
+      )}
     </Container>
   );
 };
