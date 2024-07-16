@@ -95,7 +95,7 @@
 
 /* Ensure all cards have the same layout */
 .card {
-  background-color: #ff0000;
+  background-color: #ffffff;
   max-height: 220px;
   width: 380px;
   gap: 1rem;
@@ -113,7 +113,7 @@
 
 /* Custom styles for each card */
 .card-0 {
-  background-color: #ff0000;
+  background-color: #ffffff;
 }
 .card-0 .company-icon{
   height: 50px;
@@ -121,14 +121,14 @@
 }
 
 .card-1 {
-  background-color: #00ff00;
+  background-color: #ffffff;
 }
 .card-1 .company-icon{
   height: 60px;
   width: 80px;
 }
 .card-2 {
-  background-color: #0000ff;
+  background-color: #ffffff;
 }
 .card-2 .company-icon{
   height: 80px;
@@ -137,7 +137,7 @@
   margin-bottom: 50px;
 }
 .card-3 {
-  background-color: #ffff00;
+  background-color: #ffffff;
 }
 .card-3 .company-icon{
   height: 120px;
@@ -155,7 +155,7 @@
 .card-6,
 .card-7,
 .card-8 {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 /* Media Queries */

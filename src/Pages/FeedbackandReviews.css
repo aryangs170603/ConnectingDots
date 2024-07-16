@@ -92,7 +92,8 @@
   justify-content: center;
   margin-top: 20px;
 }
-.read-more{
+
+.read-more {
   color: #000000;
 }
 
@@ -109,4 +110,13 @@
     width: 100%;
     max-width: none;
   }
+}
+
+.read-more {
+  color: #000000;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline;
 }

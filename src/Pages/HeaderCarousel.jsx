@@ -4,24 +4,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './HeaderCarousel.css';
 import TextTransition, { presets } from 'react-text-transition';
 import slideImage3 from '../Logos/Headercarousel/file02.png';
-import slide4 from '../Logos/Headercarousel/slide4 img.png';
+// import slide4 from '../Logos/Headercarousel/slide4 img.png';
 import logostrip from '../Logos/Headercarousel/logo strip.png';
 import SAPmodule1 from '../Logos/Headercarousel/SAP module1.png';
 import DSh from '../Logos/Headercarousel/DSh.png';
 import DGM from '../Logos/Headercarousel/DGM.png';
 import IT from '../Logos/Headercarousel/IT.png';
+//import assurance from '../Logos/Headercarousel/100%assurance.png';
 
 const TEXTS1 = [
-  'Connect Your Dots with SAP Expertise',
+  'Connect Your Dots with  SAP Expertise',
   'Connect Your Dots with Data Science',
   'Connect Your Dots in IT Excellence',
   'Connect Your Dots in Digital Marketing'
 ];
 const TEXTS2 = [
-  'SAP is a leading enterprise software used by companies worldwide to manage business operations and customer relations.',
-  'Data Science is the key to unlocking valuable insights from vast amounts of data.',
-  'Advance your IT career with industry relevant courses in web development, Python, Java, and more.',
-  'Digital marketing allows you to gather customer data in a way that offline marketing cant'
+  // 'SAP is a leading enterprise software used by companies worldwide to manage business operations and customer relations.',
+  // 'Data Science is the key to unlocking valuable insights from vast amounts of data.',
+  // 'Advance your IT career with industry relevant courses in web development, Python, Java, and more.',
+  // 'Digital marketing allows you to gather customer data in a way that offline marketing cant'
 ];
 const IMAGES = [SAPmodule1, DSh, IT, DGM];
 
@@ -82,6 +83,7 @@ const HeaderCarousel = () => {
 
   return (
     <Carousel>
+    {/* /*First Slide */}
       <Carousel.Item>
         <div className="carousel-slide">
           <div className="carousel-text">
@@ -95,7 +97,7 @@ const HeaderCarousel = () => {
             </Col>
             <div>
               <CustomButton text="Freshers" onClick={() => alert('Freshers clicked!')} />
-              <CustomButton text="Professionals" onClick={() => alert('Professionals clicked!')} />
+              {/* <CustomButton text="Professionals" onClick={() => alert('Professionals clicked!')} /> */}
             </div>
             <div className="logostrip">
               <img src={logostrip} alt="companies" />
@@ -106,10 +108,10 @@ const HeaderCarousel = () => {
           </div>
         </div>
       </Carousel.Item>
-
+       {/* Second Slide */}
       <Carousel.Item>
-        <div className="carousel-slide3">
-          <div className="carousel-text4">
+        <div className="carousel-slide2">
+          <div className="carousel-text2">
             <h1 className={textVisible ? 'visible' : 'hidden'}>
               <TextTransition springConfig={presets.wobbly}>
                 {TEXTS1[index]}
@@ -121,9 +123,9 @@ const HeaderCarousel = () => {
               </TextTransition>
             </h3>
           </div>
-          <div className="cardBox">
-            <div className="cardH">
-              <div className="content">
+          <div className="cardBox2">
+            <div className="cardH2">
+              <div className="content2">
                 <Card.Img
                   className="transition-image"
                   style={getImageStyle(index)}
@@ -136,15 +138,50 @@ const HeaderCarousel = () => {
           </div>
         </div>
       </Carousel.Item>
-
+      {/* Third Slide */}
       <Carousel.Item>
-        <div className="carousel-slideB">
-          <div className="carousel-slide4">
-            <img src={slide4} alt="Career Potential" />
+        <div className="carousel-slide3">
+          <div className="left-sideH3">
+            <h1>
+              Secure your <span className="highlight">Dream Career</span> with <span className="bold">Live Classes</span> From Industry Experts.
+            </h1>
+            <br></br>
+            <br></br>
+            <h2>
+              Our <span className="bold">Mentors</span> Come From Top <span className="highlight">MNCs</span>
+            </h2>
+            <br></br>
+            <br></br>
+           <h2>
+              <img src="src/Logos/assurance.png" alt="" className="assured-placement-image" /> 
+              Assured Placement Opportunity*
+             </h2>
+          </div>
+          <div className="cardBox3">
+            <div className="cardH3">
+              <h2>Our Mentors Come From</h2>
+              <div className="content3">
+                <div className="image-grid">
+                  <img src="src/Logos/Ourclients/ibm1.png" alt="Image 1" className="grid-image grid-image-ibm"/>
+                  <img src="src/Logos/Ourclients/tcs1.png" alt="Image 2" className="grid-image grid-image-tcs"/>
+                  <img src="src/Logos/Headercarousel/LnT.png" alt="Image 3" className="grid-image grid-image-Lnt"/>
+                  <img src="src/Logos/Ourclients/amdocs1.png" alt="Image 4" className="grid-image grid-image-amd"/>
+                  <img src="src/Logos/Ourclients/infosys2.png" alt="Image 5" className="grid-image grid-image-info"/>
+                  <img src="src/Logos/Ourclients/wipro.png" alt="Image 6" className="grid-image grid-image-wip"/>
+                  <img src="src/Logos/Ourclients/deloitte.png" alt="Image 7" className="grid-imaged grid-image-del"/>
+                  <img src="src/Logos/Ourclients/accenture1.png" alt="Image 8" className="grid-image grid-image-acc"/>
+                  <img src="src/Logos/Headercarousel/BMW.png" alt="Image 9" className="grid-image grid-image-bmw"/>
+                  <img src="src/Logos/Ourclients/cognizant1.png" alt="Image 7" className="grid-image grid-image-cog"/>
+                  <img src="src/Logos/Headercarousel/Cisco.png" alt="Image 8" className="grid-image grid-image-cis"/>
+                  <img src="src/Logos/Headercarousel/TechM.png" alt="Image 9" className="grid-image grid-image-tec"/>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Carousel.Item>
 
+{/* fourth slide */}
       <Carousel.Item>
         <div className="carousel-slide4">
           <div className="left-sideH">

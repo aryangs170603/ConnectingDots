@@ -1,4 +1,5 @@
 /*Main carousle*/
+/* slide1 */
 .carousel-slide {
   display: flex;
   align-items: center;
@@ -17,122 +18,35 @@
   height: 570px;
   width: auto;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-.carousel-slide3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 580px;
-  padding: 50px;
-  background-color: #E5E5ED;
-}
-
-.cardBox {
-  width: 500px;
-  height: 500px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
-  margin-right: 80px;
-}
-
-.cardH {
-  position: absolute;
-  width: 98%;
-  height: 98%;
-  background: #ffffff;
-  border-radius: 20px;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: #000000;
-  overflow: hidden;
-  padding: 20px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.7) 0px 8px 6px -8px inset;
-}
-
-.cardH .content {
-  transform: translateY(0);
-  opacity: 1;
-  transition: none;
-}
-
-.cardBox::before {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 150%;
-  background: #40e0d0;
-  background: -webkit-linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
-  background: linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
-  
-  transform-origin: center;
-  animation: glowing 5s linear infinite;
-}
-
-@keyframes glowing {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.transition-image {
-  width: 90%;
-  height: auto;
-  border-radius: 8px;
-  transition: opacity 0.5s ease-in-out;
-}
-
 .logostrip img {
   height: 130px;
   width: 800px;
   margin-top: 70px;
   margin-left: 10px;
 }
-
-.carousel-slide4 img {
-  height: 100%;
-  width: 1100px;
-  margin-left: 150px;
-}
-
-.carousel-slide4 {
-  background-color: #E5E5ED;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 580px;
-  padding: 50px
-}
-
 .carousel-text {
   width: 50%;
   text-align: left;
   padding-right: 20px;
   position: relative;
   margin-top: 50px;
-  font-family: 'Lato', sans-serif;
+  
+  
 }
 
 .carousel-text h2 {
   color: #000;
   margin-bottom: 20px;
+  font-size: 42px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 .carousel-text h3 {
   color: #333;
   margin-bottom: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 .carousel-text p {
@@ -145,7 +59,7 @@
   margin-left: 90px;
   text-align: top;
   max-width: 600px;
-  
+
 }
 
 .carousel-text button {
@@ -186,6 +100,7 @@ button {
   transition: all 0.3s ease;
   position: relative;
   display: inline-flex;
+  line-height: 50%;
   align-items: center;
   justify-content: center;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
@@ -211,7 +126,7 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  
+
   align-items: center;
   justify-content: center;
 }
@@ -281,6 +196,258 @@ button {
   width: 100%;
 }
 
+
+/* slide2 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+.carousel-slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 580px;
+  padding: 50px;
+  background-color: #E5E5ED;
+}
+
+.carousel-text2{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+.cardBox2 {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  margin-right: 80px;
+}
+
+.cardH2 {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  background: #ffffff;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #000000;
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.7) 0px 8px 6px -8px inset;
+}
+
+.cardH2 .content2 {
+  transform: translateY(0);
+  opacity: 1;
+  transition: none;
+}
+
+.cardBox2::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 150%;
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  background: linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  
+  transform-origin: center;
+  animation: glowing 5s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.transition-image {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
+/* slide3 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+.carousel-slide3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 580px;
+  padding: 50px;
+  background-color: #E5E5ED;
+}
+
+.left-sideH3 h1 {
+  font-size: 48px;
+  width: 850px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.left-sideH3 h2 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.assured-placement-image {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cardBox3 {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  margin-right: 80px;
+}
+
+.cardH3 {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  background: #ffffff;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #000000;
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.7) 0px 8px 6px -8px inset;
+}
+
+.cardH3 h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.cardH3 .content3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition: none;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-image-ibm {
+  width: 100px;
+  height: auto;
+}
+
+.grid-image-tcs {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-Lnt {
+  width: 80px;
+  height: auto;
+}
+
+.grid-image-amd {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-info {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-wip {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-del {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-acc {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-bmw {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-cog {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-cis {
+  width: 130px;
+  height: auto;
+}
+
+.grid-image-tec {
+  width: 130px;
+  height: auto;
+}
+
+.cardBox3::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 150%;
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #ff0ff7, #ac36c4, #ffb36b, #2efffc);
+  background: linear-gradient(to right, #ff0ff7, #ac36c4, #ffb36b, #2efffc);
+  transform-origin: center;
+  animation: glowing 5s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 /*slde4*/ 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -293,7 +460,11 @@ button {
   padding: 0px;
   background-color: #E5E5ED;
 }
-
+.carousel-slide4 img {
+  height: 100%;
+  width: 1100px;
+  margin-left: 150px;
+}
 .left-sideH {
   flex: 1;
   padding: 50px;
@@ -335,7 +506,7 @@ button {
   cursor: pointer;
 }
 .highlight {
-  color: #2277d3; /* Or any other highlighting style you prefer */
+  color: #2277d3; 
   font-weight: bold;
 }
 
@@ -379,7 +550,7 @@ button {
 }
 
 /*responsive*/
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .carousel-slide, .carousel-slide3, .carousel-slide4 {
     flex-direction: column;
     height: auto;
@@ -394,18 +565,18 @@ button {
   }
 
   .carousel-image img, .carousel-image3 img, .carousel-slide4 img {
-    margin: 20px 0;
-    width: 100%;
-    height: auto;
+    display: none;
   }
-  .cardBox {
-      width: 70%;
+  .carousel-slide2 {
+    height: 340px;
+    background-color: #E5E5ED;
+  }
+  .cardBox2 {
+    width: 70%;
     height: 60%;
-      margin: 10px ;
-    margin-bottom: 60px;
     
-    }
-  
+  }
+
   
   .logostrip img {
     width: 100%;
@@ -413,55 +584,102 @@ button {
     margin-top: 20px;
     margin-left: 0;
   }
+
   .carousel-slide .carousel-image {
     display: none;
   }
 
-  .carousel-text h2  {
+  .carousel-text h2 {
     font-size: 14px;
   }
-  
-  .carousel-text h3  {
-    font-size : 12px;
+
+  .carousel-text h3 {
+    font-size: 12px;
   }
-  .carousel-text p  {
-    font-size : 8px;
+
+  .carousel-text p {
+    font-size: 8px;
   }
+
   .custom-btn {
     width: auto;
-    height : 50px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 50%;
   }
-  .carousel-image3 img{
-     width: auto;
+
+  .carousel-image3 img {
+    width: auto;
     height: 100px;
   }
-.carousel-text4 h1{
-  font-size: 14px;
-  display: none;
-}
-.carousel-text4 h3{
-  font-size: 10px;
-  display: none;
-}
-.carousel-slide{
-  height: 340px;
-}
 
-  .carousel-slide3{
-    height: 340px;
+  .carousel-text2 h1 {
     
-    justify-content: center;
-  }
-  .carousel-slideB {
-    height: 340px;
-    background-color:#E5E5ED ;
+    display: none;
   }
 
-  .carousel-slide4 img{
-    margin-top: 50px;
+  .carousel-text2 h3 {
+    
+    display: none;
   }
+
+  .carousel-slide {
+    height: 340px;
+  }
+
+  
+
  
-  .carousel-slide4{
+  .carousel-slide3 {
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    height: 340px; /* Ensuring the height remains 340px */
+  }
+
+  .left-sideH3 h1 {
+    display: none;
+  }
+
+  .left-sideH3 h2 {
+    display: none; /* Hides paragraph text on mobile screens */
+  }
+
+  .assured-placement-image {
+    display: none;
+  }
+
+  .cardBox3 {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .cardH3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Added background color for visibility */
+    border: 1px solid #ccc; /* Added border for visibility */
+  }
+
+  .cardH3 h2 {
+    font-size: 18px;
+  }
+
+  .content3 {
+    display: none; /* Hides images inside the card */
+  }
+
+  .cardBox3::before {
+    width: 60%;
+    height: 100%;
+  }
+
+  /* slide4 */
+  .carousel-slide4 {
     height: 340px;
   }
 
@@ -471,33 +689,34 @@ button {
   }
 
   .left-sideH h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .left-sideH p {
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
     margin-bottom: 20px;
   }
 
   .quiz-options {
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
+    gap: 10px;
   }
 
   .quiz-option {
     margin-bottom: 10px;
   }
 
-  .right-sideH {
-    display: none;
+  .carousel-slide4 .circular-button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
 
   .go-button {
-    position: static;
-    margin-top: 20px;
-    display: block;
-    align-self: center; 
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
-  }
-
+}

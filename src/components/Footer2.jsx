@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-logo">
         <img src={"src/Logos/Navbar/connecting dot erp logo.png"} alt="Connecting Dots ERP Logo" />
       </div>
-      <div className="container">
+      <div className="footer-container">
         <div className="row">
           <div className="col">
             <div className="widget">

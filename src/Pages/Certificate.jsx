@@ -12,11 +12,10 @@ const Certificate = () => {
         </div>
         <div className="certificate-text">
           <h2>Congratulations on Completing Your Training!</h2>
-          <p>This certificate certifies that Mr XYZ has successfully completed the program on dd/mm/yyyy.</p>
+          <p>This certificate proudly recognizes that Mr./Miss XYZ has successfully completed the program on dd/mm/yyyy. </p>
           <p>
-            By earning this certificate, you have also earned a total of 24 credits, which are recognized under the
-            guidelines approved by the Ministry of Micro, Small and Medium Enterprises (MSME). These credits can be
-            utilized in furthering your education or in gaining professional recognition in your chosen field.
+            By earning this certificate, whether through our online or offline courses, you have demonstrated your commitment to excellence and continuous learning. This certificate is a testament to your dedication and hard work, recognized under the standards set by our esteemed institution.
+            At <span class='highlight-founder-1'>Connecting Dots ERP</span>, we strive to be the <span class='highlight-founder'>best SAP training institute </span>, ensuring that our alumni are well-prepared for their careers.
           </p>
         </div>
       </div>

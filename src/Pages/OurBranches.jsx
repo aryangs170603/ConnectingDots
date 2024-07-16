@@ -20,19 +20,19 @@ const branches = [
     city: 'Pune',
     address: '1st Floor,101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad, Maharashtra 411027',
     position: [18.586392186498944, 73.78140166973165],
-    mapLink: 'https://maps.app.goo.gl/ntqgJmX5nYwLmwbH6',
+    mapLink: 'https://g.co/kgs/2ovQeEb',
   },
   {
     city: 'Mumbai',
     address: 'Office No. 806, 8th Floor, Paradise Tower, next to MCDonalds, Naupada, Thane West, Mumbai, Thane, Maharashtra 400601',
     position: [19.1877496131839, 72.97525703071106],
-    mapLink: 'https://maps.app.goo.gl/nDrfHe75HqZ4dKXU9',
+    mapLink: 'https://g.co/kgs/8oPq6on',
   },
   {
     city: 'Raipur',
-    address: 'G-54, New Panchsheel Nagar, Civil Lines, Raipur, Chhattisgarh 492001',
+    address: ' New Panchsheel Nagar, Civil Lines, Raipur, Chhattisgarh 492001',
     position: [21.237314571201736, 81.6539475802003],
-    mapLink: 'https://maps.app.goo.gl/vJucPySnJxGsMpe59',
+    mapLink: 'https://g.co/kgs/dkg98uo',
   }
 ];
 

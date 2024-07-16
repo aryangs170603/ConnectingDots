@@ -21,15 +21,20 @@
 
 .founder-name h1 {
   margin-bottom: 80px;
+  color: ;
   letter-spacing: 8px;
   font-weight: bold;
    font-size: 2.5rem;
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  -webkit-background-clip: text;
+  color: transparent;
+  
 }
 
 .founder-message {
   flex: 1;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #000000;
   
@@ -49,6 +54,18 @@
   font-size: 40px;
   color: #0f0b0b;
 }
+.highlight-founder {
+  color: #3d0eaa;
+  padding: 0 5px; 
+  font-weight: bold;
+}
+.highlight-founder-1 {
+  color: #3d0eaa;
+  padding: 0 5px; 
+  font-weight: bold;
+  
+}
+
 
 /* Responsive styles */
 @media (max-width: 1024px) {

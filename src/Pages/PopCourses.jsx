@@ -12,6 +12,7 @@ import img5 from '../Icons/HR PR2.png';
 import img6 from '../Icons/SEO2.png';
 import img7 from '../Icons/MERN.png';
 import img8 from '../Icons/UIUX.png';
+import img9 from '../Icons/python-file.png';
 
 const courses = [
   { name: 'SAP FICO Courses', count: 25, icon: img1 },
@@ -22,6 +23,7 @@ const courses = [
   { name: 'SEO', count: 12, icon: img6 },
   { name: 'Mern Stack', count: 17, icon: img7 },
   { name: 'UI/UX', count: 17, icon: img8 },
+  { name: 'Python', count: 17, icon: img9 },
 ];
 
 const Courses = () => {

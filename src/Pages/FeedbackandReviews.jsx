@@ -14,10 +14,22 @@ const reviews = [
     image: premImage3,
   },
   {
+    name: "Shweta Udainiya",
+    review:
+      "Connecting Dots Advancements complete projects, master coaches, adaptable learning choices, and solid position support make them the best online SAP preparing establishment in Mumbai. I did my SAP SD Course from here. I prescribe you to join Connecting Dots Advancements for best online SAP SD Course and venture out towards a fruitful vocation in SAP.",
+    image: premImage1,
+  },
+  {
     name: "Seshu Tamma",
     review:
       "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. ",
     image: premImage2,
+  },
+  {
+    name: "Niveath P",
+    review:
+      "I have completed the SAP HCM course in Connecting Dots ERP in Mumbai, and I must say it was a truly world's best experience. The instructors have next level of expertise, guiding us through the complexities of SAP with clarity and patience. The course structure was well-designed, covering all essential modules comprehensively. I have recommended the course to my friends also.",
+    image: premImage3,
   },
   {
     name: "Shweta Udainiya",
@@ -25,9 +37,16 @@ const reviews = [
       "Connecting Dots Advancements complete projects, master coaches, adaptable learning choices, and solid position support make them the best online SAP preparing establishment in Mumbai. I did my SAP SD Course from here. I prescribe you to join Connecting Dots Advancements for best online SAP SD Course and venture out towards a fruitful vocation in SAP.",
     image: premImage1,
   },
+  {
+    name: "Seshu Tamma",
+    review:
+      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. ",
+    image: premImage2,
+  },
+  
 ];
 
-const duplicateReviews = [...reviews, ...reviews];
+const duplicateReviews = [...reviews]; // Duplicating the reviews to ensure seamless carousel
 
 const FeedbackAndReviews = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);

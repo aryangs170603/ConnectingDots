@@ -14,15 +14,19 @@ const Founder = () => {
         </div>
         <p1>
           I have worked as a Technical and SD Consultant for more than ten years, during which time I have seen firsthand the difficulties young professionals get employment. Having established Connecting Dots ERP, a renowned IT institute, my goal is to upskill and prepare young people for the workforce. 
-          Connecting Dots ERP is committed to equipping the upcoming generation with the necessary abilities and knowledge to succeed in the fiercely competitive technology sector. Our goal is to close the skills and employment gaps by making sure our students are equipped with the knowledge and skills needed to succeed in the workforce.
+         <span class="highlight-founder-1"> Connecting Dots ERP</span> is committed to equipping the upcoming generation with the necessary abilities and knowledge to succeed in the fiercely competitive technology sector. Our goal is to close the skills and employment gaps by making sure our students are equipped with the knowledge and skills needed to succeed in the workforce.
 
           
         </p1> 
         <br>
         </br>
         <p>
-          Join us at Connecting Dots ERP and take the next step towards a successful and fulfilling career in SAP ,Data Science and other  IT courses
+          Join us at Connecting Dots ERP and take the next step towards a successful and fulfilling 
+          <span class="highlight-founder">career in SAP</span>,
+          <span class="highlight-founder">Data Science</span>, and other 
+          <span class="highlight-founder">IT courses</span>.
         </p>
+
         <br></br>
         <p className="signature">~N.K. Singh</p>
       </div>

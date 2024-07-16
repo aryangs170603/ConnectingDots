@@ -51,6 +51,20 @@ body {
 .navbar-toggler {
   border: none;
   font-size: 1.25rem;
+  padding: 0;
+  margin-left: auto;
+  position: relative;
+}
+
+.navbar-toggler:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-right: 2px;
+  }
 }
 
 .navbar-toggler:focus,
@@ -105,7 +119,7 @@ body {
   width: 170px;
   max-width: 400px;
   background-color: #cccccc;
-  margin-left: 320px;
+  margin-left: 200px;
 }
 
 .search-bar__input {
@@ -113,7 +127,7 @@ body {
   border-radius: 5px;
   outline: none;
   flex-grow: 1;
-  width: 170px;
+  width: 200px;
   height: 35px;
   background-color: #ffffff;
   padding: 0 10px;
@@ -233,10 +247,10 @@ body {
       border: 1px solid #ffffff;
       border-radius: 5px;
       height: 35px;
-      width: 170px;
-      max-width: 400px;
+      width: 190px;
+      
       background-color: #cccccc;
-      margin-left: 320px;
+      margin-left: 10px;
     }
 
     .search-bar__input {
@@ -357,31 +371,6 @@ body {
         margin-right: 20px;
       }
     }
-
-    .dropdown {
-      margin-top: 10px;
-      margin-left: 50px;
-    }
-
-    .nav-links-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 200px;
-      width: 80px;
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-
-    .nav-links-container2 {
-      display: flex;
-      align-items: center;
-      gap: 0px;
-      width: 300px;
-      margin-left: 50px;
-      margin-top: 10px;
-    }
-
     /* New responsive styles */
     @media (max-width: 991px) {
       .header {
@@ -531,15 +520,15 @@ body {
 
 .dropdown {
   margin-top: 10px;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .nav-links-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 200px;
-  width: 80px;
+  margin-left: 100px;
+  width: 100px;
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -548,9 +537,10 @@ body {
   display: flex;
   align-items: center;
   gap: 0px;
-  width: 300px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 25px;
   margin-top: 10px;
+  
 }
 
 /* New responsive styles */
