@@ -28,7 +28,7 @@ const Founder = () => {
         </p>
 
         <br></br>
-        <p className="signature">~N.K. Singh</p>
+        <p className="signature"> <span className='signature'>~ N.K. Singh</span></p>
       </div>
     </div>
   );

@@ -12,10 +12,12 @@
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   padding-top: 5px;
   font-family: 'Lato', sans-serif;
+  color: #00abc2;
 }
 
 .contact-formS h2 {
   margin-bottom: 20px;
+  color: white;
 }
 
 .form-row {

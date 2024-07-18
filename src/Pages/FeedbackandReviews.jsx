@@ -1,59 +1,59 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./FeedbackandReviews.css";
 import premImage1 from "../Logos/FeedbacksandReviews/review image 1.png";
 import premImage2 from "../Logos/FeedbacksandReviews/review image 2.png";
 import premImage3 from "../Logos/FeedbacksandReviews/review image 3.jpg";
+import premImage4 from "../Logos/FeedbacksandReviews/review image 4.png";
+import premImage5 from "../Logos/FeedbacksandReviews/review image 5.png";
 
 const reviews = [
   {
     name: "Niveath P",
     review:
-      "I have completed the SAP HCM course in Connecting Dots ERP in Mumbai, and I must say it was a truly world's best experience. The instructors have next level of expertise, guiding us through the complexities of SAP with clarity and patience. The course structure was well-designed, covering all essential modules comprehensively. I have recommended the course to my friends also.",
+      "I completed the SAP HCM course at Connecting Dots ERP in Mumbai, where expert instructors guided me through SAP complexities with clarity. The comprehensive, well-designed course covered all essential modules.",
     image: premImage3,
   },
   {
     name: "Shweta Udainiya",
     review:
-      "Connecting Dots Advancements complete projects, master coaches, adaptable learning choices, and solid position support make them the best online SAP preparing establishment in Mumbai. I did my SAP SD Course from here. I prescribe you to join Connecting Dots Advancements for best online SAP SD Course and venture out towards a fruitful vocation in SAP.",
+      "Connecting Dots Advancements offers top SAP training in Mumbai with expert coaches, flexible learning, and strong job support. I completed my SAP SD Course here, highly recommending it for a successful SAP career.",
     image: premImage1,
   },
   {
     name: "Seshu Tamma",
     review:
-      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. ",
+      "In my opinion, Connecting Dots is Mumbai's best SAP training center, offering top-notch SAP Aruba courses with a comprehensive curriculum, expert instructors, and excellent placement assistance.",
     image: premImage2,
   },
   {
-    name: "Niveath P",
+    name: "Shreyansh Gupta",
     review:
-      "I have completed the SAP HCM course in Connecting Dots ERP in Mumbai, and I must say it was a truly world's best experience. The instructors have next level of expertise, guiding us through the complexities of SAP with clarity and patience. The course structure was well-designed, covering all essential modules comprehensively. I have recommended the course to my friends also.",
-    image: premImage3,
+      "Connecting Dots Advancements offers top SAP training in Mumbai with expert coaches, flexible learning, and strong job support. I completed my SAP SD Course here, highly recommending it for a successful SAP career.",
+    image: premImage4,
   },
   {
-    name: "Shweta Udainiya",
+    name: "Sai Srujan",
     review:
-      "Connecting Dots Advancements complete projects, master coaches, adaptable learning choices, and solid position support make them the best online SAP preparing establishment in Mumbai. I did my SAP SD Course from here. I prescribe you to join Connecting Dots Advancements for best online SAP SD Course and venture out towards a fruitful vocation in SAP.",
-    image: premImage1,
+      "I completed the SAP HCM course at Connecting Dots ERP in Mumbai, where expert instructors guided me through SAP complexities with clarity. The comprehensive, well-designed course covered all essential modules.",
+    image: premImage5,
   },
   {
     name: "Seshu Tamma",
     review:
-      "In my opinion connecting dots is the best sap training institute in Mumbai offering Best sap Aruba courses with great return on money their comprehensive curriculum and experienced trainers ensure that students gain in depth knowledge and practical skills. Additionally the institute provides great placement support assisting students in securing high paying jobs in reputable organizations. ",
+      "In my opinion, Connecting Dots is Mumbai's best SAP training center, offering top-notch SAP Aruba courses with a comprehensive curriculum, expert instructors, and excellent placement assistance. ",
     image: premImage2,
   },
-  
 ];
-
-const duplicateReviews = [...reviews]; // Duplicating the reviews to ensure seamless carousel
 
 const FeedbackAndReviews = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const containerRef = useRef(null);
 
-  const toggleReadMore = (index) => {
+  const toggleExpand = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
@@ -73,11 +73,21 @@ const FeedbackAndReviews = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleSelect = (selectedIndex, e) => {
     setSelectedIndex(selectedIndex);
   };
-
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <Container fluid className="feedback-section text-center" ref={containerRef}>
@@ -89,7 +99,7 @@ const FeedbackAndReviews = () => {
         controls={false}
       >
         {isMobile
-          ? duplicateReviews.map((review, index) => (
+          ? reviews.map((review, index) => (
               <Carousel.Item key={index}>
                 <Row className="justify-content-center">
                   <Col xs={12} className="d-flex justify-content-center mb-4">
@@ -99,7 +109,7 @@ const FeedbackAndReviews = () => {
                       }`}
                       onClick={(e) => {
                         e.stopPropagation();
-                        toggleReadMore(index);
+                        toggleExpand(index);
                       }}
                     >
                       <div className="card-body-wrapper">
@@ -118,16 +128,6 @@ const FeedbackAndReviews = () => {
                               ? review.review
                               : `${review.review.substring(0, 80)}...`}
                           </Card.Text>
-                          <Button
-                            variant="link"
-                            className="read-more"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleReadMore(index);
-                            }}
-                          >
-                            {expandedIndex === index ? "Read Less" : "Read More"}
-                          </Button>
                         </Card.Body>
                       </div>
                     </Card>
@@ -135,56 +135,51 @@ const FeedbackAndReviews = () => {
                 </Row>
               </Carousel.Item>
             ))
-          : duplicateReviews.map((review, index) => (
-              <Carousel.Item key={index}>
-                <Row className="justify-content-center">
-                  {[index, index + 1, index + 2].map((i) => (
-                    <Col key={i} md={4} xs={12} className="d-flex justify-content-center mb-4">
-                      {duplicateReviews[i] && (
-                        <Card
-                          className={`feedback-card shadow ${
-                            expandedIndex === i ? "expanded" : ""
-                          }`}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleReadMore(i);
-                          }}
-                        >
-                          <div className="card-body-wrapper">
-                            <Card.Body>
-                              <div className="img-container">
-                                <img
-                                  src={duplicateReviews[i].image}
-                                  alt={duplicateReviews[i].name}
-                                  className="review-image"
-                                />
-                                <i className="fa fa-quote-left icon"></i>
+          : reviews.reduce((acc, review, index) => {
+              if (index % 3 === 0) {
+                acc.push(
+                  <Carousel.Item key={index}>
+                    <Row className="justify-content-center">
+                      {[index, index + 1, index + 2].map((i) => (
+                        <Col key={i} md={4} xs={12} className="d-flex justify-content-center mb-4">
+                          {reviews[i] && (
+                            <Card
+                              className={`feedback-card shadow ${
+                                expandedIndex === i ? "expanded" : ""
+                              }`}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleExpand(i);
+                              }}
+                            >
+                              <div className="card-body-wrapper">
+                                <Card.Body>
+                                  <div className="img-container">
+                                    <img
+                                      src={reviews[i].image}
+                                      alt={reviews[i].name}
+                                      className="review-image"
+                                    />
+                                    <i className="fa fa-quote-left icon"></i>
+                                  </div>
+                                  <Card.Title className="review-name">{reviews[i].name}</Card.Title>
+                                  <Card.Text className="review-text">
+                                    {expandedIndex === i
+                                      ? reviews[i].review
+                                      : `${reviews[i].review.substring(0, 80)}...`}
+                                  </Card.Text>
+                                </Card.Body>
                               </div>
-                              <Card.Title className="review-name">{duplicateReviews[i].name}</Card.Title>
-                              <Card.Text className="review-text">
-                                {expandedIndex === i
-                                  ? duplicateReviews[i].review
-                                  : `${duplicateReviews[i].review.substring(0, 80)}...`}
-                              </Card.Text>
-                              <Button
-                                variant="link"
-                                className="read-more"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  toggleReadMore(i);
-                                }}
-                              >
-                                {expandedIndex === i ? "Read Less" : "Read More"}
-                              </Button>
-                            </Card.Body>
-                          </div>
-                        </Card>
-                      )}
-                    </Col>
-                  ))}
-                </Row>
-              </Carousel.Item>
-            ))}
+                            </Card>
+                          )}
+                        </Col>
+                      ))}
+                    </Row>
+                  </Carousel.Item>
+                );
+              }
+              return acc;
+            }, [])}
       </Carousel>
       {!isMobile && (
         <div className="radio-buttons">

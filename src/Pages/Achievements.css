@@ -12,7 +12,7 @@
   font-family: 'Lato', sans-serif;
   letter-spacing: 7px;
   background: rgb(1,1,98);
-  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
   color: transparent;
 }

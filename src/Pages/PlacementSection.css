@@ -1,10 +1,15 @@
 .placement-section {
-  padding: 20px;
-  background-color: #ffffff;
+  padding: 40px;
+  background-color: #182E4A;
   color: #333333;
   text-align: center;
-  width: 100%;
-  padding-left: 82px;
+  width: 97.5%;
+  padding-left: 40px;
+  margin: 20px ;
+  font-family: 'Lato', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 450px;
 }
 
 .section-titleP {
@@ -13,13 +18,8 @@
   letter-spacing: 8px;
   margin-bottom: 40px;
   font-family: 'Lato', sans-serif;
-  background: rgb(1, 1, 98);
-  background: linear-gradient(
-    90deg,
-    rgba(1, 1, 98, 1) 35%,
-    rgba(3, 163, 196, 1) 49%,
-    rgba(2, 2, 85, 1) 62%
-  );
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -93,7 +93,7 @@
   display: none !important; 
 }
 
-/* Ensure all cards have the same layout */
+
 .card {
   background-color: #ffffff;
   max-height: 220px;
@@ -111,7 +111,6 @@
   left: 15px;
 }
 
-/* Custom styles for each card */
 .card-0 {
   background-color: #ffffff;
 }
@@ -158,14 +157,15 @@
   background-color: #ffffff;
 }
 
-/* Media Queries */
-
 @media (max-width: 768px) {
   .section-titleP {
     font-size: 2rem;
   }
   
-
+  .card{
+    width: 500px;
+    margin-left: 0;
+  }
   .placement-section {
     padding-left: 30px;
     padding-right: 30px;
@@ -174,7 +174,7 @@
   .card-title {
     font-size: 1.2rem;
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 100px;
     margin-top: -5px; 
   }
 
@@ -218,23 +218,24 @@
   }
 
   .student-placement-card {
-    width: 200px;
+    width: 280px;
     max-height: 200px;
-    border: 10px #000000 solid;
+    border: 1px #000000 solid;
   }
 
   .card-title {
     font-size: 0.8rem;
     padding-left: 10px;
-    padding-right: 10px;
-    margin-top: -5px; /* Adjusted to bring it upwards */
-    margin-left: 10px;
+    padding-right: -40px;
+    margin-top: -5px; 
+    margin-left: 50px;
+    width: auto;
   }
 
   .card-text {
     font-size: 0.8rem;
     padding-left: 10px;
-    margin-top: -15px; /* Adjusted margin for card text */
+    margin-top: -15px; 
     margin-left: 10px;
    
    
@@ -249,7 +250,7 @@
   }
 
   .company-icon {
-    height: 40px; /* Adjust size for smaller screens */
+    height: 40px; 
     width: 80px;
     
   }

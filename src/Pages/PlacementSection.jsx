@@ -18,13 +18,13 @@ import companylogo4 from '../Logos/Placementsection/agconsultancy.png';
 import companylogo5 from '../Logos/Placementsection/marketlegos.png';
 
 const placementStories = [
-  { name: 'Preetesh Pardeshi', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo4, topImage: faceImage1 },
-  { name: 'Nikhilesh Landge', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo3, topImage: faceImage2 },
-  { name: 'Shubham Desale', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo2, topImage: faceImage3 },
+  { name: 'Preetesh Pardeshi', degree: 'Trained on- SAP ABAP', company: 'Placed in', logo: companylogo4, topImage: faceImage1 },
+  { name: 'Nikhilesh Landge', degree: 'Trained on- SAP SD', company: 'Placed in', logo: companylogo3, topImage: faceImage2 },
+  { name: 'Shubham Desale', degree: 'Trained on- SAP MM', company: 'Placed in', logo: companylogo2, topImage: faceImage3 },
   { name: 'Nitesh Kumar', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo5, topImage: faceImage4 },
-  { name: 'Seshu Tamma', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo2, topImage: faceImage5 },
-  { name: 'Prathamesh Singh', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage8 },
-  { name: 'Prathamesh Singh', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage6 },
+  { name: 'Seshu Tamma', degree: 'Trained on- SAP Security', company: 'Placed in', logo: companylogo2, topImage: faceImage5 },
+  { name: 'Pratham Singh', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage8 },
+  { name: 'Pratham Singh', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage6 },
   { name: 'Abhishek Nagar', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage7 },
   { name: 'Abhishek Nagar', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage8 },
 ];
@@ -47,7 +47,7 @@ const PlacementSection = () => {
   };
 
   return (
-    <Container fluid className="placement-section">
+    <Container fluid className="placement-section text-center">
       <h2 className="section-titleP">OUR STUDENTS PLACED AT</h2>
       <Carousel 
         indicators={false} 

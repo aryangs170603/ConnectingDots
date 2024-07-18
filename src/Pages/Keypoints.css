@@ -1,3 +1,5 @@
+
+
 .container {
   background-color: #ffffff; 
   width: 90%;
@@ -32,14 +34,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+
 }
 
 .circle {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 3px solid #13136c;
   animation: rotate 20s linear infinite;
   margin-top: 60px;
   margin-left: -700px;
@@ -48,8 +52,8 @@
 
 .feature {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,10 +61,20 @@
   margin-top: 150px;
   margin-left: 140px;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 3px solid #13136c;
   text-align: center;
+  font-size: 0.6rem;
   transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease; 
 }
+
+.feature:hover {
+  background-color: #13136c; 
+  color: white;
+  border-color: #13136c;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+}
+
 
 .center-feature {
   position: absolute;
@@ -72,10 +86,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: #ffffff;
+  border: 3px solid #13136c;
   transform: translate(-50%, -50%);
 }
+.centre-feature:hover{
+  background-color: #13136c; 
+  color: white;
+  border-color: #13136c;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+}
+
 
 .center-text {
   font-size: 1.2rem;
@@ -104,8 +125,8 @@
   margin-top: 20px;
   text-align: left;
   margin-left: 830px;
-  margin-top: -500px;
-  margin-bottom: 100px;
+  margin-top: -620px;
+  margin-bottom: 80px;
 }
 
 .key-notes h2 {
@@ -119,6 +140,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  margin-bottom: -30px;
 }
 
 .note .img {
@@ -126,7 +148,7 @@
 }
 
 .note img {
-  width: 100px;
+  width: 110px;
   height: 120px;
 }
 
@@ -134,21 +156,31 @@
   max-width: 500px;
 }
 
-/* Media query for screens with a max-width of 576px */
+/* responsive */
 @media (max-width: 576px) {
   .circle {
     width: 250px;
     height: 250px;
-    margin-left: 0; /* Center the circle */
+    margin-left: 0; 
     margin-bottom: 80px;
+  }
+  @keyframes spiral {
+    0% { transform: rotate(0deg) translate(0, -130px) rotate(0deg); }
+    16.7% { transform: rotate(60deg) translate(0, -130px) rotate(-60deg); }
+    33.4% { transform: rotate(120deg) translate(0, -130px) rotate(-120deg); }
+    50% { transform: rotate(180deg) translate(0, -130px) rotate(-180deg); }
+    66.7% { transform: rotate(240deg) translate(0, -130px) rotate(-240deg); }
+    83.4% { transform: rotate(300deg) translate(0, -130px) rotate(-300deg); }
+    100% { transform: rotate(360deg) translate(0, -130px) rotate(-360deg); }
   }
 
   .feature {
-    width: 90px;
-    height: 85px;
-    margin-top: 80px;
-    margin-left: 100px;
-    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    margin-top: 85px;
+    margin-left: 85px;
+    transform: translate(-40%, -10%);
+    font-size: 0.4rem;
   }
 
   .center-feature {
@@ -157,7 +189,7 @@
   }
 
   .center-text {
-    font-size: 0.5rem;
+    font-size: 1.2rem;
   }
 
   .key-notes {
@@ -185,8 +217,10 @@
     height: 80px;
   }
 
-  .note .text {
+  .note .text 
     max-width: 100%;
     text-align: center;
   }
+
+  
 }

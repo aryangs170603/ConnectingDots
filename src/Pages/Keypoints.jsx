@@ -18,17 +18,32 @@ const Keypoints = () => {
   const homeAbout = [
     {
       cover: logo1,
-      title: "Industry Expert Trainers",
+      title: "MNC Experienced Professional ",
       desc: "Highly Qualified and Industry Experience Professionals for providing Real-Time Scenario Based Training."
     },
     {
       cover: logo2,
-      title: "Flexible Batches",
+      title: "Corporate Style Training",
       desc: "Multiple Batches & Support Systems to make sure you can learn according to your convenience."
     },
     {
       cover: logo3,
-      title: "Placement Assistance",
+      title: "100% Job Assistance",
+      desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual."
+    },
+    {
+      cover: logo3,
+      title: "Real Time Training & Project",
+      desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual."
+    },
+    {
+      cover: logo3,
+      title: "Experience Alteration",
+      desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual."
+    },
+    {
+      cover: logo3,
+      title: "Affordable Fees",
       desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual."
     }
   ];
@@ -44,11 +59,11 @@ const Keypoints = () => {
             </div>
           ))}
           <div className="center-feature">
-            <div className="center-text">Keypoints</div>
+            <div className="center-text"><span className="centre-keypoints">Keypoints</span></div>
           </div>
         </div>
         <div className="key-notes">
-          <h2>Key Notes</h2>
+          
           {homeAbout.map((feature, index) => (
             <div className="note" key={index}>
               <div className="img">

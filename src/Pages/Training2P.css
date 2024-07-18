@@ -1,146 +1,107 @@
-.cards-container {
+.training2p-container {
   display: flex;
-  flex-wrap: wrap;
-  height: 750px;
-  justify-content: space-between;
-  padding: 20px;
-  overflow-x: auto; 
-  background-image: url('src/Logos/Training2P/t2pp.png'); 
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center; 
-  font-family: 'Lato', sans-serif;
-}
-
-.heading {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin as needed */
   text-align: center;
-  margin-top: 50px;
-  font-size: 2rem;
-  font-weight: bold;
-  background: rgb(1,1,98);
-  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
-  -webkit-background-clip: text;
-  color: transparent;
+  margin: 20px;
   font-family: 'Lato', sans-serif;
-  letter-spacing: 7px;
-}
-
-.card {
-  flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
-  height: 400px;
-  margin: 10px;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #d6d6d6;
-  border-radius: 8px;
-  box-shadow: 0 20px 20px rgba(0,0,0,0.2);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.card-number {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.card-description {
-  font-size: 16px;
-  color: #464444;
-}
-
-.card-01 {
-  margin-top: 170px;
   background-color: #ffffff;
-}
-.card-01:hover {
-  background-color: #47a3ff;
-}
-.card-02 {
-  margin-top: 230px;
-  background-color: #47a3ff;
-  height: 380px;
-}
-.card-02:hover {
-  background-color: #ffffff;
-}
-.card-03 {
-  margin-top: 170px;
-  background-color: #ffffff;
-}
-.card-03:hover {
-  background-color: #47a3ff;
-}
-.card-04 {
-  margin-top: 230px;
-  background-color: #47a3ff;
-}
-.card-04:hover {
-  background-color: #ffffff;
-}
-.card-05 {
-  background-color: #ffffff;
-  margin-top: 170px;
-}
-.card-05:hover {
-  background-color: #47a3ff;
-}
-.card-06 {
-  background-color: #47a3ff;
-  margin-top: 230px;
-}
-.card-06:hover {
-  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 
-@media (max-width: 1200px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
+.cardBox {
+  width: 150px; /* Adjusted width */
+  height: 200px; /* Adjusted height */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px; /* Adjusted border radius */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+}
+
+.card1 {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background: #ffffff;
+  border-radius: 10px; /* Adjusted border radius */
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #000000;
+  overflow: hidden;
+  padding: 10px; /* Adjusted padding */
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.5) 0px 8px 6px -8px inset;
+}
+
+.card h2,
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: 800;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+span {
+  top: 75%;
+}
+
+.card1 .content h3 {
+  font-size: 1.5rem; 
+  padding-bottom: 5px;
+}
+
+.card1 .content p {
+  font-size: 1.2rem; 
+  line-height: 1.5;
+}
+
+.card1 .content {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card1:hover .content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card1:hover h2,
+.card1:hover span {
+  opacity: 0;
+}
+
+.cardBox::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 150%;
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  background: linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
+  animation: glowing01 5s linear infinite;
+  transform-origin: center;
+  animation: glowing 5s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: rotate(0);
   }
-
-  .card {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .cards-container {
-    flex-direction: column;
-    background-image: none; /* Remove the background image on small screens */
-  }
-
-  .card {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .card-number {
-    font-size: 20px;
-  }
-
-  .card-title {
-    font-size: 18px;
-  }
-
-  .card-description {
-    font-size: 14px;
+  100% {
+    transform: rotate(360deg);
   }
 }

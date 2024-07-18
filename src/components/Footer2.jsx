@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-logo">
-        <img src={"src/Logos/Navbar/connecting dot erp logo.png"} alt="Connecting Dots ERP Logo" />
+        <img src={"src/Logos/cderp.jpg"} alt="Connecting Dots ERP Logo" />
       </div>
       <div className="footer-container">
         <div className="row">
@@ -70,9 +70,9 @@ const Footer = () => {
           </div>
           <div className="col">
             <div className="widget">
-              <div className="headline"><h3>Contact Details</h3></div>
+              {/* <div className="headline"><h3>Contact Details</h3></div> */}
               <ul className="footer-contact-list">
-                <li><i className="fa fa-map-marker"></i> PUNE Branch
+                {/* <li><i className="fa fa-map-marker"></i> PUNE Branch
                   <address>
                     Pune, Maharashtra 
                   </address>
@@ -80,8 +80,8 @@ const Footer = () => {
                 <li><i className="fa fa-map-marker"></i> MUMBAI Branch
                   <address>
                     Maharashtra 
-                  </address>
-                </li>
+                  </address> */}
+                {/* </li> */}
               </ul>
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
               <a href="#"><i className="fa fa-instagram"></i></a>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2022 Ltd.</p>
+              <p>&copy; ConnectingDotsERP 2024Ltd.</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 .branches-section {
   text-align: center;
   padding: 20px;
- 
+  background-color: #182E4A;
+  margin: 20px;
+  
 }
 
 .branches-title {
@@ -12,7 +14,7 @@
   font-family: 'Lato', sans-serif;
   letter-spacing: 8px;
   background: rgb(1,1,98);
-  background: linear-gradient(90deg, rgba(1,1,98,1) 35%, rgba(3,163,196,1) 49%, rgba(2,2,85,1) 62%);
+  background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -24,8 +26,9 @@
 }
 
 .branch-card {
-   background-color: #022674;
-  border: 1px solid #4F4D8C;
+   background-color: #ffffff;
+  border: 3px solid ;
+  border-color: black;
   border-radius: 8px;
   padding: 20px;  
   margin: 10px;
@@ -43,19 +46,21 @@
 
 .map-container {
   height: 200px;
+  border: 2px solid #000000;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
 .branch-card h3 {
-  color: #ffffff;
+  color: #182E4A;
   margin-bottom: 10px;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 .branch-card a {
-  color: white; 
+  color: #182E4A; 
   text-decoration: none;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
