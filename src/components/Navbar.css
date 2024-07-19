@@ -19,6 +19,8 @@ body {
   background-color: #ffffff;
   height: 70px;
   width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
   z-index: 1000;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 30%);
 }

@@ -1,25 +1,27 @@
-.courses {
-  background-color: #ffffff;
-  font-family: 'Lato', sans-serif;
-}
-body.modal-open {
-  overflow: hidden;
-}
-
 .courses-container {
   text-align: center;
-  margin: 20px;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 20px auto;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
   padding-top: 20px;
   padding-bottom: 5px;
 }
 
+.courses {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .courses-title h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
-  
   font-family: 'Lato', sans-serif;
   letter-spacing: 8px;
   background: rgb(1, 1, 98);
@@ -41,16 +43,17 @@ body.modal-open {
 
 .course-card {
   background-color: #fff;
-  padding: 30px;
+  padding: 20px; /* Decreased from 30px to 20px */
   text-align: center;
   margin: 10px;
   transition: 0.5s;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 30%);
   position: relative;
-  width: 300px;
+  width: 220px; /* Decreased from 300px to 220px */
   height: auto;
   border-radius: 5px;
   font-family: 'Lato', sans-serif;
+  font-color: #000000;
 }
 
 .course-card:hover {
@@ -64,8 +67,8 @@ body.modal-open {
 }
 
 .course-icon {
-  width: 80px;
-  height: 80px;
+  width: 60px; /* Decreased from 80px to 60px */
+  height: 60px; /* Decreased from 80px to 60px */
   border-radius: 0%;
   overflow: hidden;
   padding: 0;
@@ -79,19 +82,19 @@ body.modal-open {
 }
 
 .course-card h3 {
-  font-size: 20px;
+  font-size: 18px; /* Decreased from 20px to 18px */
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 15px; /* Decreased from 20px to 15px */
   margin-bottom: 10px;
 }
 
 .course-card p {
-  font-size: 16px;
+  font-size: 14px; /* Decreased from 16px to 14px */
   color: #666;
 }
 
 .outline-btn {
-  width: 20%;
+  width: 160px;
   height: 40px;
   color: #ffffff;
   border-radius: 5px;
@@ -111,7 +114,6 @@ body.modal-open {
     7px 7px 20px 0px rgba(0, 0, 0, 0.1),
     4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
- 
 }
 
 .outline-btn:before,
@@ -149,66 +151,47 @@ body.modal-open {
   width: 100%;
 }
 
-.outline-btn1 {
-  border: 2px solid #0f1a19;
-  box-shadow: none;
-  margin: 0;
-  transition: 0.5s;
-  width: 50%;
-  height: auto;
-  background-color: transparent;
-  color: #0e1934;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .course-card:hover .outline-btn {
   color: #ffffff;
   background-color: #3464a2;
 }
 
-.outline-btn1:hover {
-  background-color: #1f95d1;
+@media screen and (max-width: 1200px) {
+  .course-card {
+    width: calc(25% - 20px); /* 4 cards per row with margin */
+  }
 }
-/*responsive*/
+
 @media screen and (max-width: 768px) {
-  .courses-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .course-card {
+    width: calc(33.33% - 20px); /* 3 cards per row with margin */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .course-card {
+    width: calc(50% - 20px); /* 2 cards per row with margin */
   }
 
-  .course-card {
-    width: 45%;
-    height: auto;
-    margin: 10px 0;
+  .course-icon img {
+    width: 40px; /* Decreased from 50px to 40px */
+    height: 40px; /* Decreased from 50px to 40px */
+  }
+
+  .course-card h3 {
+    font-size: 16px; /* Decreased from 18px to 16px */
+  }
+
+  .course-card p {
+    font-size: 12px; /* Decreased from 14px to 12px */
   }
 
   .outline-btn {
     font-size: 12px;
     width: 70%;
   }
-  
-.outline-btn1{
-  width: 90%;
-  font-size: 13px;
-}
+
   .courses-title h2 {
     font-size: 19px;
-  }
-
-  .course-icon img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .course-card h3 {
-    font-size: 18px;
-  }
-
-  .course-card p {
-    font-size: 14px;
   }
 }

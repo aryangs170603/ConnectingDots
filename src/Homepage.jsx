@@ -8,27 +8,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Marquee1 from './Pages/Marquee1';
 import Marquee2 from './Pages/Marquee2';
-import PlacementSection from './Pages/PlacementSection';
+// import PlacementSection from './Pages/PlacementSection';
 import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import Ourclients from './Pages/Ourclients';
 import Footer2 from './components/Footer2';
-//import foooter from './components/foooter';
-//import foooter from './components/foooter';
-import Footer1 from './components/Footer1';
+
+
 //import database from './components/Database';
 
-// import FAQComponent from './Pages/FAQComponent';
 import Achievements from './Pages/Achievements';
-// import Training2P from './Pages/Training2P';
+import Training2P from './Pages/Training2P';
 import Stickyform from './Pages/Stickyform';
 import Certificate from './Pages/Certificate';
 import OurBranches from './Pages/OurBranches';
-import Founders from './Pages/Founder';
+// import Founders from './Pages/Founder';
 import Whatsapp from './Pages/FloatingWhatsApp';
 import FeedbackandReviews from './Pages/FeedbackandReviews';
 //import Navbar from './components/AboutUs.jsx';
-import Exp from './Pages/Exp';
+// import PopupForm from './components/PopupForm';
+
 import Wave from './components/Wave.jsx'
 function AppH() {
   return (
@@ -39,27 +38,24 @@ function AppH() {
        <main>
       <HeaderCarousel />
       <Marquee2 />
+       {/* <PopupForm/> */}
       <Keypoints />
-         <database />
+      <Ourclients />
+      <database />
       <PopCourses />
-
-         <PlacementSection />
-      <Certificate />
-         <Ourclients />
-
-      <Founders />
-
-      <Achievements />
-          <Exp />
-
-      {/* <Training2P /> */}
-         
-         {/* <FAQComponent /> */}
-          <FeedbackandReviews />
-         <OurBranches />   
+      {/* <PlacementSection /> */}
+      <Certificate />  
+      {/* <Achievements /> */}
+    
+      <FeedbackandReviews />
+      
+       <Training2P />
+       
+     
+      <OurBranches />   
       </main>
       <Stickyform />
-      {/* <Footer1 /> */}
+     
       <Wave />
       <Footer2 />
       <Whatsapp />

@@ -16,7 +16,7 @@ import img9 from '../Icons/python-file.png';
 
 const courses = [
   { name: 'SAP FICO Courses', count: 25, icon: img1 },
-  { name: 'SAP HANA Courses', count: 25, icon: img2 },
+  { name: 'SAP S/4 HANA Courses', count: 25, icon: img2 },
   { name: 'Masters in Data Science', count: 16, icon: img3 },
   { name: 'Digital Marketing', count: 30, icon: img4 },
   { name: 'HR payroll', count: 8, icon: img5 },
@@ -65,7 +65,6 @@ const Courses = () => {
             </div>
             <h3>{course.name}</h3>
             <p>{course.count} Seats Left</p>
-            <button className="outline-btn1">ENROLL!</button>
           </div>
         ))}
       </div>

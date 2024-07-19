@@ -4,12 +4,13 @@
   color: #333333;
   text-align: center;
   width: 97.5%;
-  padding-left: 40px;
-  margin: 20px ;
+  padding-left: 120px;
+  margin: 20px auto;
   font-family: 'Lato', sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 450px;
+  max-width: 1800px;
 }
 
 .section-titleP {
@@ -19,10 +20,19 @@
   margin-bottom: 40px;
   font-family: 'Lato', sans-serif;
   background: rgb(255, 255, 255);
+  text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182E4A, 0 0 20px #182E4A, 0 0 30px #182E4A, 0 0 30px #182E4A;
   background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+ 
+  
 }
+font-size: 80px;
+color: #fff;
+text-align: center;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+
 
 .student-placement-card {
   background-color: #c70000;
@@ -72,7 +82,7 @@
 
 .card-text {
   font-size: 1.0rem;
-  color: #333;
+  color: #000000;
   font-weight: bold;
   margin-top: 5px; 
   padding-top: 10px;
@@ -81,7 +91,7 @@
 }
 
 .dotted-underline {
-  border-top: 2px dotted #333;
+  border-top: 2px dotted #000000;
   width: 100%;
   margin-top: 5px; 
   margin-bottom: 10px;
@@ -176,6 +186,7 @@
     padding-left: 20px;
     padding-right: 100px;
     margin-top: -5px; 
+    width: 50px;
   }
 
   .card-text {
@@ -198,6 +209,7 @@
   .card-body {
     padding-left: 70px; 
   }
+  
 
   .dotted-underline {
     margin-top: 5px; 
@@ -218,22 +230,25 @@
   }
 
   .student-placement-card {
-    width: 280px;
+    width: 300px;
     max-height: 200px;
     border: 1px #000000 solid;
+  
   }
 
   .card-title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     padding-left: 10px;
-    padding-right: -40px;
+    padding-right: -20px;
     margin-top: -5px; 
     margin-left: 50px;
     width: auto;
+    display: flex;
+    flex-direction: row;
   }
 
   .card-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding-left: 10px;
     margin-top: -15px; 
     margin-left: 10px;
@@ -279,9 +294,11 @@
   outline: none;
   cursor: pointer;
   transition: background 0.3s;
+  background-color: white;
 }
 
 .radio-buttons input[type="radio"]:checked {
-  background-color: #333;
+  background-color: #000000;
+  
 }
 

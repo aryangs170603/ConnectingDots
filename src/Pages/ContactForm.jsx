@@ -18,19 +18,19 @@ const ContactForm = ({ onClose, course }) => {
     event.preventDefault();
 
     emailjs.send(
-      'service_mbz2yyi', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      'service_mbz2yyi', // Replace with EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with EmailJS template ID
       {
         course,
         name: formData.name,
         mobile: formData.mobile,
         email: formData.email,
-        to_email: 'manishshinde19996@gmail.com', // The email address to send the form data to
+        to_email: 'manishshinde19996@gmail.com', // email address to send the form data to
       },
-      'YOUR_USER_ID' // Replace with your EmailJS user ID
+      'YOUR_USER_ID' // Replace with EmailJS user ID
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
-      onClose(); // Close the form after successful submission
+      onClose(); 
     }).catch((err) => {
       console.error('FAILED...', err);
     });

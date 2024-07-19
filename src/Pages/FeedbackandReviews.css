@@ -1,11 +1,12 @@
 .feedback-section{
   text-align: center;
-  margin: 20px;
+  margin: 20px auto;
   font-family: 'Lato', sans-serif;
-  background-color: #ffffff;
+  
   padding-top: 20px;
   padding-bottom: 5px;
   width: 97.5%;
+  max-width: 1800px;
 }
 
 .feedback-card {
@@ -35,13 +36,9 @@
   font-weight: bold;
   margin-bottom: 40px;
   letter-spacing: 8px;
-  background: rgb(1, 1, 98);
-  background: linear-gradient(
-    90deg,
-    rgba(1, 1, 98, 1) 35%,
-    rgba(3, 163, 196, 1) 49%,
-    rgba(2, 2, 85, 1) 62%
-  );
+  background: rgb(255, 255, 255);
+  text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182E4A, 0 0 20px #182E4A, 0 0 30px #182E4A, 0 0 30px #182E4A;
+  background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -58,7 +55,7 @@
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -80px;
+  margin-left: -20px;
   margin-top: -20px;
 }
 
@@ -70,14 +67,14 @@
   color: #fff;
   padding: 8px;
   border-radius: 50%;
-  margin-left: -100px;
+  margin-left: -30px;
 }
 
 .review-name {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: -80px;
-  margin-left: -15px;
+  margin-left: 85px;
 }
 
 .review-post {
@@ -94,7 +91,7 @@
   max-height: 120px;
   overflow: hidden;
   margin-top: -5px;
-  margin-left: 10px;
+  margin-left: 70px;
   transition: none; /* Remove any transitions on text */
 }
 
@@ -140,12 +137,23 @@
 }
 @media (max-width: 576px) {
   .feedback-card{
-    max-height: 500px;
-    height: auto;
+    max-height: 200px;
+  
     width: 100%;
     margin-top: 50px;
+    
   }
   .review-name{
-    margin-left: 40px;
+    margin-left: 30px;
+  }
+  .review-image{
+    margin-left: -60px;
+  }
+  .fa-quote-left.icon {
+    margin-left: -70px;
+  }
+  .review-text {
+    margin-left: 10px;
+    margin-top: 20px
   }
 }

@@ -118,7 +118,7 @@ const Header = () => {
                             <li><a className="dropdown-item" href="#">Full Stack Python </a></li>
                             <li><a className="dropdown-item" href="#">Full Stack Java</a></li>
                             <li><a className="dropdown-item" href="#">MERN Stack </a></li>
-                            <li><a className="dropdown-item" href="#">MEAN S</a></li>
+                            <li><a className="dropdown-item" href="#">MEAN Stack</a></li>
                             </ul>
                         </li>
                         <li>

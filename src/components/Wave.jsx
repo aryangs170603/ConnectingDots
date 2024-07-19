@@ -2,7 +2,7 @@ import React from "react";
 import Wave from "react-wavify";
 import "./Wave.css";
 
-const StatsSection = () => {
+const wave = () => {
   return (
     <div className="stats-section">
       {/* Wave Container */}
@@ -35,4 +35,4 @@ const StatsSection = () => {
   );
 };
 
-export default StatsSection;
+export default wave;

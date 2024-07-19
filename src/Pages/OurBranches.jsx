@@ -58,9 +58,10 @@ const Branches = () => {
               </Marker>
             </MapContainer>
             <h3>{branch.city}</h3>
-            <a href={branch.mapLink} target="_blank" rel="noopener noreferrer">
+            <div className='add2'><a  href={branch.mapLink} target="_blank" rel="noopener noreferrer">
               {branch.address}
             </a>
+              </div>
           </div>
         ))}
       </div>

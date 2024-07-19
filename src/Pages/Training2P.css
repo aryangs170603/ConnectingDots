@@ -1,107 +1,168 @@
-.training2p-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; /* Adjust margin as needed */
+.T2P {
   text-align: center;
-  margin: 20px;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 20px auto;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 60px;
 }
 
-.cardBox {
-  width: 150px; /* Adjusted width */
-  height: 200px; /* Adjusted height */
-  position: relative;
+.T2P-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 8px;
+  background: rgb(1, 1, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgba(3, 163, 196, 1) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cardsT2P-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 10px; /* Adjusted border radius */
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
 }
 
-.card1 {
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  background: #ffffff;
-  border-radius: 10px; /* Adjusted border radius */
-  z-index: 5;
+.cardT2P-container {
+  perspective: 1200px;
+}
+
+.cardT2P {
+  height: 300px;
+  width: 180px;
+  position: relative;
+  border-radius: 25px;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.rotated {
+  transform: rotateY(-180deg);
+}
+
+.cardT2P-contents {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: #000000;
-  overflow: hidden;
-  padding: 10px; /* Adjusted padding */
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px -2px inset, rgba(0, 0, 0, 0.5) 0px 8px 6px -8px inset;
-}
-
-.card h2,
-span {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem; /* Adjusted font size */
-  font-weight: 800;
-  pointer-events: none;
-  opacity: 0.5;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
 }
 
-span {
-  top: 75%;
+.cardT2P-contents h2,
+.cardT2P-contents p {
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.card1 .content h3 {
-  font-size: 1.5rem; 
-  padding-bottom: 5px;
+.cardT2P-contents h2 {
+  font-size: 1.5em;
+  margin: 0 auto;
 }
 
-.card1 .content p {
-  font-size: 1.2rem; 
-  line-height: 1.5;
+.cardT2P-contents hr {
+  width: 50%;
+  margin: 10px auto;
 }
 
-.card1 .content {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+.cardT2P-contents p {
+  margin: 0 auto;
 }
 
-.card1:hover .content {
-  transform: translateY(0);
-  opacity: 1;
+.cardT2P-depth {
+  transform: translateZ(50px) scale(0.98);
+  perspective: inherit;
 }
 
-.card1:hover h2,
-.card1:hover span {
-  opacity: 0;
+.cardT2P-img1 img {
+  height: auto;
+  width: 70px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  align-self: center;
 }
 
-.cardBox::before {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 150%;
-  background: #40e0d0;
-  background: -webkit-linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
-  background: linear-gradient(to right, #04015a, #0b3293, #2ab0f8, #53daff);
-  animation: glowing01 5s linear infinite;
-  transform-origin: center;
-  animation: glowing 5s linear infinite;
+.cardT2P-depth h2, .cardT2P-depth p {
+  color: #d5d2d2;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }
 
-@keyframes glowing {
-  0% {
-    transform: rotate(0);
+.cardT2P-front {
+  background: linear-gradient(to top left, #337ac7, #000352);
+  transform-style: preserve-3d;
+}
+
+.cardT2P-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom left, #5ddaf9, #09608b);
+  transform-style: preserve-3d;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .T2P {
+    width: 97.5%;
+    padding: 20px 30px;
+    padding-bottom: 20px;
   }
-  100% {
-    transform: rotate(360deg);
+
+  .cardsT2P-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cardT2P {
+    height: 250px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .T2P-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .cardsT2P-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cardT2P-depth h2 {
+    font-size: 1rem;
+  }
+
+  .cardT2P {
+    height: 220px;
+    width: 150px;
+  }
+
+  .cardT2P-contents hr {
+    width: 40%;
+  }
+
+  .cardT2P-depth h2, .cardT2P-depth p {
+    font-size: 18px;
   }
 }

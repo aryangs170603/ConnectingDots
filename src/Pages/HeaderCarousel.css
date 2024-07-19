@@ -1,4 +1,10 @@
 /*Main carousle*/
+/* .carousel-section{
+max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  height: 585px;
+} */
 /* slide1 */
 .carousel-slide {
   display: flex;
@@ -7,6 +13,9 @@
   height: 580px;
   padding: 50px;
   background-color: #E5E5ED;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .carousel-image img {
@@ -206,6 +215,9 @@ button {
   height: 580px;
   padding: 50px;
   background-color: #E5E5ED;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .carousel-text2{
@@ -290,6 +302,9 @@ button {
   height: 580px;
   padding: 50px;
   background-color: #E5E5ED;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .left-sideH3 h1 {
@@ -459,6 +474,9 @@ button {
   height: 580px;
   padding: 0px;
   background-color: #E5E5ED;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
 }
 .carousel-slide4 img {
   height: 100%;

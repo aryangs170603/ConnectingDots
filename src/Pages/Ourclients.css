@@ -1,8 +1,9 @@
 .our-clients-section {
- 
-  height: 300px;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 0 auto;
+  height: 600px;
   font-family: 'Lato', sans-serif;
- 
 }
 
 .section-titleC {
@@ -14,17 +15,16 @@
   margin-top: 30px;
   font-family: 'Lato', sans-serif;
   background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, #fff 40%, rgba(3,163,196,1) 49%, #fff 62%);
+  text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182E4A, 0 0 20px #182E4A, 0 0 30px #182E4A, 0 0 30px #182E4A;
+  background: linear-gradient(90deg, #fff 35%, rgba(3,163,196,1) 49%, #fff 62%);
   -webkit-background-clip: text;
   color: transparent;
-  
 }
 
 .clients-marquee {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  /* background: linear-gradient(to right,  #DFF9FE, #DFF9FE,#DFF9FE); */
   background-color: #182E4A;
   margin-top: 40px;
 }
@@ -44,9 +44,9 @@
 }
 
 .client-logo {
-  max-height: 70px;
+  max-height: 200px;
   width: auto;
-  filter:drop-shadow(2px 4px 10px #666666);
+  filter: drop-shadow(2px 4px 10px #666666);
 }
 
 @keyframes marquee {
@@ -54,13 +54,13 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes marquee-reverse {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0%);

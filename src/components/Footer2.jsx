@@ -4,10 +4,10 @@ import './Footer2.css';
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-logo">
-        <img src={"src/Logos/cderp.jpg"} alt="Connecting Dots ERP Logo" />
-      </div>
       <div className="footer-container">
+        <div className="footer-logo">
+          <img src={"src/Logos/cderp.jpg"} alt="Connecting Dots ERP Logo" />
+        </div>
         <div className="row">
           <div className="col">
             <div className="widget">
@@ -70,33 +70,21 @@ const Footer = () => {
           </div>
           <div className="col">
             <div className="widget">
-              {/* <div className="headline"><h3>Contact Details</h3></div> */}
-              <ul className="footer-contact-list">
-                {/* <li><i className="fa fa-map-marker"></i> PUNE Branch
-                  <address>
-                    Pune, Maharashtra 
-                  </address>
-                </li>
-                <li><i className="fa fa-map-marker"></i> MUMBAI Branch
-                  <address>
-                    Maharashtra 
-                  </address> */}
-                {/* </li> */}
-              </ul>
+              <ul className="footer-contact-list"></ul>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col">
             <div className="social-icons">
-              <a href="#"><i className="fa fa-facebook"></i></a>
-              <a href="#"><i className="fa fa-twitter"></i></a>
-              <a href="#"><i className="fa fa-youtube"></i></a>
-              <a href="#"><i className="fa fa-linkedin"></i></a>
-              <a href="#"><i className="fa fa-instagram"></i></a>
+              <a href="https://www.facebook.com/sapinstallation.pune.9"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://wa.me/919004002941"><i className="fab fa-whatsapp"></i></a>
+              <a href="https://m.youtube.com/@connectingdotserp4991"><i className="fab fa-youtube"></i></a>
+              <a href="https://in.linkedin.com/in/connecting-dots-erp-043039171"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fab fa-instagram"></i></a>
             </div>
             <div className="footer-bottom">
-              <p>&copy; ConnectingDotsERP 2024Ltd.</p>
+              <p>&copy; ConnectingDotsERP 2024 Ltd.</p>
             </div>
           </div>
         </div>
