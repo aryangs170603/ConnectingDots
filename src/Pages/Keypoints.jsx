@@ -1,7 +1,7 @@
 import React from "react";
 import "./Keypoints.css";
 
-import logo1 from "../Logos/Keypoints/stulogo.png";
+
 import logo2 from "../Logos/Keypoints/unilogo.png";
 import logo3 from "../Logos/Keypoints/watchlogo.png";
 import logo4 from "../Logos/Keypoints/exp alt.png";

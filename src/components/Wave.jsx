@@ -4,7 +4,7 @@ import "./Wave.css";
 
 const wave = () => {
   return (
-    <div className="stats-section">
+    <div className="wave12-section">
       {/* Wave Container */}
       <div className="wave-container">
         <Wave

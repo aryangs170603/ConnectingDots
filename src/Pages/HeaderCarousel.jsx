@@ -128,6 +128,7 @@ const HeaderCarousel = () => {
                   {TEXTS1[index]}
                 </TextTransition>
               </h1>
+              <br></br>
               <h3 className={textVisible ? "visible" : "hidden"}>
                 <TextTransition springConfig={presets.wobbly}>
                   {TEXTS2[index]}
@@ -181,12 +182,12 @@ const HeaderCarousel = () => {
                 <div className="content3">
                   <div className="image-grid">
                     <img
-                      src="src/Logos/Ourclients/ibm1.png"
+                      src="src/Logos/oldclients/ibm1.png"
                       alt="Image 1"
                       className="grid-image grid-image-ibm"
                     />
                     <img
-                      src="src/Logos/Ourclients/tcs1.png"
+                      src="src/Logos/oldclients/tcs1.png"
                       alt="Image 2"
                       className="grid-image grid-image-tcs"
                     />
@@ -196,27 +197,27 @@ const HeaderCarousel = () => {
                       className="grid-image grid-image-Lnt"
                     />
                     <img
-                      src="src/Logos/Ourclients/amdocs1.png"
+                      src="src/Logos/oldclients/amdocs1.png"
                       alt="Image 4"
                       className="grid-image grid-image-amd"
                     />
                     <img
-                      src="src/Logos/Ourclients/infosys2.png"
+                      src="src/Logos/oldclients/infosys2.png"
                       alt="Image 5"
                       className="grid-image grid-image-info"
                     />
                     <img
-                      src="src/Logos/Ourclients/wipro.png"
+                      src="src/Logos/oldclients/wipro.png"
                       alt="Image 6"
                       className="grid-image grid-image-wip"
                     />
                     <img
-                      src="src/Logos/Ourclients/deloitte.png"
+                      src="src/Logos/oldclients/deloitte.png"
                       alt="Image 7"
                       className="grid-imaged grid-image-del"
                     />
                     <img
-                      src="src/Logos/Ourclients/accenture1.png"
+                      src="src/Logos/oldclients/accenture1.png"
                       alt="Image 8"
                       className="grid-image grid-image-acc"
                     />
@@ -226,18 +227,18 @@ const HeaderCarousel = () => {
                       className="grid-image grid-image-bmw"
                     />
                     <img
-                      src="src/Logos/Ourclients/cognizant1.png"
-                      alt="Image 7"
+                      src="src/Logos/oldclients/cognizant1.png"
+                      alt="Image 10"
                       className="grid-image grid-image-cog"
                     />
                     <img
                       src="src/Logos/Headercarousel/Cisco.png"
-                      alt="Image 8"
+                      alt="Image 11"
                       className="grid-image grid-image-cis"
                     />
                     <img
                       src="src/Logos/Headercarousel/TechM.png"
-                      alt="Image 9"
+                      alt="Image 12"
                       className="grid-image grid-image-tec"
                     />
                   </div>

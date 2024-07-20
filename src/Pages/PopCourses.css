@@ -53,7 +53,7 @@ body.modal-open {
   height: auto;
   border-radius: 5px;
   font-family: 'Lato', sans-serif;
-  font-color: #000000;
+  color: #000000;
 }
 
 .course-card:hover {

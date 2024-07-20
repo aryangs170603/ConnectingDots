@@ -55,7 +55,7 @@
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -20px;
+  margin-left: -80px;
   margin-top: -20px;
 }
 
@@ -67,14 +67,14 @@
   color: #fff;
   padding: 8px;
   border-radius: 50%;
-  margin-left: -30px;
+  margin-left: -90px;
 }
 
 .review-name {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: -80px;
-  margin-left: 85px;
+  margin-top: -70px;
+  margin-left: 15px;
 }
 
 .review-post {
@@ -91,7 +91,7 @@
   max-height: 120px;
   overflow: hidden;
   margin-top: -5px;
-  margin-left: 70px;
+  margin-left: 30px;
   transition: none; /* Remove any transitions on text */
 }
 

@@ -64,6 +64,7 @@ function App() {
       {/* <Footer2 /> */}
       {/* <Whatsapp /> */}
       <Homepage />
+       
     </div>
   );
 }

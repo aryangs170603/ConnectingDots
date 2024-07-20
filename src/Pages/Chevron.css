@@ -1,0 +1,89 @@
+
+
+#phases {
+  text-align: center;
+}
+
+#phases ul {
+  list-style: none;
+  display: inline-table;
+}
+
+#phases ul li {
+  display: inline;
+}
+
+#phases ul li a {
+  display: block;
+  float: left;
+  height: 50px;
+  background: #555;
+  text-align: center;
+  padding: 30px 40px 0 80px;
+  position: relative;
+  margin: 0 10px 0 0; 
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* colour of current phase */
+#phases ul li.current-phase a {
+  background: #e41d24;
+}
+
+#phases ul li.current-phase a:after {
+  border-left: 40px solid #e41d24 !important;
+}
+
+/* set sizing of front pointers */
+#phases ul li a:after {
+  content: "";  
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #555;
+  position: absolute; right: -40px; top: 0;
+  z-index: 1;
+}
+
+/* set sizing of rear pointers */
+#phases ul li a:before {
+  content: "";  
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid white;
+  position: absolute; left: 0; top: 0;
+}
+
+/* set corner radius on first item */
+#phases ul li:first-child a {
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+
+/* hide pointer on end of last item */
+#phases ul li:first-child a:before {
+  display: none; 
+}
+
+/* set size and corner radius on last item */
+#phases ul li:last-child a {
+  padding-right: 80px;
+  border-top-right-radius: 10px; 
+  border-bottom-right-radius: 10px;
+}
+
+/*hide pointer on last item */
+#phases ul li:last-child a:after {
+  display: none; 
+}
+
+/* chevron body */
+#phases ul li a:hover {
+  background: #e41d24;
+}
+
+/* chevron pointer */
+#phases ul li a:hover:after {
+  border-left-color: #e41d24;
+}
