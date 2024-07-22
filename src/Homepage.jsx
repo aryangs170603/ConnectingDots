@@ -37,15 +37,16 @@ function AppH() {
       <main>
         <HeaderCarousel />
         <Marquee2 />
+        <Chevron />
         {/* <PopupForm/> */}
         <Keypoints />
+      
         <Ourclients />
         <database />
         <PopCourses />
         <PlacementSection />
         <Training2P />
         <Achievements />
-        <Chevron />
         <FeedbackandReviews />
         <Certificate />
         <OurBranches />

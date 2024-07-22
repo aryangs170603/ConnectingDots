@@ -7,6 +7,7 @@ import premImage2 from "../Logos/FeedbacksandReviews/review image 2.png";
 import premImage3 from "../Logos/FeedbacksandReviews/review image 3.jpg";
 import premImage4 from "../Logos/FeedbacksandReviews/review image 4.png";
 import premImage5 from "../Logos/FeedbacksandReviews/review image 5.png";
+import googleLogo from "../Logos/FeedbacksandReviews/google-logo.png"; // Update with the correct path to your Google logo
 
 const reviews = [
   {
@@ -42,7 +43,7 @@ const reviews = [
   {
     name: "Seshu Tamma",
     review:
-      "In my opinion, Connecting Dots is Mumbai's best SAP training center, offering top-notch SAP Aruba courses with a comprehensive curriculum, expert instructors, and excellent placement assistance. ",
+      "In my opinion, Connecting Dots is Mumbai's best SAP training center, offering top-notch SAP Aruba courses with a comprehensive curriculum, expert instructors, and excellent placement assistance.",
     image: premImage2,
   },
 ];
@@ -112,16 +113,21 @@ const FeedbackAndReviews = () => {
                         toggleExpand(index);
                       }}
                     >
-                      <div className="card-body-wrapper">
+                      <div className="card-body-wrapper d-flex">
+                        <div className="img-container">
+                          <img
+                            src={review.image}
+                            alt={review.name}
+                            className="review-image"
+                          />
+                          <img
+                            src={googleLogo}
+                            alt="Google Logo"
+                            className="google-logo"
+                          />
+                        </div>
                         <Card.Body>
-                          <div className="img-container">
-                            <img
-                              src={review.image}
-                              alt={review.name}
-                              className="review-image"
-                            />
-                            <i className="fa fa-quote-left icon"></i>
-                          </div>
+                          <i className="fa fa-quote-left icon"></i>
                           <Card.Title className="review-name">{review.name}</Card.Title>
                           <Card.Text className="review-text">
                             {expandedIndex === index
@@ -152,16 +158,21 @@ const FeedbackAndReviews = () => {
                                 toggleExpand(i);
                               }}
                             >
-                              <div className="card-body-wrapper">
+                              <div className="card-body-wrapper d-flex">
+                                <div className="img-container">
+                                  <img
+                                    src={reviews[i].image}
+                                    alt={reviews[i].name}
+                                    className="review-image"
+                                  />
+                                  <img
+                                    src={googleLogo}
+                                    alt="Google Logo"
+                                    className="google-logo"
+                                  />
+                                </div>
                                 <Card.Body>
-                                  <div className="img-container">
-                                    <img
-                                      src={reviews[i].image}
-                                      alt={reviews[i].name}
-                                      className="review-image"
-                                    />
-                                    <i className="fa fa-quote-left icon"></i>
-                                  </div>
+                                  <i className="fa fa-quote-left icon"></i>
                                   <Card.Title className="review-name">{reviews[i].name}</Card.Title>
                                   <Card.Text className="review-text">
                                     {expandedIndex === i

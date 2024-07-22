@@ -39,11 +39,12 @@ const Keypoints = () => {
       className: "logo2",
     },
     {
-      cover: logo6,
-      title: "100% Job Assistance",
+      cover: logo4,
+      title: "Experience Alteration",
       desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual.",
-      className: "logo3",
+      className: "logo5",
     },
+    
     {
       cover: logo3,
       title: "Real Time Training & Project",
@@ -51,10 +52,10 @@ const Keypoints = () => {
       className: "logo4",
     },
     {
-      cover: logo4,
-      title: "Experience Alteration",
+      cover: logo6,
+      title: "100% Job Assistance",
       desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual.",
-      className: "logo5",
+      className: "logo3",
     }
    
   ];

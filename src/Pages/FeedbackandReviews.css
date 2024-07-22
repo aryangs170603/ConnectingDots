@@ -1,10 +1,9 @@
-.feedback-section{
+.feedback-section {
   text-align: center;
   margin: 20px auto;
   font-family: 'Lato', sans-serif;
-  
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 5px;
   width: 97.5%;
   max-width: 1800px;
 }
@@ -21,14 +20,14 @@
   overflow: hidden;
   padding: 20px 10px 35px 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .feedback-card.expanded {
   max-height: 1000px; 
-  padding: 20px;
+  padding: 20px 10px 10px 10px;
 }
 
 .section-subtitle {
@@ -47,113 +46,81 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .review-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-left: -80px;
-  margin-top: -20px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
-.fa-quote-left.icon {
-  position: absolute;
-  bottom: 0;
-  left: 60px;
-  background-color: #43c0df;
-  color: #fff;
-  padding: 8px;
-  border-radius: 50%;
-  margin-left: -90px;
+.google-logo {
+  width: 70px;
+  height: 70px;
+  margin-left: 230px;
+  margin-top: -30px;
+  
+}
+
+.icon {
+  font-size: 2rem;
+  color: #0073e6;
+  margin-bottom: 50px;
+  margin-left: -30px;
 }
 
 .review-name {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: -70px;
-  margin-left: 15px;
-}
-
-.review-post {
-  color: #43c0df;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  max-height: 100px;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: -200px;
+  text-decoration: underline;
 }
 
 .review-text {
-  color: grey;
-  font-size: 15px;
-  line-height: 1.5;
-  max-height: 120px;
-  overflow: hidden;
-  margin-top: -5px;
-  margin-left: 30px;
-  transition: none; /* Remove any transitions on text */
+  font-size: 1rem;
+  color: #555;
 }
 
-.feedback-card.expanded .review-text {
-  max-height: none; /* Allow full height for expanded text */
-}
-
-.radio-buttons {
+.card-body-wrapper {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
-  .review-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .feedback-section {
+    padding: 10px;
   }
 
-  .expanded .review-text {
-    -webkit-line-clamp: initial;
-    overflow: visible;
-    height: auto;
-    width: auto;
-  }
-}
-
-/* Hide radio buttons on mobile devices */
-@media (max-width: 768px) {
-  .radio-buttons {
-    display: none;
-  }
-}
-
-/* Ensure single column layout on mobile devices */
-@media (max-width: 768px) {
   .feedback-card {
-    width: 100%;
-    max-width: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
   }
-}
-@media (max-width: 576px) {
-  .feedback-card{
-    max-height: 200px;
-  
-    width: 100%;
-    margin-top: 50px;
-    
+
+  .feedback-card.expanded {
+    padding: 0px;
   }
-  .review-name{
-    margin-left: 30px;
+
+  .img-container {
+    flex-direction: column;
+    align-items: center;
   }
-  .review-image{
-    margin-left: -60px;
+
+  .review-image {
+    margin-bottom: 10px;
+    margin-right: 0;
   }
-  .fa-quote-left.icon {
-    margin-left: -70px;
-  }
-  .review-text {
-    margin-left: 10px;
-    margin-top: 20px
+
+  .google-logo {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }

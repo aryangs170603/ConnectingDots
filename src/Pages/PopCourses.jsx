@@ -4,20 +4,21 @@ import ContactForm from './ContactForm';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Images
-import img1 from '../Icons/SAPFICO.png';
-import img2 from '../Icons/SAPHANA.png';
-import img3 from '../Icons/MnDS.png';
-import img4 from '../Icons/DGM3.png';
+import img1 from '../Icons/sap (3).png';
+
+import img2 from '../Icons/MnDS.png';
+import img3 from '../Icons/online-analytical.png';
+import img4 from '../Icons/salesforce.png';
 import img5 from '../Icons/HR PR2.png';
-import img6 from '../Icons/SEO2.png';
-import img7 from '../Icons/MERN.png';
-import img8 from '../Icons/UIUX.png';
-import img9 from '../Icons/python-file.png';
+import img6 from '../Icons/python-file.png';
+import img7 from '../Icons/java.png';
+import img8 from '../Icons/business-intelligence.png';
+import img9 from '../Icons/cloud-data.png';
 
 const courses = [
   { name: 'SAP S/4 HANA Courses', count: 25, icon: img1 },
   { name: 'Masters in Data Science', count: 25, icon: img2 },
-  { name: 'Masters in Data Analystics', count: 16, icon: img3 },
+  { name: 'Masters in Data Analystics', count: 16, icon:img3  },
   { name: 'Salesforce', count: 30, icon: img4 },
   { name: 'HR Courses', count: 8, icon: img5 },
   { name: 'Full-Stack Python', count: 12, icon: img6 },
