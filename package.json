@@ -2,6 +2,7 @@
   "name": "codespaces-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aryangs170603.github.io/ConnectingDots",
   "dependencies": {
     "@fontsource/poppins": "^5.0.14",
     "@fortawesome/fontawesome-free": "^6.5.2",
@@ -54,7 +55,9 @@
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

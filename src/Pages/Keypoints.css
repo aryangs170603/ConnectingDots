@@ -10,7 +10,7 @@
   margin: auto;
   padding-bottom: 100px;
 }
-
+ 
 .keypoints-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -151,6 +151,8 @@
   width: 70px;
   height: 80px;
   margin-left: 5px;
+  margin-bottom: 20px;
+  margin-right: 5px;
 }
 
 .logo2 {
@@ -165,7 +167,7 @@
   height: 75px;
   margin-left: 8px;
   margin-right: 17px;
-  
+
 }
 
 .logo4 {

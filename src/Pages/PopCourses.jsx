@@ -15,15 +15,15 @@ import img8 from '../Icons/UIUX.png';
 import img9 from '../Icons/python-file.png';
 
 const courses = [
-  { name: 'SAP FICO Courses', count: 25, icon: img1 },
-  { name: 'SAP S/4 HANA Courses', count: 25, icon: img2 },
-  { name: 'Masters in Data Science', count: 16, icon: img3 },
-  { name: 'Digital Marketing', count: 30, icon: img4 },
-  { name: 'HR payroll', count: 8, icon: img5 },
-  { name: 'SEO', count: 12, icon: img6 },
-  { name: 'Mern Stack', count: 17, icon: img7 },
-  { name: 'UI/UX', count: 17, icon: img8 },
-  { name: 'Python', count: 17, icon: img9 },
+  { name: 'SAP S/4 HANA Courses', count: 25, icon: img1 },
+  { name: 'Masters in Data Science', count: 25, icon: img2 },
+  { name: 'Masters in Data Analystics', count: 16, icon: img3 },
+  { name: 'Salesforce', count: 30, icon: img4 },
+  { name: 'HR Courses', count: 8, icon: img5 },
+  { name: 'Full-Stack Python', count: 12, icon: img6 },
+  { name: 'Full-Stack Java', count: 17, icon: img7 },
+  { name: 'PowerBI', count: 17, icon: img8 },
+  { name: 'AWS/Azure/Google Cloud Platform', count: 17, icon: img9 },
 ];
 
 const Courses = () => {

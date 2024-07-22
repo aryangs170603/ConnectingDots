@@ -3,7 +3,7 @@ import './Chevron.css';
 
 const Phases = () => {
   return (
-    <div className="container">
+    <div className="containerCH">
       <div id="phases">
         <ul>
           <li>
