@@ -3,32 +3,28 @@ import React from "react";
 import Navbar from "./components/Navbar";
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import HeaderCarousel from "./Pages/HeaderCarousel";
+import HeaderCarousel from "./Homepage/HeaderCarousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Marquee1 from "./Pages/Marquee1";
-import Marquee2 from "./Pages/Marquee2";
-import PlacementSection from "./Pages/PlacementSection";
-import Keypoints from "./Pages/Keypoints";
-import PopCourses from "./Pages/PopCourses";
-// import Ourclients from './Pages/Ourclients';
+import Marquee1 from "./Homepage/Marquee1";
+import Marquee2 from "./Homepage/Marquee2";
+import PlacementSection from "./Homepage/PlacementSection";
+import Keypoints from "./Homepage/Keypoints";
+import PopCourses from "./Homepage/PopCourses";
 import Footer2 from "./components/Footer2";
-//import database from './components/Database';
-// import chevron from './Pages/chevron';
-import Achievements from "./Pages/Achievements";
-import Ourstats from "./Pages/Ourstats";
+import Achievements from "./Homepage/Achievements";
+import Ourstats from "./Homepage/Ourstats";
 import Stickyform from "./components/Stickyform";
-import Certificate from "./Pages/Certificate";
-import OurBranches from "./Pages/OurBranches";
-import Chevron from "./Pages/Chevron";
-import Whatsapp from "./Pages/FloatingWhatsApp";
-import FeedbackandReviews from "./Pages/FeedbackandReviews";
+import Certificate from "./Homepage/Certificate";
+import OurBranches from "./Homepage/OurBranches";
+import Chevron from "./Homepage/Chevron";
+import Whatsapp from "./Homepage/FloatingWhatsApp";
+import FeedbackandReviews from "./Homepage/FeedbackandReviews";
 //import Navbar from './components/AboutUs.jsx';
 // import PopupForm from './components/PopupForm';
-import Ourclients from "./Pages/Ourclients";
-
+import Ourclients from "./Homepage/Ourclients";
 import Wave from "./components/Wave.jsx";
-function AppH() {
+function Homepage() {
   return (
     <div className="App">
       <Marquee1 />
@@ -40,9 +36,7 @@ function AppH() {
         <Chevron />
         {/* <PopupForm/> */}
         <Keypoints />
-      
         <Ourclients />
-        <database />
         <PopCourses />
         <PlacementSection />
         <Ourstats />
@@ -59,4 +53,4 @@ function AppH() {
   );
 }
 
-export default AppH;
+export default Homepage;

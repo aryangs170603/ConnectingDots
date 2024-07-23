@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "./Ourstats.css";
-import book from "../Logos/T2P gifs/book.gif";
-import cert from "../Logos/T2P gifs/certificate.gif";
-import cv from "../Logos/T2P gifs/cv.gif";
-import intprep from "../Logos/T2P gifs/interviewprep.gif";
-import jobs from "../Logos/T2P gifs/jobs.gif";
-import mockint from "../Logos/T2P gifs/mockint.gif";
-import years from "../Logos/T2P gifs/10years.gif";
-import growth from "../Logos/T2P gifs/growth.gif";
-import mentors from "../Logos/T2P gifs/mentors.gif";
+import cert from "../Logos/Stats gifs/certificate.gif";
+import cv from "../Logos/Stats gifs/cv.gif";
+import jobs from "../Logos/Stats gifs/jobs.gif";
+import years from "../Logos/Stats gifs/10years.gif";
+import growth from "../Logos/Stats gifs/growth.gif";
+import mentors from "../Logos/Stats gifs/mentors.gif";
 
 const CardComponent = () => {
   const [cardStates, setCardStates] = useState([

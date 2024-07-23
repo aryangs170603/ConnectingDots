@@ -4,13 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HeaderCarousel.css";
 import TextTransition, { presets } from "react-text-transition";
 import slideImage3 from "../Logos/Headercarousel/file02.png";
-// import slide4 from '../Logos/Headercarousel/slide4 img.png';
 import logostrip from "../Logos/Headercarousel/logo strip.png";
 import SAPmodule1 from "../Logos/Headercarousel/SAP module1.png";
 import DSh from "../Logos/Headercarousel/DSh.png";
 import DGM from "../Logos/Headercarousel/DGM.png";
 import IT from "../Logos/Headercarousel/IT.png";
-//import assurance from '../Logos/Headercarousel/100%assurance.png';
+
 
 const TEXTS1 = [
   "Connect Your Dots with  SAP Expertise",
@@ -91,9 +90,9 @@ const HeaderCarousel = () => {
         <Carousel.Item>
           <div className="carousel-slide">
             <div className="carousel-text">
-              <h2>Unlock your career potential</h2>
+              <h2>Unlock your <span className="highlight">Career</span> potential</h2>
               <b></b>
-              <h3>Job Oriented Programs</h3>
+              <h3><span className="highlight">Job</span> Oriented Programs</h3>
               <b></b>
               <p>
                 Sap Courses | HR Courses | Software Development | Digital
@@ -101,7 +100,7 @@ const HeaderCarousel = () => {
                 Stack
               </p>
               <Col>
-                <p>Est. 2010 Trusted by +65000 Students</p>
+                <p>Est. 2010 Trusted by <span className="highlight">65000+</span> Students</p>
               </Col>
               <div>
                 <CustomButton
@@ -162,14 +161,14 @@ const HeaderCarousel = () => {
               <br></br>
               <br></br>
               <h2>
-                Our <span className="bold">Mentors</span> Come From Top{" "}
+                Our <span className="highlight">Mentors</span> Come From Top{" "}
                 <span className="highlight">MNCs</span>
               </h2>
               <br></br>
               <br></br>
               <h2>
                 <img
-                  src="src/Logos/assurance.png"
+                  src="src/Logos/Headercarousel/assurance.png"
                   alt=""
                   className="assured-placement-image"
                 />
@@ -182,12 +181,12 @@ const HeaderCarousel = () => {
                 <div className="content3">
                   <div className="image-grid">
                     <img
-                      src="src/Logos/oldclients/ibm1.png"
+                      src="src/Logos/Headercarousel/ibm1.png"
                       alt="Image 1"
                       className="grid-image grid-image-ibm"
                     />
                     <img
-                      src="src/Logos/oldclients/tcs1.png"
+                      src="src/Logos/Headercarousel/tcs1.png"
                       alt="Image 2"
                       className="grid-image grid-image-tcs"
                     />
@@ -197,27 +196,27 @@ const HeaderCarousel = () => {
                       className="grid-image grid-image-Lnt"
                     />
                     <img
-                      src="src/Logos/oldclients/amdocs1.png"
+                      src="src/Logos/Headercarousel/amdocs1.png"
                       alt="Image 4"
                       className="grid-image grid-image-amd"
                     />
                     <img
-                      src="src/Logos/oldclients/infosys2.png"
+                      src="src/Logos/Headercarousel/infosys2.png"
                       alt="Image 5"
                       className="grid-image grid-image-info"
                     />
                     <img
-                      src="src/Logos/oldclients/wipro.png"
+                      src="src/Logos/Headercarousel/wipro.png"
                       alt="Image 6"
                       className="grid-image grid-image-wip"
                     />
                     <img
-                      src="src/Logos/oldclients/deloitte.png"
+                      src="src/Logos/Headercarousel/deloitte.png"
                       alt="Image 7"
                       className="grid-imaged grid-image-del"
                     />
                     <img
-                      src="src/Logos/oldclients/accenture1.png"
+                      src="src/Logos/Headercarousel/accenture1.png"
                       alt="Image 8"
                       className="grid-image grid-image-acc"
                     />
@@ -227,7 +226,7 @@ const HeaderCarousel = () => {
                       className="grid-image grid-image-bmw"
                     />
                     <img
-                      src="src/Logos/oldclients/cognizant1.png"
+                      src="src/Logos/Headercarousel/cognizant1.png"
                       alt="Image 10"
                       className="grid-image grid-image-cog"
                     />

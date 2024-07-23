@@ -3,9 +3,8 @@ import './PopCourses.css';
 import ContactForm from './ContactForm';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Images
-import img1 from '../Icons/sap (3).png';
 
+import img1 from '../Icons/sap (3).png';
 import img2 from '../Icons/MnDS.png';
 import img3 from '../Icons/online-analytical.png';
 import img4 from '../Icons/salesforce.png';
