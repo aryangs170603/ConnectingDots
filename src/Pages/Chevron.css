@@ -30,7 +30,7 @@
   background-color: #F0AC8A;
   padding-top: 10px;
   padding-bottom: 8px;
-padding-left: 8px;
+  padding-left: 8px;
   border-radius: 20px;
   box-shadow: 7px 5px 5px #000000;
 }
@@ -65,7 +65,6 @@ padding-left: 8px;
   text-decoration: none;
   color: #fff;
   box-sizing: border-box;
-
 }
 
 /* colour of current phase */
@@ -131,4 +130,88 @@ padding-left: 8px;
 /* chevron pointer */
 .phases ul li a:hover:after {
   border-left-color:  #182E4A;
+}
+
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .containerCH h1 {
+    font-size: 1.5rem;
+  }
+
+  .phases {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto; /* Center the phases container */
+  }
+
+  .phases ul {
+    display: block;
+    padding: 0;
+    margin: 0 auto; /* Center the phases list */
+  }
+ .chevron-item{
+   margin-left: 35px;
+ }
+  .phases ul li {
+    display: flex;
+    justify-content: center; /* Center each list item */
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 240px; /* Adjust the width of each list item */
+  }
+
+  .phases ul li a {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  /* Alternating chevron arrows */
+  .phases ul li:nth-child(odd) a:after {
+    border-left: 40px solid #B26946;
+    right: -40px;
+  }
+
+  .phases ul li:nth-child(even) a:after {
+    border-right: 40px solid #B26946;
+    border-left: none;
+    left: -40px;
+    right: auto;
+  }
+
+  .phases ul li:nth-child(odd) a:before {
+    border-left: 40px solid #F0AC8A;
+    left: 0;
+  }
+
+  .phases ul li:nth-child(even) a:before {
+    border-right: 40px solid #F0AC8A;
+    border-left: none;
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .containerCH h1 {
+    font-size: 1.25rem;
+  }
+
+  .phases ul li a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .containerCH h1 {
+    font-size: 1.25rem;
+  }
+
+  .phases ul li a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }

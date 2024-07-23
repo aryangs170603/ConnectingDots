@@ -37,6 +37,7 @@ footer {
   flex-grow: 1;
 }
 
+
 .social-icons a {
   color: #fff;
   margin: 0 10px;
@@ -65,7 +66,7 @@ footer {
   display: inline-block;
   padding-bottom: 5px;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 25px;
   color: white;
 }
 
@@ -83,6 +84,7 @@ footer {
 
 .menu-item {
   margin: 5px 10px;
+  font-size: 13px;
 }
 
 .menu-item a {
@@ -103,6 +105,13 @@ footer {
   display: flex;
   justify-content: center; 
   height: 20px;
+}
+.course-categories h6{
+  margin-left: 20px;
+  margin-top: 5px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .footer-bottom p {

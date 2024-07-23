@@ -16,7 +16,7 @@ import Footer2 from "./components/Footer2";
 //import database from './components/Database';
 // import chevron from './Pages/chevron';
 import Achievements from "./Pages/Achievements";
-import Training2P from "./Pages/Training2P";
+import Ourstats from "./Pages/Ourstats";
 import Stickyform from "./components/Stickyform";
 import Certificate from "./Pages/Certificate";
 import OurBranches from "./Pages/OurBranches";
@@ -45,7 +45,7 @@ function AppH() {
         <database />
         <PopCourses />
         <PlacementSection />
-        <Training2P />
+        <Ourstats />
         <Achievements />
         <FeedbackandReviews />
         <Certificate />

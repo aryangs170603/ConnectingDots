@@ -31,7 +31,7 @@ const Certificate = () => {
             This certificate proudly recognizes that Mr./Miss XYZ has successfully completed the program on dd/mm/yyyy.
           </p>
           <p>
-            By earning this certificate, whether through our online or offline courses, you have demonstrated your commitment to excellence and continuous learning. This certificate is a testament to your dedication and hard work, recognized under the standards set by our esteemed institution. At <span className="highlight-founder-1">Connecting Dots ERP</span>, we strive to be the <span className="highlight-founder">best SAP training institute</span>, ensuring that our alumni are well-prepared for their careers.
+            Your degree and abilities are pivotal in launching your career, equipping you with the skills to compete on a global scale. These qualifications open doors to opportunities and ensure you stay competitive in the international job market
           </p>
           <div className="mb-3" style={{ display: 'flex', justifyContent: 'left' }}>
             <Button className="outline-btn" onClick={() => handleShowModal('Brochure')}>Enroll Now</Button>

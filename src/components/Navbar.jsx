@@ -74,7 +74,7 @@ const Header = () => {
                           <a className="dropdown-item" href="#">SAP Functional &raquo;</a>
                           <ul className="dropdown-menu dropdown-submenu">
                             <li><a className="dropdown-item" href="#">SAP FICO</a></li>
-                            <li><a className="dropdown-item" href="#">SAP MM 2</a></li>
+                            <li><a className="dropdown-item" href="#">SAP MM </a></li>
                             <li><a className="dropdown-item" href="#">SAP SD</a></li>
                             <li><a className="dropdown-item" href="#">SAP HR/HCM</a></li>
                             <li><a className="dropdown-item" href="#">SAP PP</a></li>

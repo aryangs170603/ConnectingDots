@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color:  #fff;
   backdrop-filter: blur(100px);
   height: 70px;
   width: 100%;
@@ -24,6 +24,7 @@ body {
   margin: 0 auto;
   z-index: 1000;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 30%);
+  
 }
 
 .logo {
@@ -197,8 +198,8 @@ body {
 .dropdown-menu {
   background-color: rgb(255, 255, 255, 0.4); 
   backdrop-filter: blur(100px); 
-  border: 1px solid rgb(0, 0, 0, 0.2); 
-   font-weight: bold;
+  border: 0.5px solid rgb(0, 0, 0, 0.2); 
+   font-weight: bolder;
 }
 
 .dropdown-menu .dropdown-submenu {
@@ -222,13 +223,20 @@ body {
 .dropdown-menu > li:hover > .dropdown-submenu {
   display: block;
 }
+.dropdown-menu dropdown-submenu{
+  font-weight: bolder;
+}
+.dropdown-item{
+  font-weight: bold;
+}
 
 .dropdown-menu li {
   position: relative;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Semi-transparent border */
   font-color: black;
-  font-weight: bold;
+  font-weight: bolder;
   transition: all 940ms;
+ 
 }
 
 .dropdown-menu li:last-child {
@@ -237,11 +245,11 @@ body {
 
 .view-more {
   font-weight: bold;
-  color: #000000;
+  color: #0008ff;
 }
 
 .view-more:hover {
-  color: #000000;
+  color: #002aff;
   text-decoration: underline;
 }
 
@@ -255,9 +263,7 @@ body {
 .dropdown {
   margin-top: 10px;
   margin-left: 70px;
-  background-color: rgba(255, 255, 255, 0.4); /* More transparent white */
-  backdrop-filter: blur(2000px); /* Stronger blur effect */
-  border: 1px solid rgb(255, 255, 255, 0.2); /* Light border to enhance the blur effect */
+  
 }
 
 .nav-links-container {

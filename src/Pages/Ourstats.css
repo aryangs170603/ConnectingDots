@@ -40,7 +40,7 @@
 
 .cardT2P {
   height: 300px;
-  width: 180px;
+  width: 190px;
   position: relative;
   border-radius: 25px;
   transition: all 1s ease;
@@ -91,6 +91,15 @@
   perspective: inherit;
 }
 
+.highlightF {
+  font-weight: bold;
+  color: #fcff5c; 
+}
+.highlightB{
+  font-weight: bold;
+  color: orange;
+}
+
 .cardT2P-img1 img {
   height: auto;
   width: 70px;
@@ -99,12 +108,18 @@
   align-self: center;
 }
 
-.cardT2P-depth h2, .cardT2P-depth p {
+.cardT2P-depth h2 {
   color: #d5d2d2;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
 }
-
+ 
+.cardT2P-back h2{
+color: black;
+  font-size: 19px;
+  text-align: left;
+  width: 90%;
+}
 .cardT2P-front {
   background: linear-gradient(to top left, #337ac7, #000352);
   transform-style: preserve-3d;

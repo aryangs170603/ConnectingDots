@@ -19,83 +19,125 @@ const Footer = () => {
         </div>
         <div className="column">
           <div className="widget">
-            <div className="headline"><h3>About</h3></div>
-                <ul className="menu horizontal">
-                  <li className="menu-item"><a href="#">Enterprises Network Solution</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">HR Recruitment IT & Non-IT</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Network Consulting Services</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Top Corporate Training In Pune</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Terms of Use</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Training</a></li>
-                </ul>
-              </div>
-              <div className="widget">
-                <div className="headline"><h3>Networking Courses</h3></div>
-                <ul className="menu horizontal">
-                  <li className="menu-item"><a href="#">Amazon Web Services</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Linux</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Azure</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Cyber Security</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">DevOps</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Salesforce</a></li>
-                </ul>
-              </div>
-              <div className="widget">
-                <div className="headline"><h3>Software Courses</h3></div>
-                <ul className="menu horizontal">
-                  <li className="menu-item"><a href="#">Artificial Intelligence</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Full Stack Training</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Java</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">MERN Stack</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">UI/UX Design</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Python</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">React JS</a></li>
-                </ul>
-              </div>
-              <div className="widget">
-                <div className="headline"><h3>Other Courses</h3></div>
-                <ul className="menu horizontal">
+            <div className="headline"><h3>SAP COURSES</h3></div>
+            <div className="course-categories">
+              <h6> - SAP FUNCTIONAL COURSES</h6>
+               <ul className="menu horizontal">
                   <li className="menu-item"><a href="#">SAP FICO</a></li>
-                  <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">SAP MM</a></li>
                   <li className="menu-item">|</li>
                   <li className="menu-item"><a href="#">SAP SD</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">SAP ABAP</a></li>
+                  <li className="menu-item"><a href="#">SAP MM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Spoken English</a></li>
+                  <li className="menu-item"><a href="#">SAP PP</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Train the Trainer (TTT)</a></li>
+                  <li className="menu-item"><a href="#">SAP HR/HCM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">HR</a></li>
+                  <li className="menu-item"><a href="#">SAP QM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Personality Development Classes in Pune</a></li>
+                  <li className="menu-item"><a href="#">SAP PM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Personality Development</a></li>
+                  <li className="menu-item"><a href="#">SAP SCM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">Interior Designing</a></li>
+                  <li className="menu-item"><a href="#">SAP EWM</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">German Language</a></li>
+                  <li className="menu-item"><a href="#">SAP LE</a></li>
                   <li className="menu-item">|</li>
-                  <li className="menu-item"><a href="#">French Language</a></li>
+                  <li className="menu-item"><a href="#">SAP SUCCESSFACTOR</a></li>
+                </ul>
+              <h6> - SAP TECHNICAL COURSES</h6>
+              <ul className="menu horizontal">
+                <li className="menu-item"><a href="#">SAP ABAP</a></li>
+                <li className="menu-item">|</li>
+                <li className="menu-item"><a href="#">SAP BASIS</a></li>
+                <li className="menu-item">|</li>
+                <li className="menu-item"><a href="#">SAP NetWeaver</a></li>
+                <li className="menu-item">|</li>
+                <li className="menu-item"><a href="#">SAP BW/BI</a></li>
+                <li className="menu-item">|</li>
+                <li className="menu-item"><a href="#">SAP SOLUTION MANAGER</a></li>
+                <li className="menu-item">|</li>
+                <li className="menu-item"><a href="#">SAP S/4 HANA</a></li>
+              </ul>
+              </div>
+              </div>
+              <div className="widget">
+                <div className="headline"><h3>DATA SCIENCE COURSES</h3></div>
+                <ul className="menu horizontal">
+                  <li className="menu-item"><a href="#">MASTERS IN DATA ANALYTICS</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">MASTERS IN DATA SCIENCE</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">MASTERS IN BUSINESS ANALYTICS</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">CHAT GPT & AI</a></li>
+                </ul>
+                
+              </div>
+              <div className="widget">
+                <div className="headline"><h3>IT COURSES</h3></div>
+                <ul className="menu horizontal">
+                  <li className="menu-item"><a href="#">ARTIFICIAL INTELLIGENCE</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">FULL STACK TRAINING</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">JAVA</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">MERN STACK</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">UI/UX DESIGN</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">PYTHON</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">REACT JS</a></li>
+                  <li className="menu-item">|</li>
+                   <li className="menu-item"><a href="#">SALESFORCE</a></li>
                 </ul>
               </div>
+              <div className="widget">
+                <div className="headline"><h3>DIGITAL MARKETING COURSES</h3></div>
+                <ul className="menu horizontal">
+                  <li className="menu-item"><a href="#">ADVANCE DIGITAL MARKETING</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">PAY PER CLICK TRAINING</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">SEARCH ENGINE OPTIMIZATION</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">SAP ABAP</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">SOCIAL MEDIA MARKETING</a></li>
+                  <li className="menu-item">|</li>
+                  <li className="menu-item"><a href="#">ADVANCE ANALYTICS TRAINING</a></li>
+                </ul>
+              </div>
+          <div className="widget">
+            <div className="headline"><h3>DATA VISUALISATION COURSES</h3></div>
+            <ul className="menu horizontal">
+              <li className="menu-item"><a href="#">POWER BI</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">TABLEAU</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">SQL</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">MICROSFT SQL</a></li>
+            </ul>
+          </div>
+          <div className="widget">
+            <div className="headline"><h3>HR COURSES</h3></div>
+            <ul className="menu horizontal">
+              <li className="menu-item"><a href="#">CORE HR</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">HR PAYROLL</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">HR MANAGEMENT</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">SAP HR (HCM)</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">HR ANALYTICS</a></li>
+              <li className="menu-item">|</li>
+              <li className="menu-item"><a href="#">ADVANCE HR ANALYTICS</a></li>
+            </ul>
+          </div>
             </div>
         <div className="footer-bottom">
           <p>&copy; ConnectingDotsERP 2024 Ltd.</p>

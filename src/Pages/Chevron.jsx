@@ -4,7 +4,7 @@ import './Chevron.css';
 const Phases = () => {
   return (
     <div className="containerCH">
-      <h1>OUR STATS AT A GLANCE</h1>
+      <h1>TRAINING TO PLACEMENT APPROACH</h1>
       <div className="phases">
         <ul>
           <li className="chevron-item highest-salary">
