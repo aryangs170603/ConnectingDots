@@ -27,7 +27,7 @@
 .phases {
   text-align: center;
   margin-top: 10px;
-  background-color: #F0AC8A;
+  background-color: #ffffff;
   padding-top: 10px;
   padding-bottom: 8px;
   padding-left: 8px;
@@ -56,7 +56,7 @@
   float: left;
   height: 81px;
   width: 200px;
-  background: #B26946;
+  background: #5aadd3;
   text-align: center;
   padding: 20px 30px;
   position: relative;
@@ -81,7 +81,7 @@
   content: "";
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
-  border-left: 40px solid #B26946;
+  border-left: 40px solid #5aadd3;
   position: absolute;
   right: -40px;
   top: 0;
@@ -93,7 +93,7 @@
   content: "";
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
-  border-left: 40px solid #F0AC8A;
+  border-left: 40px solid #ffffff;
   position: absolute;
   left: 0;
   top: 0;
@@ -169,24 +169,24 @@
 
   /* Alternating chevron arrows */
   .phases ul li:nth-child(odd) a:after {
-    border-left: 40px solid #B26946;
+    border-left: 40px solid #5aadd3;
     right: -40px;
   }
 
   .phases ul li:nth-child(even) a:after {
-    border-right: 40px solid #B26946;
+    border-right: 40px solid #5aadd3;
     border-left: none;
     left: -40px;
     right: auto;
   }
 
   .phases ul li:nth-child(odd) a:before {
-    border-left: 40px solid #F0AC8A;
+    border-left: 40px solid white;
     left: 0;
   }
 
   .phases ul li:nth-child(even) a:before {
-    border-right: 40px solid #F0AC8A;
+    border-right: 40px solid white;
     border-left: none;
     left: auto;
     right: 0;

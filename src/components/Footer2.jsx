@@ -5,6 +5,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
+        <div className="background-animation">
+          <div className="starsec"></div>
+          <div className="starthird"></div>
+          <div className="starfourth"></div>
+          <div className="starfifth"></div>
+        </div>
         <div className="footer-content">
           <div className="footer-logo">
             <img src={"src/Logos/Footer/cdots.png"} alt="Connecting Dots ERP Logo" />
@@ -136,6 +142,41 @@ const Footer = () => {
               <li className="menu-item"><a href="#">HR ANALYTICS</a></li>
               <li className="menu-item">|</li>
               <li className="menu-item"><a href="#">ADVANCE HR ANALYTICS</a></li>
+            </ul>
+          </div>
+          <div className="widget">
+            <div className="headline-about"><h3>ABOUT US</h3></div>
+            <ul className="menu horizontal">
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"></li>
+              <li className="menu-item-about"><a href="#">CONTACT US </a></li>
+              <li className="menu-item-about">|</li>
+              <li className="menu-item-about"><a href="#">ABOUT US </a></li>
+              <li className="menu-item-about">|</li>
+              <li className="menu-item-about"><a href="#">CAREER</a></li>
+              <li className="menu-item-about">|</li>
+              <li className="menu-item-about"><a href="#">POLICIES</a></li>
+              <li className="menu-item-about">|</li>
+              <li className="menu-item-about"><a href="#">PLACEMENT</a></li>
+              <li className="menu-item-about">|</li>
+              <li className="menu-item-about"><a href="#">CORPORATE TRAINING</a></li>
             </ul>
           </div>
             </div>

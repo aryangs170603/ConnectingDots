@@ -1,71 +1,45 @@
+// App.jsx
 import React from 'react';
-//import axios from 'axios'
-// import Navbar from './components/Navbar';
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-// import HeaderCarousel from './Pages/HeaderCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-// import Marquee1 from './Pages/Marquee1';
-// import Marquee2 from './Pages/Marquee2';
-// import PlacementSection from './Pages/PlacementSection';
-// import Keypoints from './Pages/Keypoints';
-// import PopCourses from './Pages/PopCourses';
-// import Ourclients from './Pages/Ourclients';
-// //import Footer2 from './components/Footer2';
-// //import foooter from './components/foooter';
-// //import foooter from './components/foooter';
-// import Footer1 from './components/Footer1';
-// //import database from './components/Database';
-
-// // import FAQComponent from './Pages/FAQComponent';
-// import Achievements from './Pages/Achievements';
-// // import Training2P from './Pages/Training2P';
-// import Stickyform from './Pages/Stickyform';
-// import Certificate from './Pages/Certificate';
-// import OurBranches from './Pages/OurBranches';
-// import Founders from './Pages/Founder';
-// import Whatsapp from './Pages/FloatingWhatsApp';
-// import FeedbackandReviews from './Pages/FeedbackandReviews';
-// //import Navbar from './components/AboutUs.jsx';
-// import Exp from './Pages/Exp';
-
-import Homepage from './Homepage.jsx';
+import Marquee1 from './Homepage/Marquee1';
+import Navbar from './components/Navbar';
+import Wave from './components/Wave';
+import Footer2 from './components/Footer2';
+import Stickyform from './components/Stickyform';
+import Whatsapp from './Homepage/FloatingWhatsApp';
+import Homepage from './Homepage';
+import IT from './IT';
+import Menubar from './components/Menubar';
 function App() {
   return (
-    <div className="App">
-      {/* <Marquee1 /> */}
-       {/* <About/> */}
-      {/* <Navbar /> */}
-       {/* <main> */}
-      {/* <HeaderCarousel /> */}
-      {/* <Marquee2 />
-      <Keypoints />
-         <database />
-      <PopCourses />
-      
-         <PlacementSection />
-      <Certificate />
-         <Ourclients />
-         
-      <Founders />
-         
-      <Achievements />
-          <Exp /> */}
-      
-      {/* <Training2P /> */}
-          {/* <FeedbackandReviews /> */}
-         {/* <FAQComponent /> */}
-         {/* <OurBranches />    */}
-      {/* </main> */}
-      {/* <Stickyform /> */}
-      {/* <Footer1 /> */}
-      
-      {/* <Footer2 /> */}
-      {/* <Whatsapp /> */}
-      <Homepage />
-       
-    </div>
+    <Router>
+      <div className="App">
+        
+        <div className="background-animation">
+          <div className="starsec"></div>
+          <div className="starthird"></div>
+          <div className="starfourth"></div>
+          <div className="starfifth"></div>
+        </div>
+        
+        <Marquee1 />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="src/IT.jsx" element={<IT />} />
+          </Routes>
+        </main>
+        <Stickyform />
+        <Wave />
+        <Footer2 />
+        <Whatsapp />
+        <Menubar />
+      </div>
+    </Router>
   );
 }
 

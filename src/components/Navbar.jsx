@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
-import logo from '/src/Logos/Navbar/connecting dot erp logo.png';
-import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Navbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "/src/Logos/Navbar/connecting dot erp logo.png";
+import { Navbar, Container, Offcanvas, Nav } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./Navbar.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState('');
-  const [isDropdownVisible1, setDropdownVisible1] = useState(false);
-  const [isDropdownVisible2, setIsDropdownVisible2] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+  const [isDropdownVisible, setIsDropdownVisible] = useState({
+    dropdown2: false,
+    dropdown3: false,
+    dropdown4: false,
+    dropdown5: false,
+    dropdown6: false,
+  });
+
   const handleNavClick = (link) => {
     setActiveLink(link);
   };
-  const handleMouseEnter1 = () => {
-    setDropdownVisible1(true);
-  };
-  const handleMouseLeave1 = () => {
-    setDropdownVisible1(false);
-  };
-  const handleMouseEnter2 = () => setIsDropdownVisible2(true);
-  const handleMouseLeave2 = () => setIsDropdownVisible2(false);
+
+  const handleMouseEnter = (dropdown) =>
+    setIsDropdownVisible((prev) => ({ ...prev, [dropdown]: true }));
+  const handleMouseLeave = (dropdown) =>
+    setIsDropdownVisible((prev) => ({ ...prev, [dropdown]: false }));
 
   return (
     <Navbar expand="lg" className="header">
@@ -29,202 +32,220 @@ const Header = () => {
         <div className="logo">
           <img src={logo} alt="Connecting Dots ERP" />
         </div>
-        <div className="search-bar">
-          <input type="text" className="search-bar__input" placeholder="Search..." />
-          <button className="search-bar__button">
-            <FontAwesomeIcon icon={faSearch} />
-          </button>
-        </div>
 
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <div 
-                className="dropdown"
-                onMouseEnter={handleMouseEnter1}
-                onMouseLeave={handleMouseLeave1}
-                style={{ position: 'relative' }}
+        <Nav className="navbar-nav justify-content-end flex-grow-1 pe-3">
+          {[
+            { id: "dropdown2", label: "SAP" },
+            { id: "dropdown3", label: "IT Courses" },
+            { id: "dropdown4", label: "Data Visualisation" },
+            { id: "dropdown5", label: "Digital Marketing" },
+            { id: "dropdown6", label: "HR Courses" },
+          ].map((dropdown) => (
+            <div
+              className="dropdown2"
+              key={dropdown.id}
+              onMouseEnter={() => handleMouseEnter(dropdown.id)}
+              onMouseLeave={() => handleMouseLeave(dropdown.id)}
+              style={{ position: "relative", marginLeft: "20px" }}
+            >
+              <Nav.Link
+                className={`mx-lg-2 dropdown-toggle ${activeLink === dropdown.id ? "active" : ""}`}
+                href="#"
+                id={`dropdownMenuButton${dropdown.id}`}
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                onClick={(e) => e.preventDefault()}
               >
-               
-                <Nav.Link
-                  className={`mx-lg-2 dropdown-toggle ${activeLink === 'courses' ? 'active' : ''}`}
-                  href="#"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  onClick={(e) => e.preventDefault()}
+                {dropdown.label}
+              </Nav.Link>
+              {isDropdownVisible[dropdown.id] && (
+                <ul
+                  className="dropdown-menu show"
+                  aria-labelledby={`dropdownMenuButton${dropdown.id}`}
+                  style={{ display: "block" }}
                 >
-                  Courses
-                </Nav.Link>
-                {isDropdownVisible1 && (
-                  <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton" style={{ display: 'block' }}>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        IT Courses &raquo;
-                      </a>
-                      <ul className="dropdown-menu dropdown-submenu">
-                        <li>
-                          <a className="dropdown-item" href="#">Data Science &raquo;</a>
-                          <ul className="dropdown-menu dropdown-submenu">
-                            <li><a className="dropdown-item" href="#">Masters in Data Science</a></li>
-                            <li><a className="dropdown-item" href="#">Masters in Data Analytics</a></li>
-                            <li><a className="dropdown-item" href="#">Masters in Business Analytics</a></li>
-                            <li><a className="dropdown-item" href="#">Chat Gpt and AI</a></li>
-                            <li>
-                              <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a className="dropdown-item" href="#">Full Stack &raquo;</a>
-                          <ul className="dropdown-menu dropdown-submenu">
-                            <li><a className="dropdown-item" href="#">Full Stack Python </a></li>
-                            <li><a className="dropdown-item" href="#">Full Stack Java</a></li>
-                            <li><a className="dropdown-item" href="#">MERN Stack </a></li>
-                            <li><a className="dropdown-item" href="#">MEAN Stack</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Data Visualisation &raquo;
-                      </a>
-                      <ul className="dropdown-menu dropdown-submenu">
-                        <li><a className="dropdown-item" href="#">POWER BI</a></li>
-                        <li><a className="dropdown-item" href="#">TABLEAU</a></li>
-                        <li>
-                          <a className="dropdown-item" href="#"> MySQL </a>
-                        </li>
-                        <li><a className="dropdown-item" href="#">Microsoft SQL</a></li>
-                        <li>
-                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Digital Marketing &raquo;
-                      </a>
-                      <ul className="dropdown-menu dropdown-submenu">
-                        <li><a className="dropdown-item" href="#">Advance Digital Marketing</a></li>
-                        <li><a className="dropdown-item" href="#">Pay Per Click Training </a></li>
-                        <li>
-                          <a className="dropdown-item" href="#"> Search Engine Optimization </a>
-
-                        </li>
-                        <li><a className="dropdown-item" href="#"> Social Media Marketing</a></li>
-                        <li><a className="dropdown-item" href="#"> Advance Analytics Training </a></li>
-                        <li>
-                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        HR Courses &raquo;
-                      </a>
-                      <ul className="dropdown-menu dropdown-submenu">
-                        <li><a className="dropdown-item" href="#">Core HR</a></li>
-                        <li><a className="dropdown-item" href="#">HR Payroll </a></li>
-                        <li>
-                          <a className="dropdown-item" href="#"> HR Management </a>
-                        </li>
-                        <li><a className="dropdown-item" href="#"> SAP HR(HCM)</a></li>
-                        <li><a className="dropdown-item" href="#"> HR Analytics </a></li>
-                        <li><a className="dropdown-item" href="#"> Advance HR Analytics  </a></li>
-                        <li><a className="dropdown-item" href="#"> PMS Training  </a></li>
-                        <li>
-                          <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                )}
-              </div>
-              <div 
-                className="dropdown2"
-                onMouseEnter={handleMouseEnter2}
-                onMouseLeave={handleMouseLeave2}
-                style={{ position: 'relative', marginLeft: '20px' }} // Adjust marginLeft to align properly
-              >
-                <Nav.Link
-                  className={`mx-lg-2 dropdown-toggle ${activeLink === 'courses2' ? 'active' : ''}`}
-                  href="#"
-                  id="dropdownMenuButton2"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  SAP 
-                </Nav.Link>
-                {isDropdownVisible2 && (
-                  <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton2" style={{ display: 'block' }}>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        SAP Functional &raquo;
-                      </a>
-                      <ul className="dropdown-menu dropdown-submenu">
-                        <li>
-                          <a className="dropdown-item" href="#"></a>
-                          <li><a className="dropdown-item" href="#">SAP FICO</a></li>
-                          <li><a className="dropdown-item" href="#">SAP MM </a></li>
-                          <li><a className="dropdown-item" href="#">SAP SD</a></li>
-                          <li><a className="dropdown-item" href="#">SAP HR/HCM</a></li>
-                          <li><a className="dropdown-item" href="#">SAP PP</a></li>
-                          <li><a className="dropdown-item" href="#">SAP SUCCESSFACTOR</a></li>
-                          <li>
-                            <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
-                          </li> 
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        SAP Technical &raquo;
-                      </a>
+                  {dropdown.id === "dropdown2" && (
+                    <>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          SAP Functional &raquo;
+                        </a>
                         <ul className="dropdown-menu dropdown-submenu">
-                          <li><a className="dropdown-item" href="#">SAP ABAP</a></li>
-                          <li><a className="dropdown-item" href="#">SAP BASIS</a></li>
                           <li>
-                            <a className="dropdown-item view-more" href="/view-more">View More &raquo;</a>
+                            <a className="dropdown-item" href="#">
+                              SAP FICO
+                            </a>
                           </li>
-                        </ul> 
-                       </li>
-                      </ul>
-                )}
-              </div>
-              <div className="nav-links-container">
-                <Nav.Link
-                  className={`mx-lg-2 ${activeLink === 'placements' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavClick('placements')} 
-                >
-                  Placements
-                </Nav.Link>
-                </div >
-                <div className="nav-links-container2">
-                <Nav.Link
-                  className={`mx-lg-2 ${activeLink === 'Corporate Training' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavClick('Corporate Training')}
-                >
-                  Corporate Training
-                </Nav.Link>
-              </div>
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP MM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP SD
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP HR/HCM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP CRM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP PP
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP QM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP PM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP PS
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP IM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP EWM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP SCM
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP SUCCESSFACTOR
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP LE
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="dropdown-item view-more"
+                              href="/view-more"
+                            >
+                              View More &raquo;
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          SAP Technical &raquo;
+                        </a>
+                        <ul className="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP ABAP
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP HANA
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP NetWeaver
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP BW/BI
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP Solution Manager
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              SAP BASIS
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="dropdown-item view-more"
+                              href="/view-more"
+                            >
+                              View More &raquo;
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </>
+                  )}
+                  {dropdown.id !== "dropdown2" && (
+                    <>
+                      <li>
+                        <Link className="dropdown-item" to="src/IT.jsx">
+                          {" "}
+                          DATA SCIENCE &raquo;
+                        </Link>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          POWER BI
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          MySQL
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          MICROSOFT SQL
+                        </a>
+                      </li>
+                    </>
+                  )}
+                </ul>
+              )}
+            </div>
+          ))}
+          <div className="dropdown2">
+            <Nav.Link
+              className={`mx-lg-2 ${activeLink === "link1" ? "active" : ""}`}
+              href="#"
+              onClick={() => handleNavClick("link1")}
+            >
+              Placement
+            </Nav.Link>
+          </div>
+          <div className="dropdown2">
+            <Nav.Link
+              className={`mx-lg-2 ${activeLink === "link2" ? "active" : ""}`}
+              href="#"
+              onClick={() => handleNavClick("link2")}
+            >
+              Corporate Training
+            </Nav.Link>
+          </div>
+        </Nav>
       </Container>
     </Navbar>
   );
