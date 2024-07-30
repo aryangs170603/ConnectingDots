@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* Chatbot CSS*/
+
+.tawk-button {
+  bottom: 400px !important; /* Move up by 100px */
+  right: 20px !important; /* Adjust right positioning if needed */
+  z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

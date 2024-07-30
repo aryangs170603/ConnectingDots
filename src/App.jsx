@@ -13,8 +13,11 @@ import Whatsapp from './Homepage/FloatingWhatsApp';
 import Homepage from './Homepage';
 import IT from './IT';
 import Menubar from './components/Menubar';
+import Chatbot from './components/Chatbot';
+// import ThemeToggle from './components/ThemeToggle'; // Import the ThemeToggle componen
 function App() {
   return (
+    // <ThemeToggle>
     <Router>
       <div className="App">
         
@@ -27,7 +30,9 @@ function App() {
         
         <Marquee1 />
         <Navbar />
+      
         <main>
+          <Chatbot/>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="src/IT.jsx" element={<IT />} />
@@ -40,6 +45,7 @@ function App() {
         <Menubar />
       </div>
     </Router>
+    // </ThemeToggle>
   );
 }
 

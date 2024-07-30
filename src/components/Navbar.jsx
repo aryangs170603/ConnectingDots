@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "/src/Logos/Navbar/connecting dot erp logo.png";
-import { Navbar, Container, Offcanvas, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./Navbar.css";
@@ -26,6 +26,100 @@ const Header = () => {
   const handleMouseLeave = (dropdown) =>
     setIsDropdownVisible((prev) => ({ ...prev, [dropdown]: false }));
 
+  const dropdowns = [
+    {
+      id: "dropdown2",
+      label: "SAP",
+      submenus: [
+        {
+          title: "SAP Functional",
+          items: [
+            "SAP FICO",
+            "SAP MM",
+            "SAP SD",
+            "SAP HR/HCM",
+            "SAP CRM",
+            "SAP PP",
+            "SAP QM",
+            "SAP PM",
+            "SAP PS",
+            "SAP IM",
+            "SAP EWM",
+            "SAP SCM",
+            "SAP SUCCESSFACTOR",
+            "SAP LE",
+          ],
+        },
+        {
+          title: "SAP Technical",
+          items: [
+            "SAP ABAP",
+            "SAP HANA",
+            "SAP NetWeaver",
+            "SAP BW/BI",
+            "SAP Solution Manager",
+            "SAP BASIS",
+          ],
+        },
+      ],
+    },
+    {
+      id: "dropdown3",
+      label: "IT Courses",
+      submenus: [
+        {
+          title: "Data Science",
+          items: [
+            "MASTERS IN DATA ANALYTICS",
+            "MASTERS IN DATA SCIENCE",
+            "MASTERS IN BUSINESS ANALYTICS",
+            "CHAT GPT & AI",
+          ],
+        },
+        {
+          title: "Software Courses",
+          items: [
+            "ARTIFICIAL INTELLIGENCE",
+            "FULL STACK TRAINING",
+            "JAVA",
+            "MERN STACK",
+            "UI/UX DESIGN",
+            "PYTHON",
+            "REACT JS",
+            "SALESFORCE",
+          ],
+        },
+      ],
+    },
+    {
+      id: "dropdown4",
+      label: "Data Visualisation",
+      items: ["Tableau", "Power BI", "SQL", "Microsoft SQL"],
+    },
+    {
+      id: "dropdown5",
+      label: "Digital Marketing",
+      items: [
+        "Advance Digital Marketing",
+        "Pay Per Click Training",
+        "Search Engine Optimization",
+        "Social Media Marketing",
+        "Advance Analytics Training",
+      ],
+    },
+    {
+      id: "dropdown6",
+      label: "HR Courses",
+      items: [
+        "Core HR",
+        "HR Payroll",
+        "HR Management",
+        "SAP HR(HCM)",
+        "HR Analytics",
+      ],
+    },
+  ];
+
   return (
     <Navbar expand="lg" className="header">
       <Container fluid className="align-items-center justify-content-between">
@@ -34,13 +128,7 @@ const Header = () => {
         </div>
 
         <Nav className="navbar-nav justify-content-end flex-grow-1 pe-3">
-          {[
-            { id: "dropdown2", label: "SAP" },
-            { id: "dropdown3", label: "IT Courses" },
-            { id: "dropdown4", label: "Data Visualisation" },
-            { id: "dropdown5", label: "Digital Marketing" },
-            { id: "dropdown6", label: "HR Courses" },
-          ].map((dropdown) => (
+          {dropdowns.map((dropdown) => (
             <div
               className="dropdown2"
               key={dropdown.id}
@@ -64,165 +152,40 @@ const Header = () => {
                   aria-labelledby={`dropdownMenuButton${dropdown.id}`}
                   style={{ display: "block" }}
                 >
-                  {dropdown.id === "dropdown2" && (
-                    <>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          SAP Functional &raquo;
-                        </a>
-                        <ul className="dropdown-menu dropdown-submenu">
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP FICO
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP MM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP SD
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP HR/HCM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP CRM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP PP
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP QM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP PM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP PS
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP IM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP EWM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP SCM
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP SUCCESSFACTOR
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP LE
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item view-more"
-                              href="/view-more"
-                            >
-                              View More &raquo;
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          SAP Technical &raquo;
-                        </a>
-                        <ul className="dropdown-menu dropdown-submenu">
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP ABAP
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP HANA
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP NetWeaver
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP BW/BI
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP Solution Manager
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#">
-                              SAP BASIS
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item view-more"
-                              href="/view-more"
-                            >
-                              View More &raquo;
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </>
-                  )}
-                  {dropdown.id !== "dropdown2" && (
-                    <>
-                      <li>
-                        <Link className="dropdown-item" to="src/IT.jsx">
-                          {" "}
-                          DATA SCIENCE &raquo;
-                        </Link>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          POWER BI
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          MySQL
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          MICROSOFT SQL
-                        </a>
-                      </li>
-                    </>
-                  )}
+                  {dropdown.submenus
+                    ? dropdown.submenus.map((submenu, index) => (
+                        <li key={index}>
+                          <a className="dropdown-item" href="#">
+                            {submenu.title} &raquo;
+                          </a>
+                          <ul className="dropdown-menu dropdown-submenu">
+                            {submenu.items.map((item, subIndex) => (
+                              <li key={subIndex}>
+                                <a className="dropdown-item" href="#">
+                                  {item}
+                                </a>
+                              </li>
+                            ))}
+                            <li>
+                              <a className="dropdown-item view-more" href="/view-more">
+                                View More &raquo;
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      ))
+                    : dropdown.items.map((item, index) => (
+                        <li key={index}>
+                          <a className="dropdown-item" href="#">
+                            {item}
+                          </a>
+                        </li>
+                      ))}
+                  <li>
+                    <a className="dropdown-item view-more" href="/view-more">
+                      View More &raquo;
+                    </a>
+                  </li>
                 </ul>
               )}
             </div>

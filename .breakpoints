@@ -1,5 +1,13 @@
 {
   "files": {
+    "src/Homepage/HeaderCarousel.jsx": [
+      {
+        "id": "0804ea07-2fdd-45c2-aa9d-261fbdfa6744",
+        "line": 301,
+        "version": 49,
+        "index": 11948
+      }
+    ],
     "src/Pages/PlacementSection.css": [
       {
         "id": "6e4e90d2-adbe-4e11-a7ad-0f2d5bef982c",
