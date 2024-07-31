@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import "./WhyChooseUs.css";
+import Assignmentlogo from "../Logos/DSimages/assignment-icon.png"; 
+import Projectlogo from "../Logos/DSimages/project-icon.png"; 
+import Jobreadylogo from "../Logos/DSimages/job-readiness-icon.png"; 
+import Companylogo from "../Logos/DSimages/company-icon.png"; 
+const steps = [
+  {
+    title: "25+ Assignments",
+    description:
+      "Work on 25+ Assignements with 24/7 Supports",
+    progress: 25,
+    imgSrc: Assignmentlogo,
+    alt: "Assignments Logo",
+  },
+  {
+    title: "18+ Industry Relevant Real Life Data Projects",
+    description:
+      "Get Industrial experience by working on real life data Projects",
+    progress: 50,
+    imgSrc: Projectlogo,
+    alt: "Project Logo",
+  },
+  {
+    title: "Tied-up with 2000+ Companies",
+    description:
+      "ConnectingDotsERP has tied up with 2000+ Companies to provide Jobs to Many Students.",
+    progress: 75,
+    imgSrc: Companylogo,
+    alt: "Company Logo",
+  },
+  {
+    title: "Job Readiness Program",
+    description:
+      "A dedicated placement who completed the course.",
+    progress: 100,
+    imgSrc: Jobreadylogo,
+    alts: "Job Readiness Logo",
+  },
+];
+
+const App = () => {
+  const [progress, setProgress] = useState(0);
+
+  const handleMouseEnter = (stepProgress) => {
+    setProgress(stepProgress);
+  };
+
+  return (
+    <div className="container-it-ds">
+      <h2>PROMGRAM HIGHLIGHTS</h2>
+      <div className="progress-bar-it-ds">
+        <div className="progress-it-ds" style={{ width: `${progress}%` }}></div>
+      </div>
+
+      <div className="cards-it-ds">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="card-it-ds"
+            onMouseEnter={() => handleMouseEnter(step.progress)}
+          >
+            <img
+              src={step.imgSrc}
+              alt={step.title}
+              className="card-img-it-ds"
+            />
+            <h3>{step.title}</h3>
+            <hr></hr>
+            <p>{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;

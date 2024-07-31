@@ -12,12 +12,18 @@ import Stickyform from './components/Stickyform';
 import Whatsapp from './Homepage/FloatingWhatsApp';
 import Homepage from './Homepage';
 import IT from './IT';
+
 import Menubar from './components/Menubar';
 import Chatbot from './components/Chatbot';
-// import ThemeToggle from './components/ThemeToggle'; // Import the ThemeToggle componen
+// import FAQsection from './IT/FAQ';
+// import HeaderCarousel1 from './components/HeaderCarousel1';
+
+
+
+
 function App() {
   return (
-    // <ThemeToggle>
+    
     <Router>
       <div className="App">
         
@@ -41,11 +47,15 @@ function App() {
         <Stickyform />
         <Wave />
         <Footer2 />
+        {/* <FAQsection /> */}
+       
+      
+        
         <Whatsapp />
         <Menubar />
       </div>
     </Router>
-    // </ThemeToggle>
+    
   );
 }
 

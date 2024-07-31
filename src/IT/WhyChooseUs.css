@@ -1,0 +1,66 @@
+.container-it-ds {
+  text-align: center;
+  
+  color: #ecf0f1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-img-it-ds {
+  width: 60%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.container-it-ds h2 {
+ 
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 8px;
+}
+.progress-bar-it-ds {
+  height: 10px;
+  width: 82%;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.progress-it-ds {
+  height: 100%;
+  background-color: #e67e22;
+  transition: width 0.3s ease;
+}
+
+.cards-it-ds {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-it-ds {
+  background-color: #377dc3;
+  border-radius: 5px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.card-it-ds:hover {
+  transform: translateY(-10px);
+  background-color: #2c5f8e;
+}
+
+.container-it-ds h3 {
+  color: #ecf0f1;
+ font-size: 1.5rem;
+}
+
+.icon-it-ds p {
+  color: #bdc3c7;
+}

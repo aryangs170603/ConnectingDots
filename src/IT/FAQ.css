@@ -1,0 +1,95 @@
+/* Wrapper styling */
+.our-faq-wrapper {
+  width: 100%;
+  padding: 90px 0 60px;
+  background: #fff;
+  float: left; /* Optional, depends on layout requirements */
+}
+
+/* Accordion card styling */
+.accordion .faq-card {
+  border: none;
+  margin-bottom: 30px;
+}
+
+/* Button link styling */
+.our-faq-wrapper .btn-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  background: #242c42;
+  color: #fff;
+  border-radius: 0;
+  padding: 7px 15px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  overflow: hidden;
+}
+
+.our-faq-wrapper .btn-link:hover,
+.our-faq-wrapper .btn-link:focus {
+  text-decoration: none;
+}
+
+/* Plus/minus icon on the button */
+.our-faq-wrapper .btn-link:after {
+  position: absolute;
+  content: '\f068'; /* FontAwesome "minus" icon */
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: FontAwesome;
+}
+
+.our-faq-wrapper .btn-link.collapsed:after {
+  content: '\f067'; /* FontAwesome "plus" icon */
+}
+
+/* Decorative skewed background on the button */
+.our-faq-wrapper .btn-link:before {
+  position: absolute;
+  content: '';
+  background: #86bc42;
+  transform: skew(-35deg);
+  height: 100%;
+  width: 50%;
+  left: 90%;
+  top: 0;
+}
+
+/* Card header styling */
+.faq-card-header {
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+/* Card body styling */
+.faq-card-body {
+  position: relative;
+  padding: 15px; /* Add padding for better readability */
+}
+
+/* Border line styling at the bottom of the card body */
+.faq-card-body:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #242c42;
+}
+
+.faq-card-body:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  background: #86bc42;
+  z-index: 1;
+}

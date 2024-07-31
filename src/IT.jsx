@@ -1,25 +1,23 @@
-// IT.jsx
-import React from 'react';
-import Marquee1 from "./Homepage/Marquee1";
-import Whatsapp from "./Homepage/FloatingWhatsApp";
-import Navbar from "./components/Navbar";
-import Footer from './components/Footer2';
-import Wave from './components/Wave';
-import Stickyform from './components/Stickyform';
-import Ourstats from "./Homepage/Ourstats";
+import React from "react";
+import DataScienceModules from "./IT/DataScienceModules";
+import HeaderCarousel1 from './IT/HeaderCarousel1';
+import WhyChooseUs from "./IT/WhyChooseUs";
+import Certificate from "./Homepage/Certificate";
+import FAQsection from "./IT/FAQ";
+// import Trustus from './IT/Trustus';
 
 const IT = () => {
   return (
     <div>
-      {/* <Marquee1 /> */}
-      {/* <Navbar /> */}
       <main>
-        <Ourstats />
+         <HeaderCarousel1 /> 
+        <DataScienceModules />
+        <Certificate />
+        <WhyChooseUs />
+        {/* <Trustus /> */}
+        
+        {/* <FAQsection /> */}
       </main>
-      {/* <Stickyform /> */}
-      {/* <Wave /> */}
-      {/* <Footer /> */}
-      {/* <Whatsapp /> */}
     </div>
   );
 };
