@@ -1,183 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './FAQ.css';
+import faqImage from '../Logos/DSimages/faqimage.png';
 
-const FAQ = () => {
+const FAQAccordion = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    <div className="our-faq-wrapper">
-      <div className="faq-container">
-        <div className="faq-row">
-          <div className="col-md-12">
-            <div className="faq-title text-center pb-3">
-              <h2>FAQ</h2>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="accordion" id="accordion">
-              <div className="faq-card">
-                <div className="card-header" id="headingOne">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapseOne"
-                  className="collapse show"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordion"
-                >
-                  <div className="faq-card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-header" id="headingTwo">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapseTwo"
-                  className="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                >
-                  <div className="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-header" id="headingThree">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapseThree"
-                  className="collapse"
-                  aria-labelledby="headingThree"
-                  data-parent="#accordion"
-                >
-                  <div className="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
+    <div className="container-faq-ds">
+      <h2>FREQUENTLY ASKED QUESTIONS</h2>
+      <div className="faq-content">
+        <div className="faq-image">
+          <img src={faqImage} alt="FAQ visual representation" />
+        </div>
+        <div className="faq-questions">
+          {faqItems.map((item, index) => (
+            <div key={index} className="accordion-item">
+              <button
+                aria-expanded={expandedIndex === index}
+                onClick={() => handleToggle(index)}
+              >
+                <span className="accordion-title">{item.question}</span>
+                <span className="icon" aria-hidden="true"></span>
+              </button>
+              <div
+                className="accordion-content"
+                style={{
+                  opacity: expandedIndex === index ? 1 : 0,
+                  maxHeight: expandedIndex === index ? '9em' : 0
+                }}
+              >
+                <p>{item.answer}</p>
               </div>
             </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="accordion" id="accordion2">
-              <div className="card">
-                <div className="card-header" id="heading4">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapse4"
-                      aria-expanded="false"
-                      aria-controls="collapse4"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapse4"
-                  className="collapse"
-                  aria-labelledby="heading4"
-                  data-parent="#accordion2"
-                >
-                  <div className="faq-card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-header" id="heading5">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapse5"
-                      aria-expanded="false"
-                      aria-controls="collapse5"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapse5"
-                  className="collapse"
-                  aria-labelledby="heading5"
-                  data-parent="#accordion2"
-                >
-                  <div className="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-header" id="heading6">
-                  <h5 className="mb-0">
-                    <button
-                      className="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapse6"
-                      aria-expanded="false"
-                      aria-controls="collapse6"
-                    >
-                      Frequently Asked Questions ?
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="collapse6"
-                  className="collapse show"
-                  aria-labelledby="heading6"
-                  data-parent="#accordion2"
-                >
-                  <div className="faq-card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae?
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default FAQ;
+const faqItems = [
+  {
+    question: 'Why is the moon sometimes out during the day?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+  },
+  {
+    question: 'Why is the sky blue?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+  },
+  {
+    question: 'Will we ever discover aliens?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+  },
+  {
+    question: 'How much does the Earth weigh?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+  },
+  {
+    question: 'How do airplanes stay up?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+  }
+];
+
+export default FAQAccordion;

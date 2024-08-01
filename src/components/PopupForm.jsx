@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 
-const PopupForm = () => {
+const ContactForm = () => {
   const [show, setShow] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setShow(true);
-    }, 40000); // 45000ms = 45 seconds
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <>
+      <Button variant="primary" onClick={handleShow}>
+        Contact Us
+      </Button>
+
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Contact Us</Modal.Title>
@@ -32,33 +29,33 @@ const PopupForm = () => {
               <Form.Control type="text" placeholder="Enter your mobile number" />
             </Form.Group>
 
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email ID</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" />
-            </Form.Group>
-
             <Form.Group controlId="formCourses">
               <Form.Label>Courses</Form.Label>
               <Form.Control as="select">
-                <option>Course 1</option>
-                <option>Course 2</option>
-                <option>Course 3</option>
+                <option>SAP</option>
+                <option>IT Courses</option>
+                <option>Data Visualisation</option>
+                <option>Digital Marketing</option>
+                <option>HR Courses</option>
               </Form.Control>
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleClose}>
+            <Button variant="primary" type="submit" className="mt-3">
               Submit
             </Button>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
+
+      <style jsx>{`
+        @media (max-width: 576px) {
+          .modal-content {
+            margin: 20px;
+          }
+        }
+      `}</style>
     </>
   );
 };
 
-export default PopupForm;
+export default ContactForm;

@@ -1,22 +1,31 @@
 import React from "react";
 import DataScienceModules from "./IT/DataScienceModules";
-import HeaderCarousel1 from './IT/HeaderCarousel1';
+import DSHeader from './IT/DSHeader';
 import WhyChooseUs from "./IT/WhyChooseUs";
 import Certificate from "./Homepage/Certificate";
 import FAQsection from "./IT/FAQ";
-// import Trustus from './IT/Trustus';
+import RelatedCourses from "./IT/RelatedCourses";
+import Trustus from './IT/Trustus';
+import Councelor from "./IT/Councelor";
+import WhyDS from "./IT/WhyDS";
+// import Learningpath from "./IT/Learningpath";
 
 const IT = () => {
   return (
     <div>
       <main>
-         <HeaderCarousel1 /> 
+         <DSHeader />
+        <Councelor /> 
+        <WhyDS />
         <DataScienceModules />
         <Certificate />
-        <WhyChooseUs />
-        {/* <Trustus /> */}
         
-        {/* <FAQsection /> */}
+        
+        <WhyChooseUs />
+        <Trustus />
+        <FAQsection />
+        <RelatedCourses />
+        {/* <Learningpath /> */}
       </main>
     </div>
   );

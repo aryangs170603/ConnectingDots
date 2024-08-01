@@ -4,11 +4,12 @@ import Assignmentlogo from "../Logos/DSimages/assignment-icon.png";
 import Projectlogo from "../Logos/DSimages/project-icon.png"; 
 import Jobreadylogo from "../Logos/DSimages/job-readiness-icon.png"; 
 import Companylogo from "../Logos/DSimages/company-icon.png"; 
+import Expalt from "../Logos/DSimages/Expaltlogo.png"; 
 const steps = [
   {
     title: "25+ Assignments",
     description:
-      "Work on 25+ Assignements with 24/7 Supports",
+      "Work on 25+ Assignements",
     progress: 25,
     imgSrc: Assignmentlogo,
     alt: "Assignments Logo",
@@ -30,6 +31,14 @@ const steps = [
     alt: "Company Logo",
   },
   {
+    title: "Experience Alteration System",
+    description:
+      "A dedicated placement who completed the course.",
+    progress: 100,
+    imgSrc: Expalt,
+    alts: "Job Readiness Logo",
+  },
+  {
     title: "Job Readiness Program",
     description:
       "A dedicated placement who completed the course.",
@@ -47,8 +56,8 @@ const App = () => {
   };
 
   return (
-    <div className="container-it-ds">
-      <h2>PROMGRAM HIGHLIGHTS</h2>
+    <div className="container-it-ds-prgrm">
+      <h2>PROGRAM HIGHLIGHTS</h2>
       <div className="progress-bar-it-ds">
         <div className="progress-it-ds" style={{ width: `${progress}%` }}></div>
       </div>

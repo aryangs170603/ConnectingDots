@@ -77,6 +77,7 @@ const clients = [
 ];
 
 const OurClients = () => {
+  console.log(clients);
   return (
     <Container fluid className="our-clients-section text-center">
       <h2 className="section-titleC">OUR CLIENTS</h2>

@@ -12,8 +12,8 @@ import Stickyform from './components/Stickyform';
 import Whatsapp from './Homepage/FloatingWhatsApp';
 import Homepage from './Homepage';
 import IT from './IT';
+// import PopupForm from './components/PopupForm';
 
-import Menubar from './components/Menubar';
 import Chatbot from './components/Chatbot';
 // import FAQsection from './IT/FAQ';
 // import HeaderCarousel1 from './components/HeaderCarousel1';
@@ -36,7 +36,7 @@ function App() {
         
         <Marquee1 />
         <Navbar />
-      
+      {/* <PopupForm /> */}
         <main>
           <Chatbot/>
           <Routes>
@@ -52,7 +52,7 @@ function App() {
       
         
         <Whatsapp />
-        <Menubar />
+        
       </div>
     </Router>
     
