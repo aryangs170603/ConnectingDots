@@ -62,22 +62,28 @@ footer {
 .widget {
   margin-bottom: 30px;
 }
-  .headline-about {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100%;
-  }
-
+.widget-about {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column; /* Arrange heading and menu vertically */
+  align-items: center; /* Center the content */
+}
+.headline-about {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
   /* Modify the h3 element */
-  .headline-about h3 {
-    border-bottom: 2px solid #69ccdd;
-    width: 6%; 
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: 1vw;
-    color: white;
-  }
+.headline-about h3 {
+  border-bottom: 2px solid #69ccdd;
+  width: fit-content; 
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 1vw;
+  color: white;
+  margin: 0 auto; /* Center the heading */
+}
 
 .headline h3 {
   border-bottom: 2px solid #69ccdd;
@@ -99,6 +105,15 @@ footer {
 .menu.horizontal {
   flex-direction: row;
 }
+.menu horizontal-about{
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  flex-wrap: wrap; /* Ensure items wrap if needed */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+}
 
 .menu-item {
   margin: 5px 10px;
@@ -110,8 +125,8 @@ footer {
   font-size: 13px;
   flex-direction: row;
   justify-items: center;
-  
 }
+
 
 
 .menu-item-about a {

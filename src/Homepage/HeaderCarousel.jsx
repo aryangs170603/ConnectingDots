@@ -9,25 +9,21 @@ import SAPmodule1 from "../Logos/Headercarousel/SAP module1.png";
 import DSh from "../Logos/Headercarousel/DSh.png";
 import DGM from "../Logos/Headercarousel/DGM.png";
 import IT from "../Logos/Headercarousel/IT.png";
+import ContactForm from "../Homepage/ContactForm"; // import your ContactForm
 
-
-const TEXTS1 = [
+const TEXTS1 = [  
   "Connect Your Dots with  SAP Expertise",
   "Connect Your Dots with Data Science",
   "Connect Your Dots in IT Excellence",
   "Connect Your Dots in Digital Marketing",
 ];
-const TEXTS2 = [
-  // 'SAP is a leading enterprise software used by companies worldwide to manage business operations and customer relations.',
-  // 'Data Science is the key to unlocking valuable insights from vast amounts of data.',
-  // 'Advance your IT career with industry relevant courses in web development, Python, Java, and more.',
-  // 'Digital marketing allows you to gather customer data in a way that offline marketing cant'
-];
+const TEXTS2 = [];
 const IMAGES = [SAPmodule1, DSh, IT, DGM];
 
 const HeaderCarousel = () => {
   const [index, setIndex] = useState(0);
   const [textVisible, setTextVisible] = useState(true);
+  const [showContactForm, setShowContactForm] = useState(false); // state for modal visibility
 
   const [question, setQuestion] = useState({
     title: "Welcome to the <span class='highlight'>Quiz!</span>",
@@ -70,6 +66,9 @@ const HeaderCarousel = () => {
     document.head.appendChild(link);
   }, []);
 
+  const handleShowContactForm = () => setShowContactForm(true);
+  const handleCloseContactForm = () => setShowContactForm(false);
+
   const CustomButton = ({ text, onClick }) => (
     <button className="custom-btn btn-3" onClick={onClick}>
       <span>{text}</span>
@@ -80,19 +79,23 @@ const HeaderCarousel = () => {
     return {
       width: "100%",
       height: "auto",
+      
     };
   };
 
   return (
-    <Carousel>
-      {/* <div className="carousel-section"> */}
-        {/* /*First Slide */}
+    <>
+      <Carousel>
         <Carousel.Item>
           <div className="carousel-slide">
             <div className="carousel-text">
-              <h2>Unlock your <span className="highlight">Career</span> potential</h2>
+              <h2>
+                Unlock your <span className="highlight">Career</span> potential
+              </h2>
               <b></b>
-              <h3><span className="highlight">Job</span> Oriented Programs</h3>
+              <h3>
+                <span className="highlight">Job</span> Oriented Programs
+              </h3>
               <b></b>
               <p>
                 Sap Courses | HR Courses | Software Development | Digital
@@ -100,14 +103,16 @@ const HeaderCarousel = () => {
                 Stack
               </p>
               <Col>
-                <p>Est. 2010 Trusted by <span className="highlight">65000+</span> Students</p>
+                <p>
+                  Est. 2010 Trusted by <span className="highlight">65000+</span>{" "}
+                  Students
+                </p>
               </Col>
               <div>
                 <CustomButton
                   text="Freshers"
-                  onClick={() => alert("Freshers clicked!")}
+                  onClick={handleShowContactForm}
                 />
-                {/* <CustomButton text="Professionals" onClick={() => alert('Professionals clicked!')} /> */}
               </div>
               <div className="logostrip">
                 <img src={logostrip} alt="companies" />
@@ -117,21 +122,26 @@ const HeaderCarousel = () => {
               <img src={slideImage3} alt="Career Potential" />
             </div>
           </div>
+          
         </Carousel.Item>
         {/* Second Slide */}
         <Carousel.Item>
           <div className="carousel-slide2">
             <div className="carousel-text2">
-              <h1 className={textVisible ? "visible" : "hidden"}>
-                <TextTransition springConfig={presets.wobbly}>
-                  {TEXTS1[index]}
-                </TextTransition>
+              <h1>
+                <span className={textVisible ? "visible" : "hidden"}>
+                  <TextTransition springConfig={presets.wobbly}>
+                    {TEXTS1[index]}
+                  </TextTransition>
+                </span>
               </h1>
               <br></br>
-              <h3 className={textVisible ? "visible" : "hidden"}>
-                <TextTransition springConfig={presets.wobbly}>
-                  {TEXTS2[index]}
-                </TextTransition>
+              <h3>
+                <span className={textVisible ? "visible" : "hidden"}>
+                  <TextTransition springConfig={presets.wobbly}>
+                    {TEXTS2[index]}
+                  </TextTransition>
+                </span>
               </h3>
             </div>
             <div className="cardBox2">
@@ -155,8 +165,7 @@ const HeaderCarousel = () => {
             <div className="left-sideH3">
               <h1>
                 Secure your <span className="highlight">Dream Career</span> with{" "}
-                <span className="bold">Live Classes</span> From Industry
-                Experts.
+                <span className="bold">Live Classes</span> From Industry Experts.
               </h1>
               <br></br>
               <br></br>
@@ -213,7 +222,7 @@ const HeaderCarousel = () => {
                     <img
                       src="src/Logos/Headercarousel/deloitte.png"
                       alt="Image 7"
-                      className="grid-imaged grid-image-del"
+                      className="grid-image grid-image-del"
                     />
                     <img
                       src="src/Logos/Headercarousel/accenture1.png"
@@ -246,8 +255,7 @@ const HeaderCarousel = () => {
             </div>
           </div>
         </Carousel.Item>
-
-        {/* fourth slide */}
+        {/* Fourth Slide */}
         <Carousel.Item>
           <div className="carousel-slide4">
             <div className="left-sideH">
@@ -293,8 +301,25 @@ const HeaderCarousel = () => {
             </div>
           </div>
         </Carousel.Item>
-      {/* </div> */}
-    </Carousel>
+      </Carousel>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <ContactForm />
+            <button className="close-button" onClick={handleCloseContactForm}>
+              Close
+              {/* Sticky Form */}
+                {!showContactForm && <SContactForm />}
+            
+            </button>
+            
+          </div>
+        </div>
+      
+      )}
+    </>
   );
 };
 

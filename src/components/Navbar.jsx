@@ -110,7 +110,7 @@ const Header = () => {
             }
           ].map((submenu, index) => (
             <li key={index}>
-              <Link className="dropdown-item" to ="src/IT.jsx">
+              <Link className="dropdown-item" to="/it">
                 {submenu.title} &raquo;
               </Link>
               <ul className="dropdown-menu dropdown-submenu">
@@ -282,3 +282,19 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

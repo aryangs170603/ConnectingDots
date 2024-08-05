@@ -144,31 +144,14 @@ const Footer = () => {
               <li className="menu-item"><a href="#">ADVANCE HR ANALYTICS</a></li>
             </ul>
           </div>
-          <div className="widget">
-            <div className="headline-about"><h3>ABOUT US</h3></div>
-            <ul className="menu horizontal">
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"></li>
-              <li className="menu-item-about"><a href="#">CONTACT US </a></li>
+          <div className="widget-about">
+            <div className="headline-about">
+              <h3>ABOUT US</h3>
+            </div>
+            <ul className="menu horizontal-about">
+              <li className="menu-item-about"><a href="#">CONTACT US</a></li>
               <li className="menu-item-about">|</li>
-              <li className="menu-item-about"><a href="#">ABOUT US </a></li>
+              <li className="menu-item-about"><a href="#">ABOUT US</a></li>
               <li className="menu-item-about">|</li>
               <li className="menu-item-about"><a href="#">CAREER</a></li>
               <li className="menu-item-about">|</li>
@@ -179,6 +162,7 @@ const Footer = () => {
               <li className="menu-item-about"><a href="#">CORPORATE TRAINING</a></li>
             </ul>
           </div>
+
             </div>
         <div className="footer-bottom">
           <p>&copy; ConnectingDotsERP 2024 Ltd.</p>

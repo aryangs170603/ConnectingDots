@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   padding: 4.5rem;
-  background: rgb(249,249,249);
-  background: linear-gradient(90deg, rgba(249,249,249,1) 44%, rgba(70,196,222,1) 100%);
+  background: url('src/Logos/DSimages/dsheader.gif') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(249, 249, 249, 0.6); /* Adjust opacity for fading effect */
   max-width: 1800px;
   width: 100%;
   height: auto;
@@ -11,6 +13,7 @@
   margin-bottom: 20px;
   z-index: 0;
 }
+
 
 .left-section-it-ds {
   max-width: 40%;
@@ -26,7 +29,7 @@
 .left-section-it-ds h2 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #000000;
   margin-bottom: 0.5rem;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .left-section-it-ds p {
-  color: #6b7280;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
@@ -69,15 +72,18 @@
 }
 
 .batch-button-it-ds {
-  background-color: #dbeafe;
-  color: #2563eb;
+  background-color: #2563eb;
+  color: #dbeafe;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
+ 
   font-size: 0.875rem;
 }
 
 .batch-button-it-ds:hover {
-  color: white;
+  background-color: white;
+  color: #2563eb;
+   border-color:#2563eb;
 }
 
 .brochure-button-it-ds {
@@ -94,7 +100,8 @@
 }
 
 .right-section-it-ds {
-  background-color: white;
+  background: transparent;
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -129,6 +136,16 @@
 
 .terms-info-it-ds a {
   color: #2563eb;
+}
+.ds-header-span{
+  color: #ff3300;
+}
+.ds-header-span-2{
+  color: #000000;
+}
+.ds-header-span-3{
+  color: #1e3a8a;
+  font-weight: 800;
 }
 
 /* Responsive styles for mobile screens */

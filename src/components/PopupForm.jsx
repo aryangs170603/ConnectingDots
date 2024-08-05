@@ -3,10 +3,9 @@ import { Modal, Button, Form } from 'react-bootstrap';
 
 const ContactForm = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   return (
     <>
       <Button variant="primary" onClick={handleShow}>

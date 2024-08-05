@@ -3,7 +3,7 @@ import './DataScienceModules.css';
 
 const DataScience = () => {
   const [activeTab, setActiveTab] = useState('beginner');
-  const [activeModule, setActiveModule] = useState(0); // Default to the first module
+  const [activeModule, setActiveModule] = useState(0); 
 
   const initialModules = {
     beginner: [
@@ -139,7 +139,7 @@ const DataScience = () => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setActiveModule(0); // Default to the first module of the new tab
+    setActiveModule(0); 
   };
 
   const activeContent = modules[activeTab][activeModule];

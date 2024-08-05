@@ -17,7 +17,7 @@ import img9 from '../Icons/cloud-data.png';
 const courses = [
   { name: 'SAP S/4 HANA Courses', count: 25, icon: img1 },
   { name: 'Masters in Data Science', count: 25, icon: img2 },
-  { name: 'Masters in Data Analystics', count: 16, icon:img3  },
+  { name: 'Masters in Data Analystics', count: 16, icon: img3 },
   { name: 'Salesforce', count: 30, icon: img4 },
   { name: 'HR Courses', count: 8, icon: img5 },
   { name: 'Full-Stack Python', count: 12, icon: img6 },
@@ -70,7 +70,7 @@ const Courses = () => {
       </div>
       <div className="mb-3">
         <Button className="outline-btn mr-3">Download Brochure</Button>
-        <Button className="outline-btn">Book Demo</Button>
+        <Button className="outline-btn" onClick={() => handleEnrollNowClick('Book Demo for Free')}>Book Demo</Button>
       </div>
       {showModal && <ContactForm onClose={handleCloseModal} course={selectedCourse} />}
     </div>

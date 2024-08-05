@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DSHeader.css';
+import ContactForm from '../Homepage/ContactForm'; 
 
 const DSHeader = () => {
+    const [showContactForm, setShowContactForm] = useState(false);
+    const [course, setCourse] = useState('');
+
+    const handleOpenContactForm = (courseName) => {
+        setCourse(courseName);
+        setShowContactForm(true);
+    };
+
+    const handleCloseContactForm = () => {
+        setShowContactForm(false);
+        setCourse('');
+    };
+
     return (
         <div className="container-it-ds-header">
+            
             <div className="left-section-it-ds">
-                <h1>Data Science &<br />Machine Learning<br />Program</h1>
-                <h2>Data Science Course <span>Online</span></h2>
-                <p>Unlock the power of data with Connecting Dot's Data Science course, mastering crucial skills for success in the field, all backed by secure placement support.</p>
+                <h1><span className='ds-header-span'>Masters in Data Science</span> &<br/>Machine Learning<br />Program</h1>
+                <h2> <span className='ds-header-span-2'>Data Science Course</span></h2>
+                <p>Unlock the power of data with <span className='ds-header-span-3'>Connecting Dots</span> Data Science course, mastering crucial skills for success in the field, all backed by secure placement support.</p>
                 <ul className="features-it-ds">
                     <li>Live Class</li>
                     <li>1:1 mentorship</li>
@@ -24,8 +39,18 @@ const DSHeader = () => {
                     </div>
                 </div>
                 <div className="buttons-it-ds">
-                    <button className="batch-button-it-ds">Next Batch starts in AUGUST</button>
-                    <button className="brochure-button-it-ds">Download Brochure</button>
+                    <button 
+                        className="batch-button-it-ds" 
+                        onClick={() => handleOpenContactForm('Data Science Program')}
+                    >
+                        Next Batch starts in AUGUST
+                    </button>
+                    <button 
+                        className="brochure-button-it-ds" 
+                        onClick={() => handleOpenContactForm('Book Live Demo')}
+                    >
+                        Book Live Demo
+                    </button>
                 </div>
             </div>
             <div className="right-section-it-ds">
@@ -77,7 +102,7 @@ const DSHeader = () => {
                         style={{ 
                             display: 'flex', 
                             gap: '0.5rem', 
-                            width: '23.5vw' 
+                            maxwidth: '23.5vw' 
                         }}
                     >
                         <select 
@@ -120,8 +145,10 @@ const DSHeader = () => {
                   </button>
 
                 </form>
-               
             </div>
+            {showContactForm && (
+                <ContactForm onClose={handleCloseContactForm} course={course} />
+            )}
         </div>
     );
 };

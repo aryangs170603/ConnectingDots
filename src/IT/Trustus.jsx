@@ -107,9 +107,9 @@ const Trustus = () => {
         <div className="container-it-ds-title">
           <h2>ORGANISATIONS TRUST US </h2>
         </div>
-        <h2 className="title-it-ds">1000+ Organizations<br></br> TRUST US WITH THEIR <br></br>Openings</h2>
+        <h2 className="title-it-ds"> <span className='highlight-span-cards'>1000+</span> Organizations<br></br> TRUST US WITH THEIR <br></br>Openings</h2>
         <p className="description-it-ds">
-          Organizations across the globe trust our students and their brilliant technical skills in Full Stack Development, Data Science & Analytics with AI, Java Full Stack Developer, Digital Marketing with AI Course, AWS Cloud Technology, which results in them getting hired at excellent companies with impressive pay scales. Itvedant India’s fastest-growing Software Training Institute provides a range of IT Courses helping to shape the future of our students in every way possible. The Coding Courses provided by our Institute are highly valuable and worthy for the students.
+          <span className='highlight-span-cards'>Organizations</span>, across the globe trust our students and their brilliant <span className='highlight-span-cards'>technical skills</span> in Full Stack Development, <span className='highlight-span-cards'>Data Science & Analytics with AI</span>, Java Full Stack Developer, Digital Marketing Course, AWS Cloud Technology, which results in them getting hired at excellent companies with impressive pay scales.<span className='highlight-span-cards'>Connecting Dots ERP</span>, India’s fastest-growing <span className='highlight-span-cards'>Software Training Institute</span> provides a range of IT Courses helping to shape the future of our students in every way possible. The Coding Courses provided by our Institute are highly valuable and worthy for the students.
         </p>
         <div className="statistics-it-ds">
           <div className="stat-it-ds">

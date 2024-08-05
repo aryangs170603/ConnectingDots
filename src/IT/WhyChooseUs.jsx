@@ -14,19 +14,19 @@ const steps = [
     imgSrc: Assignmentlogo,
     alt: "Assignments Logo",
   },
-  {
-    title: "18+ Industry Relevant Real Life Data Projects",
-    description:
-      "Get Industrial experience by working on real life data Projects",
-    progress: 50,
-    imgSrc: Projectlogo,
-    alt: "Project Logo",
-  },
+  // {
+  //   title: "18+ Industry Relevant Real Life Data Projects",
+  //   description:
+  //     "Get Industrial experience by working on real life data Projects",
+  //   progress: 50,
+  //   imgSrc: Projectlogo,
+  //   alt: "Project Logo",
+  // },
   {
     title: "Tied-up with 2000+ Companies",
     description:
       "ConnectingDotsERP has tied up with 2000+ Companies to provide Jobs to Many Students.",
-    progress: 75,
+    progress: 50,
     imgSrc: Companylogo,
     alt: "Company Logo",
   },
@@ -34,7 +34,7 @@ const steps = [
     title: "Experience Alteration System",
     description:
       "A dedicated placement who completed the course.",
-    progress: 100,
+    progress: 75,
     imgSrc: Expalt,
     alts: "Job Readiness Logo",
   },
@@ -48,7 +48,7 @@ const steps = [
   },
 ];
 
-const App = () => {
+const prgrm = () => {
   const [progress, setProgress] = useState(0);
 
   const handleMouseEnter = (stepProgress) => {
@@ -84,4 +84,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default prgrm;

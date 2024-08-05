@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Certificate.css';
-import certificateImage from '../Logos/Certificate/certificate2.jpg';
-import { Button } from 'react-bootstrap';  // Make sure you have react-bootstrap installed and imported
-import ContactForm from './ContactForm';  // Adjust the import based on your file structure
+import certificateImage from '../Logos/Certificate/Certificate-1.png';
+import { Button } from 'react-bootstrap';  
+import ContactForm from './ContactForm';  
 
 const Certificate = () => {
-  const [showModal, setShowModal] = useState(false);  // State to manage modal visibility
-  const [selectedCourse, setSelectedCourse] = useState(null);  // State to manage selected course
+  const [showModal, setShowModal] = useState(false);  
+  const [selectedCourse, setSelectedCourse] = useState(null);  
 
   const handleShowModal = (course) => {
     setSelectedCourse(course);

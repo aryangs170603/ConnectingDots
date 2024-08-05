@@ -9,23 +9,28 @@ import Trustus from './IT/Trustus';
 import Councelor from "./IT/Councelor";
 import WhyDS from "./IT/WhyDS";
 // import Learningpath from "./IT/Learningpath";
+import Induspro from "./IT/Induspro";
+
 
 const IT = () => {
   return (
     <div>
       <main>
-         <DSHeader />
-        <Councelor /> 
+         <DSHeader />  
         <WhyDS />
+        <Councelor /> 
         <DataScienceModules />
+        <Trustus />
+        <WhyChooseUs />
         <Certificate />
         
         
-        <WhyChooseUs />
-        <Trustus />
+        
+        
+        <Induspro />
         <FAQsection />
         <RelatedCourses />
-        {/* <Learningpath /> */}
+        
       </main>
     </div>
   );

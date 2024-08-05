@@ -68,9 +68,10 @@ const Courses = () => {
       <Carousel
         activeIndex={activeIndex}
         onSelect={handleSelect}
-        interval={null}
+        interval={3000} // 3 seconds interval for automatic sliding
         indicators={false}
         controls={false}
+        pause="hover" // Pause the carousel on hover
       >
         <Carousel.Item>
           <div className="related-courses-grid">
