@@ -55,6 +55,7 @@ const DataScience = () => {
           "HDFS Architecture",
           "Hadoop Ecosystem",
           "HDFS Commands",
+          "HDFS Commands",
           "Intro Linux Commands"
         ]
       },
@@ -92,6 +93,9 @@ const DataScience = () => {
         content: [
           "Introduction to Data Engineering",
           "Data Pipelines",
+          "Data Pipelines",
+          "ETL Processes",
+          "Data Warehousing",
           "ETL Processes",
           "Data Warehousing"
         ]
@@ -101,7 +105,10 @@ const DataScience = () => {
         duration: "4 Months",
         content: [
           "Introduction to AI",
+          "Introduction to AI",
           "Deep Learning Architectures",
+          "Deep Learning Architectures",
+          "Convolutional Neural Networks",
           "Convolutional Neural Networks",
           "Recurrent Neural Networks"
         ]
@@ -113,6 +120,9 @@ const DataScience = () => {
           "Specialization 1",
           "Specialization 2",
           "Specialization 3",
+          "Specialization 4",
+          "Specialization 4",
+          "Specialization 4",
           "Specialization 4"
         ]
       },
@@ -121,6 +131,9 @@ const DataScience = () => {
         duration: "2 Months",
         content: [
           "Production Machine Learning",
+          "Scaling ML Systems",
+          "Scaling ML Systems",
+          "Scaling ML Systems",
           "Scaling ML Systems",
           "ML System Design",
           "Case Studies"

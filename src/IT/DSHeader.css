@@ -5,7 +5,7 @@
   background: url('src/Logos/DSimages/dsheader.gif') no-repeat center center;
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: rgba(249, 249, 249, 0.6); /* Adjust opacity for fading effect */
+  background-color: rgba(249, 249, 249, 0.75); /* Adjust opacity for fading effect */
   max-width: 1800px;
   width: 100%;
   height: auto;
