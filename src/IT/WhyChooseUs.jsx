@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./WhyChooseUs.css";
 import Assignmentlogo from "../Logos/DSimages/assignment-icon.png"; 
-import Projectlogo from "../Logos/DSimages/project-icon.png"; 
 import Jobreadylogo from "../Logos/DSimages/job-readiness-icon.png"; 
 import Companylogo from "../Logos/DSimages/company-icon.png"; 
 import Expalt from "../Logos/DSimages/Expaltlogo.png"; 
@@ -14,14 +13,7 @@ const steps = [
     imgSrc: Assignmentlogo,
     alt: "Assignments Logo",
   },
-  // {
-  //   title: "18+ Industry Relevant Real Life Data Projects",
-  //   description:
-  //     "Get Industrial experience by working on real life data Projects",
-  //   progress: 50,
-  //   imgSrc: Projectlogo,
-  //   alt: "Project Logo",
-  // },
+ 
   {
     title: "Tied-up with 2000+ Companies",
     description:

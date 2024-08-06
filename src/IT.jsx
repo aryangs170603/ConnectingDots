@@ -8,29 +8,22 @@ import RelatedCourses from "./IT/RelatedCourses";
 import Trustus from './IT/Trustus';
 import Councelor from "./IT/Councelor";
 import WhyDS from "./IT/WhyDS";
-// import Learningpath from "./IT/Learningpath";
 import Induspro from "./IT/Induspro";
 
-
-const IT = () => {
+const IT = ({ city }) => {
   return (
     <div>
       <main>
-         <DSHeader />  
-        <WhyDS />
-        <Councelor /> 
+        <DSHeader city={city} />
+        <WhyDS city={city} />
+        <Councelor />
         <DataScienceModules />
         <Trustus />
         <WhyChooseUs />
         <Certificate />
-        
-        
-        
-        
         <Induspro />
         <FAQsection />
         <RelatedCourses />
-        
       </main>
     </div>
   );

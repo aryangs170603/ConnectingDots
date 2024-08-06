@@ -69,7 +69,7 @@ const HeaderCarousel = () => {
   const handleShowContactForm = () => setShowContactForm(true);
   const handleCloseContactForm = () => setShowContactForm(false);
 
-  const CustomButton = ({ text, onClick }) => (
+  const FormButtons = ({ text, onClick }) => (
     <button className="custom-btn btn-3" onClick={onClick}>
       <span>{text}</span>
     </button>
@@ -109,7 +109,7 @@ const HeaderCarousel = () => {
                 </p>
               </Col>
               <div>
-                <CustomButton
+                <FormButtons
                   text="Freshers"
                   onClick={handleShowContactForm}
                 />

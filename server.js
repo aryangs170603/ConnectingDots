@@ -1,51 +1,22 @@
-// server.js
 const express = require('express');
-const oracledb = require('oracledb');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const app = express();
-const port = 3000;
+const PORT = 5000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
+// Sample data loaded from a JSON file or directly embedded
+const courseData = require('./Datasciencecontent.json'); // Assuming you save the JSON above as courseData.json
 
-// Oracle DB connection configuration
-const dbConfig = {
-  user: 'yourUsername',
-  password: 'yourPassword',
-  connectString: 'yourConnectionString'
-};
+// API endpoint to get content based on city
+app.get('/api/content/:city', (req, res) => {
+  const city = req.params.city.toLowerCase();
+  const content = courseData[city];
 
-// Route to handle form submission
-app.post('/submit', async (req, res) => {
-  const { name, contact, course } = req.body;
-  let connection;
-
-  try {
-    connection = await oracledb.getConnection(dbConfig);
-
-    const result = await connection.execute(
-      `INSERT INTO yourTable (name, contact, course) VALUES (:name, :contact, :course)`,
-      { name, contact, course },
-      { autoCommit: true }
-    );
-
-    res.status(200).send('Form data submitted successfully');
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error submitting form data');
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
-      }
-    }
+  if (content) {
+    res.json(content);
+  } else {
+    res.status(404).json({ message: 'City not found' });
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

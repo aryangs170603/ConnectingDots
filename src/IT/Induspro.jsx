@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Induspro.css';
-import ContactForm from '../Homepage/ContactForm';
-
-// Importing the GIF icons
 import aiLogo from '../Logos/Relatedgifs/artificial-intelligence (1).gif';
 import clLogo from '../Logos/Relatedgifs/cloud--network.gif';
 import codeLogo from '../Logos/Relatedgifs/coding.gif';
@@ -16,7 +13,7 @@ import setLogo from '../Logos/Relatedgifs/setting.gif';
 import sciLogo from '../Logos/Relatedgifs/science.gif';
 import phyLogo from '../Logos/Relatedgifs/physics.gif';
 
-const courses = [
+const Indusprocourses = [
   { name: 'Revealing the Power of Data', description: 'Here, in Excel, you need to find the vital stats of the departments such as weak spots and bottlenecks in the processes, and find ways to scale them up.', icon: aiLogo },
   { name: 'Human Resource Management System', description: 'This application helps the student complete their HR toolkit with the secure management of tracking and delivering HR documents, organizing personal records, payroll data, etc.', icon: pieLogo },
   { name: 'Vehicle Sales Analysis', description: 'The idea behind introducing this project in our Data Science & Analytics with AI Certification course is to understand how to analyze and generate Vehicle Sales Report and dive into the data of ‘total vehicles sold’, ‘total revenue generated’, seasonality of the revenue and so on.', icon: sciLogo },
@@ -30,34 +27,10 @@ const courses = [
 ];
 
 const Induspro = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedCourse, setSelectedCourse] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add('modal-open');
-    } else {
-      document.body.classList.remove('modal-open');
-    }
-
-    return () => {
-      document.body.classList.remove('modal-open');
-    };
-  }, [showModal]);
-
-  const handleEnrollNowClick = (course) => {
-    setSelectedCourse(course);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setSelectedCourse(null);
-  };
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
-    setActiveIndex(selectedIndex);
+    setCarouselIndex(selectedIndex);
   };
 
   return (
@@ -66,7 +39,7 @@ const Induspro = () => {
         <h2>INDUSTRY PROJECT</h2>
       </div>
       <Carousel
-        activeIndex={activeIndex}
+        activeIndex={carouselIndex}
         onSelect={handleSelect}
         interval={3000} // 3 seconds interval for automatic sliding
         indicators={false}
@@ -75,26 +48,26 @@ const Induspro = () => {
       >
         <Carousel.Item>
           <div className="induspro-grid">
-            {courses.slice(0, 5).map((course, index) => (
-              <div key={index} className="induspro-card" onClick={() => handleEnrollNowClick(course.name)}>
+            {Indusprocourses.slice(0, 5).map((induscourse, index) => (
+              <div key={index} className="induspro-card">
                 <div className="induspro-container">
-                  <img src={course.icon} alt={`${course.name} icon`} className="induspro-icon" />
+                  <img src={induscourse.icon} alt={`${induscourse.name} icon`} className="induspro-icon" />
                 </div>
-                <h3>{course.name}</h3>
-                <p>{course.description}</p>
+                <h3>{induscourse.name}</h3>
+                <p>{induscourse.description}</p>
               </div>
             ))}
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="induspro-grid">
-            {courses.slice(5, 10).map((course, index) => (
-              <div key={index} className="induspro-card" onClick={() => handleEnrollNowClick(course.name)}>
+            {Indusprocourses.slice(5, 10).map((induscourse, index) => (
+              <div key={index} className="induspro-card">
                 <div className="induspro-container">
-                  <img src={course.icon} alt={`${course.name} icon`} className="induspro-icon" />
+                  <img src={induscourse.icon} alt={`${induscourse.name} icon`} className="induspro-icon" />
                 </div>
-                <h3>{course.name}</h3>
-                <p>{course.description}</p>
+                <h3>{induscourse.name}</h3>
+                <p>{induscourse.description}</p>
               </div>
             ))}
           </div>
@@ -104,18 +77,16 @@ const Induspro = () => {
         <input
           type="radio"
           name="carousel-radio"
-          checked={activeIndex === 0}
+          checked={carouselIndex === 0}
           onChange={() => handleSelect(0)}
         />
         <input
           type="radio"
           name="carousel-radio"
-          checked={activeIndex === 1}
+          checked={carouselIndex === 1}
           onChange={() => handleSelect(1)}
         />
       </div>
-
-      {showModal && <ContactForm onClose={handleCloseModal} course={selectedCourse} />}
     </div>
   );
 };
