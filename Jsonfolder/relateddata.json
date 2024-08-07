@@ -1,0 +1,114 @@
+{
+  "courses": {
+    "id": "CoursesRelatedPageDS",
+    "title": "RELATED COURSES",
+    "items": [
+      {
+        "name": "Artificial Intelligence",
+        "description": "Learn AI from scratch",
+        "icon": "./Relatedgifs/artificial-intelligence (1).gif",
+        "alt": "Artificial Intelligence icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "./Relatedgifs/pie-chart.gif",
+        "alt": "Pie chart icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "./Relatedgifs/science.gif",
+        "alt": "Science icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "./Relatedgifs/cloud--network.gif",
+        "alt": "Cloud network icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "./Relatedgifs/computer.gif",
+        "alt": "Computer icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "./Relatedgifs/coding.gif",
+        "alt": "Coding icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "./Relatedgifs/java (1).gif",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "./Relatedgifs/setting.gif",
+        "alt": "Setting icon"
+      },
+      {
+        "name": "Google Cloud Platform",
+        "description": "Learn GCP from experts",
+        "icon": "./Relatedgifs/exchange.gif",
+        "alt": "Exchange icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "./Relatedgifs/physics.gif",
+        "alt": "Physics icon"
+      }
+    ]
+  },
+  "anotherComponent": {
+    "id": "AnotherComponentPage",
+    "title": "ANOTHER COMPONENT",
+    "items": [
+      {
+        "name": "Revealing the Power of Data",
+        "description": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "name": "Human Resource Management System",
+        "description": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "name": "Vehicle Sales Analysis",
+        "description": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "name": "Supply Chain & Logistics Analysis",
+        "description": "I Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "name": "Face Detection",
+        "description": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "name": "PowerBI",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "name": "Google Cloud Platform",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      }
+    ]
+  }
+}

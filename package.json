@@ -1,8 +1,8 @@
 {
+  "homepage": "https://aryangs170603.github.io/ConnectingDots",
   "name": "codespaces-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aryangs170603.github.io/ConnectingDots",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fontsource/poppins": "^5.0.14",
@@ -20,6 +20,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@use-gesture/react": "^10.3.1",
+    "axios": "^1.7.3",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
@@ -28,7 +29,6 @@
     "express": "^4.19.2",
     "leaflet": "^1.9.4",
     "oracledb": "^6.5.1",
-    "react-axios": "^2.0.6",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-hooks": "^1.0.1",
@@ -44,6 +44,7 @@
     "react-text-transition": "^3.1.0",
     "react-wavify": "^1.11.0",
     "slick-carousel": "^1.8.1",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.11",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.3",
@@ -56,11 +57,11 @@
   },
   "scripts": {
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "vitest"
   },
   "eslintConfig": {
     "extends": [

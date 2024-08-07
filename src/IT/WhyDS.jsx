@@ -1,28 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import './WhyDS.css';
 
-const DataScienceComponent = ({ city }) => {
-  const [cards, setCards] = useState([]);
+const DataScienceComponent = () => {
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Fetch the dynamic content for the selected city
-    axios.get(`http://localhost:5000/api/content/${city}`)
-      .then(response => {
-        setCards(response.data.WhyDS.cards);
-      })
-      .catch(error => {
-        console.error('Error fetching course data:', error);
-      });
-  }, [city]);
+    // Fetch JSON data
+    fetch('Jsonfolder/Whyds.json')  // Path to your JSON file
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  if (!data) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="container-yds mx-auto p-6">
+      <SectionComponent section={data.dataScience} />
+      
+    </div>
+  );
+};
+
+const SectionComponent = ({ section }) => {
+  return (
+    <>
       <h1 className="text-5xl text-center mb-10 text-primary">
-        <span className="text-accent">Why Data Science?</span>
+        <span className="text-accent">{section.title}</span>
       </h1>
       <div className="cards-container-yds grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {cards.map((card, index) => (
+        {section.cards.map((card, index) => (
           <DataCard
             key={index}
             title={card.title}
@@ -31,7 +40,7 @@ const DataScienceComponent = ({ city }) => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

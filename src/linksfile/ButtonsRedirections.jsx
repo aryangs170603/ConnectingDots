@@ -1,18 +1,12 @@
-      // ButtonsRedirections.jsx
-      import React from 'react';
-      import { Button } from 'react-bootstrap';
-      import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 
-      const ButtonsRedirections = ({ text, onClick, className }) => {
-        return (
-          <Button className={className} onClick={onClick}>
-            {text}
-          </Button>
-        );
-      };
+const ButtonsRedirections = ({ className, text, buttonType }) => {
+  console.log('ButtonsRedirections component loaded');
+  return (
+    <button className={className}>
+      {text}
+    </button>
+  );
+};
 
-    
-      export default ButtonsRedirections;
-
-
-
+export default ButtonsRedirections;

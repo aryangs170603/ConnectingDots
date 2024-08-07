@@ -247,7 +247,7 @@ button {
   max-width: 1800px;
   width: 100%;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .carousel-text2{

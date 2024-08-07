@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "/src/Logos/Navbar/connecting dot erp logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -48,23 +47,47 @@ const Header = () => {
           {[
             {
               title: "SAP Functional",
-              items: ["SAP FICO", "SAP MM", "SAP SD", "SAP HR/HCM", "SAP CRM", "SAP PP", "SAP QM", "SAP PM", "SAP PS", "SAP IM", "SAP EWM", "SAP SCM", "SAP SUCCESSFACTOR", "SAP LE"]
+              link: "/sap-functional",
+              items: [
+                { name: "SAP FICO", link: "/sap-functional/fi-co" },
+                { name: "SAP MM", link: "/sap-functional/mm" },
+                { name: "SAP SD", link: "/sap-functional/sd" },
+                { name: "SAP HR/HCM", link: "/sap-functional/hr-hcm" },
+                { name: "SAP CRM", link: "/sap-functional/crm" },
+                { name: "SAP PP", link: "/sap-functional/pp" },
+                { name: "SAP QM", link: "/sap-functional/qm" },
+                { name: "SAP PM", link: "/sap-functional/pm" },
+                { name: "SAP PS", link: "/sap-functional/ps" },
+                { name: "SAP IM", link: "/sap-functional/im" },
+                { name: "SAP EWM", link: "/sap-functional/ewm" },
+                { name: "SAP SCM", link: "/sap-functional/scm" },
+                { name: "SAP SUCCESSFACTOR", link: "/sap-functional/successfactor" },
+                { name: "SAP LE", link: "/sap-functional/le" },
+              ],
             },
             {
               title: "SAP Technical",
-              items: ["SAP ABAP", "SAP HANA", "SAP NetWeaver", "SAP BW/BI", "SAP Solution Manager", "SAP BASIS"]
-            }
+              link: "/sap-technical",
+              items: [
+                { name: "SAP ABAP", link: "/sap-technical/abap" },
+                { name: "SAP HANA", link: "/sap-technical/hana" },
+                { name: "SAP NetWeaver", link: "/sap-technical/netweaver" },
+                { name: "SAP BW/BI", link: "/sap-technical/bw-bi" },
+                { name: "SAP Solution Manager", link: "/sap-technical/solution-manager" },
+                { name: "SAP BASIS", link: "/sap-technical/basis" },
+              ],
+            },
           ].map((submenu, index) => (
             <li key={index}>
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to={submenu.link}>
                 {submenu.title} &raquo;
-              </a>
+              </Link>
               <ul className="dropdown-menu dropdown-submenu">
                 {submenu.items.map((item, subIndex) => (
                   <li key={subIndex}>
-                    <a className="dropdown-item" href="#">
-                      {item}
-                    </a>
+                    <Link className="dropdown-item" to={item.link}>
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -102,23 +125,39 @@ const Header = () => {
           {[
             {
               title: "Data Science",
-              items: ["MASTERS IN DATA ANALYTICS", "MASTERS IN DATA SCIENCE", "MASTERS IN BUSINESS ANALYTICS", "CHAT GPT & AI"]
+              link: "/it/data-science",
+              items: [
+                { name: "MASTERS IN DATA ANALYTICS", link: "/it/data-science/masters-in-data-analytics" },
+                { name: "MASTERS IN DATA SCIENCE", link: "/it" },
+                { name: "MASTERS IN BUSINESS ANALYTICS", link: "/it/data-science/masters-in-business-analytics" },
+                { name: "CHAT GPT & AI", link: "/it/data-science/chat-gpt-ai" },
+              ],
             },
             {
               title: "Software Courses",
-              items: ["ARTIFICIAL INTELLIGENCE", "FULL STACK TRAINING", "JAVA", "MERN STACK", "UI/UX DESIGN", "PYTHON", "REACT JS", "SALESFORCE"]
-            }
+              link: "/it/software-courses",
+              items: [
+                { name: "ARTIFICIAL INTELLIGENCE", link: "/it/software-courses/artificial-intelligence" },
+                { name: "FULL STACK TRAINING", link: "/it/software-courses/full-stack-training" },
+                { name: "JAVA", link: "/it/software-courses/java" },
+                { name: "MERN STACK", link: "/it/software-courses/mern-stack" },
+                { name: "UI/UX DESIGN", link: "/it/software-courses/ui-ux-design" },
+                { name: "PYTHON", link: "/it/software-courses/python" },
+                { name: "REACT JS", link: "/it/software-courses/react-js" },
+                { name: "SALESFORCE", link: "/it/software-courses/salesforce" },
+              ],
+            },
           ].map((submenu, index) => (
             <li key={index}>
-              <Link className="dropdown-item" to="/it">
+              <Link className="dropdown-item" to={submenu.link}>
                 {submenu.title} &raquo;
               </Link>
               <ul className="dropdown-menu dropdown-submenu">
                 {submenu.items.map((item, subIndex) => (
                   <li key={subIndex}>
-                    <a className="dropdown-item" href="#">
-                      {item}
-                    </a>
+                    <Link className="dropdown-item" to={item.link}>
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -153,11 +192,16 @@ const Header = () => {
       </Nav.Link>
       {isDropdownVisible.dropdown4 && (
         <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton4" style={{ display: "block" }}>
-          {["Tableau", "Power BI", "SQL", "Microsoft SQL"].map((item, index) => (
+          {[
+            { name: "Tableau", link: "/data-visualisation/tableau" },
+            { name: "Power BI", link: "/data-visualisation/power-bi" },
+            { name: "SQL", link: "/data-visualisation/sql" },
+            { name: "Microsoft SQL", link: "/data-visualisation/microsoft-sql" },
+          ].map((item, index) => (
             <li key={index}>
-              <a className="dropdown-item" href="#">
-                {item}
-              </a>
+              <Link className="dropdown-item" to={item.link}>
+                {item.name}
+              </Link>
             </li>
           ))}
           <li>
@@ -189,11 +233,17 @@ const Header = () => {
       </Nav.Link>
       {isDropdownVisible.dropdown5 && (
         <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton5" style={{ display: "block" }}>
-          {["Advance Digital Marketing", "Pay Per Click Training", "Search Engine Optimization", "Social Media Marketing", "Advance Analytics Training"].map((item, index) => (
+          {[
+            { name: "Advance Digital Marketing", link: "/digital-marketing/advance-digital-marketing" },
+            { name: "Pay Per Click Training", link: "/digital-marketing/pay-per-click-training" },
+            { name: "Search Engine Optimization", link: "/digital-marketing/search-engine-optimization" },
+            { name: "Social Media Marketing", link: "/digital-marketing/social-media-marketing" },
+            { name: "Advance Analytics Training", link: "/digital-marketing/advance-analytics-training" },
+          ].map((item, index) => (
             <li key={index}>
-              <a className="dropdown-item" href="#">
-                {item}
-              </a>
+              <Link className="dropdown-item" to={item.link}>
+                {item.name}
+              </Link>
             </li>
           ))}
           <li>
@@ -225,11 +275,17 @@ const Header = () => {
       </Nav.Link>
       {isDropdownVisible.dropdown6 && (
         <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton6" style={{ display: "block" }}>
-          {["Core HR", "HR Payroll", "HR Management", "SAP HR(HCM)", "HR Analytics"].map((item, index) => (
+          {[
+            { name: "Core HR", link: "/hr-courses/core-hr" },
+            { name: "HR Payroll", link: "/hr-courses/hr-payroll" },
+            { name: "HR Management", link: "/hr-courses/hr-management" },
+            { name: "SAP HR(HCM)", link: "/hr-courses/sap-hr-hcm" },
+            { name: "HR Analytics", link: "/hr-courses/hr-analytics" },
+          ].map((item, index) => (
             <li key={index}>
-              <a className="dropdown-item" href="#">
-                {item}
-              </a>
+              <Link className="dropdown-item" to={item.link}>
+                {item.name}
+              </Link>
             </li>
           ))}
           <li>
@@ -282,19 +338,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

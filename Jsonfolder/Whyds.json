@@ -1,0 +1,58 @@
+{
+  "dataScience": {
+    "id": "dataScienceSection",
+    "title": "Why Data Science?",
+    "cards": [
+      {
+        "title": "What is <span class=\"highlight-span-cards\">Data Science?</span>",
+        "content": "Data Science involves <span class=\"highlight-span-cards\">extracting actionable insights</span> from raw data using various scientific methods, algorithms, and processes. It provides tools for working with data from diverse sources, including financial logs, multimedia files, and sensors."
+      },
+      {
+        "title": "What does a <span class=\"highlight-span-cards\">Data Scientist</span> do?",
+        "content": "A data scientist analyzes data to provide actionable insights for various processes. They possess strong <span class=\"highlight-span-cards\">statistical</span>, <span class=\"highlight-span-cards\">analytical</span>, and <span class=\"highlight-span-cards\">technical skills</span> to work with structured and unstructured data.",
+        "listItems": [
+          "Identify data sources and collect data.",
+          "Analyze data effectively.",
+          "Formulate strategies to solve business challenges."
+        ]
+      },
+      {
+        "title": "Why take <span class=\"highlight-span-cards\">Data Science</span> training?",
+        "content": "Data scientists are in high demand across industries, making a <span class=\"highlight-span-cards\">Data Science certification</span> valuable. Our training course is designed for both beginners and professionals to equip them with essential skills.",
+        "listItems": [
+          "Junior/Senior Data Scientist",
+          "Forecasting/Risk Analyst",
+          "Machine Learning Engineer"
+        ]
+      }
+    ]
+  },
+  "dataAnalytics": {
+    "id": "dataAnalyticsSection",
+    "title": "Why Data Analytics?",
+    "cards": [
+      {
+        "title": "What is <span class=\"highlight-span-cards\">Data Analytics?</span>",
+        "content": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "title": "What does a <span class=\"highlight-span-cards\">Data Analyst</span> do?",
+        "content": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "listItems": [
+          "Collect and clean data.",
+          "Analyze complex data sets.",
+          "Create visualizations to represent data insights."
+        ]
+      },
+      {
+        "title": "Why take <span class=\"highlight-span-cards\">Data Analytics</span> training?",
+        "content": " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "listItems": [
+          "Business Intelligence Analyst",
+          "Operations Analyst",
+          "Marketing Analyst"
+        ]
+      }
+    ]
+  }
+}

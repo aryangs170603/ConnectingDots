@@ -1,148 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './DataScienceModules.css';
 
-const DataScience = () => {
+const DataScienceModules = () => {
   const [activeTab, setActiveTab] = useState('beginner');
-  const [activeModule, setActiveModule] = useState(0); 
+  const [activeModule, setActiveModule] = useState(0);
+  const [data, setData] = useState(null);
 
-  const initialModules = {
-    beginner: [
-      {
-        title: "Tableau + Excel",
-        duration: "5 Months",
-        content: [
-          "Basic Visual Analytics",
-          "More Charts and Graphs, Operations on Data and Calculations in Tableau",
-          "Advanced Visual Analytics and Level Of Detail (LOD) Expressions",
-          "Geographic Visualizations, Advanced Charts, and Worksheet and Workbook Formatting",
-          "Introduction to Excel and Formulas",
-          "Pivot Tables, Charts and Statistical functions"
-          
-        ]
-      },
-      {
-        title: "Python Basic to Advance",
-        duration: "4 Months",
-        content: [
-          "Basic Python Concepts",
-          "Control Flow and Functions",
-          "Data Structures and Classes",
-          "Exception Handling and Recursion",
-          "Regular Expressions and Libraries",
-          "Exploratory Data Analysis",
-          "Practical Applications"
-        ]
-      },
-      {
-        title: "Structured Query Language(SQL)",
-        duration: "3 Months",
-        content: [
-          "CRUD Operations",
-          "Normalization",
-          "Joins (INNER, OUTER, LEFT, RIGHT, CROSS, SELF JOIN)",
-          "Transactions",
-          "Advanced Queries on University Schema",
-          "Stored Procedures",
-          "Common Table Expressions"
-        ]
-      },
-      {
-        title: "Big Data Computing",
-        duration: "3 Months",
-        content: [
-          "Introduction to Big Data",
-          "Hadoop and Its Evolution",
-          "HDFS Architecture",
-          "Hadoop Ecosystem",
-          "HDFS Commands",
-          "HDFS Commands",
-          "Intro Linux Commands"
-        ]
-      },
-      {
-        title: "Machine Learning Ops",
-        duration: "1 Month",
-        content: [
-          "Introduction to Machine Learning",
-          "Types of ML Algorithms",
-          "Feature Selection",
-          "Handling Categorical Data",
-          "Linear Regression",
-          "Logistic Regression",
-          "KNN (K-Nearest Neighbors)"
-        ]
-      },
-    ],
-    advanced: [
-      {
-        title: "Data Structures and Algorithms",
-        duration: "6 Months",
-        content: [
-          "Sorting Algorithms",
-          "Searching Algorithms",
-          "Linked Lists  ",
-          "Stacks and Queues",
-          "Tree Traversal Techniques",
-          "Graphs",
-          "Advanced Topics"
-        ]
-      },
-      {
-        title: "Data Engineering",
-        duration: "5 Months",
-        content: [
-          "Introduction to Data Engineering",
-          "Data Pipelines",
-          "Data Pipelines",
-          "ETL Processes",
-          "Data Warehousing",
-          "ETL Processes",
-          "Data Warehousing"
-        ]
-      },
-      {
-        title: "AI and Deep Learning",
-        duration: "4 Months",
-        content: [
-          "Introduction to AI",
-          "Introduction to AI",
-          "Deep Learning Architectures",
-          "Deep Learning Architectures",
-          "Convolutional Neural Networks",
-          "Convolutional Neural Networks",
-          "Recurrent Neural Networks"
-        ]
-      },
-      {
-        title: "Project Specializations",
-        duration: "4 Months",
-        content: [
-          "Specialization 1",
-          "Specialization 2",
-          "Specialization 3",
-          "Specialization 4",
-          "Specialization 4",
-          "Specialization 4",
-          "Specialization 4"
-        ]
-      },
-      {
-        title: "Production ML Systems",
-        duration: "2 Months",
-        content: [
-          "Production Machine Learning",
-          "Scaling ML Systems",
-          "Scaling ML Systems",
-          "Scaling ML Systems",
-          "Scaling ML Systems",
-          "ML System Design",
-          "Case Studies"
-        ]
-      },
-    ],
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('Jsonfolder/curriculumdata.json');
+        const data = await response.json();
+        setData(data.dataScienceCurriculum);
+      } catch (error) {
+        console.error('Error fetching module data:', error);
+      }
+    };
 
-  const [modules] = useState(initialModules);
+    fetchData();
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   const handleModuleClick = (moduleIndex) => {
     if (activeModule !== moduleIndex) {
@@ -152,35 +32,31 @@ const DataScience = () => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setActiveModule(0); 
+    setActiveModule(0);
   };
 
-  const activeContent = modules[activeTab][activeModule];
+  const activeContent = data.tabs.find(tab => tab.type === activeTab).modules[activeModule];
 
   return (
     <div className="container-ds">
       <div className="header-ds">
-        <h1>DATA SCIENCE CURRICULUM</h1>
+        <h1>{data.title}</h1>
       </div>
       <div className="tabs">
-        <div
-          className={`tab ${activeTab === 'beginner' ? 'active' : ''}`}
-          onClick={() => handleTabChange('beginner')}
-        >
-          <p>Beginner</p>
-          <span>15 Months</span>
-        </div>
-        <div
-          className={`tab ${activeTab === 'advanced' ? 'active' : ''}`}
-          onClick={() => handleTabChange('advanced')}
-        >
-          <p>Advanced</p>
-          <span>20 Months</span>
-        </div>
+        {data.tabs.map(tab => (
+          <div
+            key={tab.type}
+            className={`tab ${activeTab === tab.type ? 'active' : ''}`}
+            onClick={() => handleTabChange(tab.type)}
+          >
+            <p>{tab.type.charAt(0).toUpperCase() + tab.type.slice(1)}</p>
+            <span>{tab.duration}</span>
+          </div>
+        ))}
       </div>
       <div className="content-container">
         <div className="content">
-          {modules[activeTab].map((module, index) => (
+          {data.tabs.find(tab => tab.type === activeTab).modules.map((module, index) => (
             <div
               key={index}
               className={`module ${activeModule === index ? 'selected' : ''}`}
@@ -215,4 +91,4 @@ const DataScience = () => {
   );
 };
 
-export default DataScience;
+export default DataScienceModules;
