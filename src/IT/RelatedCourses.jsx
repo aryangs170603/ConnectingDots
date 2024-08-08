@@ -11,7 +11,7 @@ const CoursesRelated = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    fetch('Jsonfolder/MasterDS.json')  // Path to your JSON file
+    fetch('Jsonfolder/relateddata.json')  // Path to your JSON file
       .then(response => response.json())
       .then(data => setRelatedCourses(data.courses.items))
       .catch(error => console.error('Error fetching related courses data:', error));

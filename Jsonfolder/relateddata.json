@@ -6,61 +6,61 @@
       {
         "name": "Artificial Intelligence",
         "description": "Learn AI from scratch",
-        "icon": "./Relatedgifs/artificial-intelligence (1).gif",
+        "icon": "Jsonfolder/Relatedgifs/artificial-intelligence (1).gif",
         "alt": "Artificial Intelligence icon"
       },
       {
         "name": "Masters in Data Science",
         "description": "Become a data science expert",
-        "icon": "./Relatedgifs/pie-chart.gif",
+        "icon": "Jsonfolder/Relatedgifs/pie-chart.gif",
         "alt": "Pie chart icon"
       },
       {
         "name": "Masters in Data Analytics",
         "description": "Master data analytics skills",
-        "icon": "./Relatedgifs/science.gif",
+        "icon": "Jsonfolder/Relatedgifs/science.gif",
         "alt": "Science icon"
       },
       {
         "name": "Salesforce",
         "description": "Salesforce developer courses",
-        "icon": "./Relatedgifs/cloud--network.gif",
+        "icon": "Jsonfolder/Relatedgifs/cloud--network.gif",
         "alt": "Cloud network icon"
       },
       {
         "name": "UI/UX Design",
         "description": "Design stunning user interfaces",
-        "icon": "./Relatedgifs/computer.gif",
+        "icon": "Jsonfolder/Relatedgifs/computer.gif",
         "alt": "Computer icon"
       },
       {
         "name": "Full-Stack Python",
         "description": "Full-stack development with Python",
-        "icon": "./Relatedgifs/coding.gif",
+        "icon": "Jsonfolder/Relatedgifs/coding.gif",
         "alt": "Coding icon"
       },
       {
         "name": "Full-Stack Java",
         "description": "Full-stack development with Java",
-        "icon": "./Relatedgifs/java (1).gif",
+        "icon": "Jsonfolder/Relatedgifs/java (1).gif",
         "alt": "Java icon"
       },
       {
         "name": "PowerBI",
         "description": "Business intelligence with PowerBI",
-        "icon": "./Relatedgifs/setting.gif",
+        "icon": "Jsonfolder/Relatedgifs/setting.gif",
         "alt": "Setting icon"
       },
       {
         "name": "Google Cloud Platform",
         "description": "Learn GCP from experts",
-        "icon": "./Relatedgifs/exchange.gif",
+        "icon": "Jsonfolder/Relatedgifs/exchange.gif",
         "alt": "Exchange icon"
       },
       {
         "name": "Reactjs Framework",
         "description": "Learn Reactjs from Industry Experts",
-        "icon": "./Relatedgifs/physics.gif",
+        "icon": "Jsonfolder/Relatedgifs/physics.gif",
         "alt": "Physics icon"
       }
     ]

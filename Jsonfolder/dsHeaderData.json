@@ -60,5 +60,68 @@
 
 
     
+  },
+  "MDApage": 
+  {
+    "MDAHeader": {
+      "id": "MDAHeader",
+      "title": "Masters in Data Analytics & Machine Learning Program",
+      "subtitle": "Data Science Course",
+      "description": "Unlock the power of data with Connecting Dots Data Science course, mastering crucial skills for success in the field, all backed by secure placement support.",
+      "features": ["Live Class", "1:1 mentorship", "Industry projects"],
+      "alumni": [
+        {"name": "amazon", "logo": "https://via.placeholder.com/50x20?text=amazon"},
+        {"name": "samsung", "logo": "https://via.placeholder.com/50x20?text=samsung"},
+        {"name": "intuit", "logo": "https://via.placeholder.com/50x20?text=intuit"},
+        {"name": "microsoft", "logo": "https://via.placeholder.com/50x20?text=microsoft"},
+        {"name": "google", "logo": "https://via.placeholder.com/50x20?text=google"}
+      ],
+      "buttons": [
+        {"text": "Next Batch starts in AUGUST", "courseName": "Data Science Program"},
+        {"text": "Book Live Demo", "courseName": "Book Live Demo"}
+      ],
+      "form": {
+        "title": "Book a FREE live class",
+        "inputs": [
+          {"type": "text", "name": "name", "placeholder": "Enter your name"},
+          {"type": "email", "name": "email", "placeholder": "Enter your Email"},
+          {"type": "text", "name": "year", "placeholder": "Year of Passing"},
+          {"type": "tel", "name": "phone", "placeholder": "Enter your phone number", "countryCode": "+91"}
+        ],
+        "submitText": "Book Live Class"
+      }
+
+
+
+    },
+    "DataAnalytics": {
+      "id": "DataAnalytics",
+      "title": "Another Course Title",
+      "subtitle": "Another Course Subtitle",
+      "description": "Description for another course.",
+      "features": ["Feature 1", "Feature 2", "Feature 3"],
+      "alumni": [
+        {"name": "company1", "logo": "https://via.placeholder.com/50x20?text=company1"},
+        {"name": "company2", "logo": "https://via.placeholder.com/50x20?text=company2"}
+      ],
+      "buttons": [
+        {"text": "Next Batch starts in SEPTEMBER", "courseName": "Another Course"},
+        {"text": "Book Live Demo", "courseName": "Book Live Demo"}
+      ],
+      "form": {
+        "title": "Book a FREE live class",
+        "inputs": [
+          {"type": "text", "name": "name", "placeholder": "Enter your name"},
+          {"type": "email", "name": "email", "placeholder": "Enter your Email"},
+          {"type": "text", "name": "year", "placeholder": "Year of Passing"},
+          {"type": "tel", "name": "phone", "placeholder": "Enter your phone number", "countryCode": "+91"}
+        ],
+        "submitText": "Book Live Class"
+      }
+    }
+
+
+
   }
+  
 }

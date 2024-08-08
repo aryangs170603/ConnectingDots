@@ -10,7 +10,7 @@ const DSHeader = ({ pageId }) => {
     const [course, setCourse] = useState('');
 
     useEffect(() => {
-        fetch('Jsonfolder/MasterDS.json')
+        fetch('Jsonfolder/dsHeaderData.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -18,7 +18,7 @@ const DSHeader = ({ pageId }) => {
                 return response.json();
             })
             .then(data => {
-                const pageData = data.MDSpage[pageId];
+                const pageData = data.MDSpage[pageId] ;
                 if (pageData) {
                     setData(pageData);
                 } else {
@@ -31,7 +31,38 @@ const DSHeader = ({ pageId }) => {
                 setError(error);
                 setLoading(false);
             });
+        
     }, [pageId]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await fetch('Jsonfolder/dsHeaderData.json');
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             const data = await response.json();
+
+    //             // Fetch data for three pages
+    //             const MDSPageData = data.MDSpage[pageId];
+    //             const MDAPageData = data.MDAPage[pageId];
+    //             // const MDCPageData = data.MDCPage[pageId]; // Assuming pageId is the same for all pages
+
+    //             if (MDSPageData || MDAPageData ) {
+    //                 setData({ MDSPageData, MDAPageData});
+    //             } else {
+    //                 throw new Error('Page data not found');
+    //             }
+
+    //             setLoading(false);
+    //         } catch (error) {
+    //             console.error('Fetch error:', error);
+    //             setError(error);
+    //             setLoading(false);
+    //         }
+    //     };
+
+    //     fetchData();
+    // }, [pageId]);
 
     const handleOpenContactForm = (courseName) => {
         setCourse(courseName);

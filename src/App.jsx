@@ -10,7 +10,8 @@ import Footer2 from './components/Footer2';
 import Stickyform from './components/Stickyform';
 import Whatsapp from './Homepage/FloatingWhatsApp';
 import Homepage from './Homepage';
-import IT from './IT';
+import Datascience from './Datascience';
+import DataAnalytics from './DataAnalytics';
 import Chatbot from './components/Chatbot';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
           <Chatbot/>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/it" element={<IT />} />
+            <Route path="/Datascience" element={<Datascience />} />
+            <Route path="/DataAnalytics" element={<DataAnalytics />} />
           </Routes>
         </main>
 

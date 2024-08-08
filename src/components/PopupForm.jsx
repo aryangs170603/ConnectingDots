@@ -11,7 +11,7 @@ const ContactForm = () => {
     // Set a timer to reopen the modal after 5 minutes (300000 milliseconds)
     setTimeout(() => {
       setShow(true);
-    }, 300000);
+    }, 3000000);
   };
 
   const handleShow = () => setShow(true);
@@ -20,7 +20,7 @@ const ContactForm = () => {
     // Set a timer to show the modal 10 seconds after the component mounts
     const timer = setTimeout(() => {
       setShow(true);
-    }, 10000);
+    }, 1000000);
 
     // Clear the timer if the component unmounts
     return () => clearTimeout(timer);

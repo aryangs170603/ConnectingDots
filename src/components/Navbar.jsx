@@ -125,10 +125,10 @@ const Header = () => {
           {[
             {
               title: "Data Science",
-              link: "/it/data-science",
+              
               items: [
-                { name: "MASTERS IN DATA ANALYTICS", link: "/it/data-science/masters-in-data-analytics" },
-                { name: "MASTERS IN DATA SCIENCE", link: "/it" },
+                { name: "MASTERS IN DATA ANALYTICS", link: "/DataAnalytics" },
+                { name: "MASTERS IN DATA SCIENCE", link: "/Datascience" },
                 { name: "MASTERS IN BUSINESS ANALYTICS", link: "/it/data-science/masters-in-business-analytics" },
                 { name: "CHAT GPT & AI", link: "/it/data-science/chat-gpt-ai" },
               ],
