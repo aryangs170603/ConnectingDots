@@ -1,36 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import './FAQ.css';
-import faqVideo from '../Logos/DSimages/faqvideo.mp4';
 
-const FAQAccordion = ({ pageId }) => {
+const FAQAccordion = ({ pageId, pageType }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   useEffect(() => {
-    fetch('Jsonfolder/faqdata.json')
-      .then(response => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('Jsonfolder/faqdata.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
-      })
-      .then(data => {
-        const pageData = data[pageId];
+        const data = await response.json();
+
+        // Dynamically fetch data based on page type and page ID
+        const pageData = data[pageType]?.[pageId];
+
         if (pageData) {
           setData(pageData);
         } else {
           throw new Error('Page data not found');
         }
+
         setLoading(false);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching FAQ data:', error);
         setError(error);
         setLoading(false);
-      });
-  }, [pageId]);
+      }
+    };
+
+    fetchData();
+  }, [pageId, pageType]);
 
   const handleToggle = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -55,7 +59,7 @@ const FAQAccordion = ({ pageId }) => {
       <div className="faq-content">
         <div className="faq-image">
           <video loop autoPlay muted>
-            <source src={faqVideo} type="video/mp4" />
+            <source src={data.video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

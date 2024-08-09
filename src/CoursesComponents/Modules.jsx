@@ -1,41 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import './DataScienceModules.css';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import './Modules.css';
 
-const DataScienceModules = () => {
+const DataScienceModules = ({ pageId }) => {
   const [activeTab, setActiveTab] = useState('beginner');
   const [activeModule, setActiveModule] = useState(0);
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
+        setError(null);
+
+        // Cache implementation
+        const cachedData = localStorage.getItem(`curriculum_${pageId}`);
+        if (cachedData) {
+          setData(JSON.parse(cachedData));
+          setLoading(false);
+          return;
+        }
+
         const response = await fetch('Jsonfolder/curriculumdata.json');
-        const data = await response.json();
-        setData(data.dataScienceCurriculum);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const jsonData = await response.json();
+        const pageData = jsonData[pageId];
+
+        if (pageData) {
+          localStorage.setItem(`curriculum_${pageId}`, JSON.stringify(pageData)); // Cache data
+          setData(pageData);
+        } else {
+          throw new Error('Page data not found');
+        }
       } catch (error) {
-        console.error('Error fetching module data:', error);
+        console.error('Fetch error:', error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [pageId]);
 
-  if (!data) {
-    return <div>Loading...</div>;
-  }
-
-  const handleModuleClick = (moduleIndex) => {
+  const handleModuleClick = useCallback((moduleIndex) => {
     if (activeModule !== moduleIndex) {
       setActiveModule(moduleIndex);
     }
-  };
+  }, [activeModule]);
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
     setActiveModule(0);
-  };
+  }, []);
 
-  const activeContent = data.tabs.find(tab => tab.type === activeTab).modules[activeModule];
+  const activeContent = useMemo(() => {
+    if (data) {
+      return data.tabs.find(tab => tab.type === activeTab).modules[activeModule];
+    }
+    return null;
+  }, [data, activeTab, activeModule]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading data: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>No data available for the specified page.</div>;
+  }
 
   return (
     <div className="container-ds">

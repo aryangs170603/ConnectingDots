@@ -53,16 +53,16 @@ const Header = () => {
                 { name: "SAP MM", link: "/sap-functional/mm" },
                 { name: "SAP SD", link: "/sap-functional/sd" },
                 { name: "SAP HR/HCM", link: "/sap-functional/hr-hcm" },
-                { name: "SAP CRM", link: "/sap-functional/crm" },
+                
                 { name: "SAP PP", link: "/sap-functional/pp" },
                 { name: "SAP QM", link: "/sap-functional/qm" },
                 { name: "SAP PM", link: "/sap-functional/pm" },
                 { name: "SAP PS", link: "/sap-functional/ps" },
-                { name: "SAP IM", link: "/sap-functional/im" },
+                
                 { name: "SAP EWM", link: "/sap-functional/ewm" },
                 { name: "SAP SCM", link: "/sap-functional/scm" },
                 { name: "SAP SUCCESSFACTOR", link: "/sap-functional/successfactor" },
-                { name: "SAP LE", link: "/sap-functional/le" },
+                
               ],
             },
             {
@@ -73,7 +73,7 @@ const Header = () => {
                 { name: "SAP HANA", link: "/sap-technical/hana" },
                 { name: "SAP NetWeaver", link: "/sap-technical/netweaver" },
                 { name: "SAP BW/BI", link: "/sap-technical/bw-bi" },
-                { name: "SAP Solution Manager", link: "/sap-technical/solution-manager" },
+                
                 { name: "SAP BASIS", link: "/sap-technical/basis" },
               ],
             },
@@ -129,22 +129,22 @@ const Header = () => {
               items: [
                 { name: "MASTERS IN DATA ANALYTICS", link: "/DataAnalytics" },
                 { name: "MASTERS IN DATA SCIENCE", link: "/Datascience" },
-                { name: "MASTERS IN BUSINESS ANALYTICS", link: "/it/data-science/masters-in-business-analytics" },
-                { name: "CHAT GPT & AI", link: "/it/data-science/chat-gpt-ai" },
+                { name: "MASTERS IN BUSINESS ANALYTICS", link: "/BussinessAnalytics" },
+                { name: "CHAT GPT & AI", link: "/GPT" },
               ],
             },
             {
               title: "Software Courses",
-              link: "/it/software-courses",
+              
               items: [
-                { name: "ARTIFICIAL INTELLIGENCE", link: "/it/software-courses/artificial-intelligence" },
-                { name: "FULL STACK TRAINING", link: "/it/software-courses/full-stack-training" },
-                { name: "JAVA", link: "/it/software-courses/java" },
-                { name: "MERN STACK", link: "/it/software-courses/mern-stack" },
-                { name: "UI/UX DESIGN", link: "/it/software-courses/ui-ux-design" },
-                { name: "PYTHON", link: "/it/software-courses/python" },
-                { name: "REACT JS", link: "/it/software-courses/react-js" },
-                { name: "SALESFORCE", link: "/it/software-courses/salesforce" },
+                
+                { name: "FULL STACK TRAINING", link: "/Fullstack" },
+                { name: "JAVA", link: "/Java" },
+                { name: "MERN STACK", link: "/Mern" },
+                { name: "UI/UX DESIGN", link: "/UIUX" },
+                { name: "PYTHON", link: "/Python" },
+                
+                { name: "SALESFORCE", link: "/Salesforce" },
               ],
             },
           ].map((submenu, index) => (
@@ -196,7 +196,7 @@ const Header = () => {
             { name: "Tableau", link: "/data-visualisation/tableau" },
             { name: "Power BI", link: "/data-visualisation/power-bi" },
             { name: "SQL", link: "/data-visualisation/sql" },
-            { name: "Microsoft SQL", link: "/data-visualisation/microsoft-sql" },
+            
           ].map((item, index) => (
             <li key={index}>
               <Link className="dropdown-item" to={item.link}>

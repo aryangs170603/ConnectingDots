@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./WhyChooseUs.css";
+import "./ProgramHighlights.css";
 import Assignmentlogo from "../Logos/DSimages/assignment-icon.png"; 
 import Jobreadylogo from "../Logos/DSimages/job-readiness-icon.png"; 
 import Companylogo from "../Logos/DSimages/company-icon.png"; 

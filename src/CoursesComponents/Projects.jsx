@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Induspro.css';
+import './Projects.css';
 
-const Induspro = () => {
+const Induspro = ({ pageId, pageType }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [indusproData, setIndusproData] = useState(null);
+  
 
   useEffect(() => {
     fetch('Jsonfolder/indusprodata.json')  // Path to your JSON file
       .then((response) => response.json())
-      .then((data) => setIndusproData(data.industryProjects))
+      .then((data) => {
+        // Fetch data based on pageType and pageId
+        const pageData = data[pageType]?.[pageId];
+        setIndusproData(pageData);
+      })
       .catch((error) => console.error('Error fetching the data:', error));
-  }, []);
+  }, [pageId, pageType]);
 
   const handleSelect = (selectedIndex) => {
     setCarouselIndex(selectedIndex);

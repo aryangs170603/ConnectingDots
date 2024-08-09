@@ -13,7 +13,7 @@ const CoursesRelated = () => {
   useEffect(() => {
     fetch('Jsonfolder/relateddata.json')  // Path to your JSON file
       .then(response => response.json())
-      .then(data => setRelatedCourses(data.courses.items))
+      .then(data => setRelatedCourses(data.DSrelcourses.items))
       .catch(error => console.error('Error fetching related courses data:', error));
   }, []);
 

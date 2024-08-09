@@ -1,25 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import './WhyDS.css';
+import './Why.css';
 
-const DataScienceComponent = () => {
+const DataScienceComponent = ({ pageId, pageType }) => {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     // Fetch JSON data
-    fetch('Jsonfolder/Whyds.json')  // Path to your JSON file
-      .then(response => response.json())
-      .then(data => setData(data))
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('Jsonfolder/Whyds.json'); // Path to your JSON file
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json();
+
+        // Dynamically fetch data based on page type and page ID
+        const pageData = jsonData?.[pageType]?.[pageId];
+
+        if (pageData) {
+          setData(pageData);
+        } else {
+          throw new Error('Page data not found');
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.error('Fetch error:', error);
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [pageId, pageType]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error loading data: {error.message}</p>;
+  }
 
   if (!data) {
-    return <p>Loading...</p>;
+    return <p>No data available for the specified page.</p>;
   }
 
   return (
     <div className="container-yds mx-auto p-6">
-      <SectionComponent section={data.dataScience} />
-      
+      <SectionComponent section={data} />
     </div>
   );
 };

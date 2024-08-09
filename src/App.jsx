@@ -10,8 +10,16 @@ import Footer2 from './components/Footer2';
 import Stickyform from './components/Stickyform';
 import Whatsapp from './Homepage/FloatingWhatsApp';
 import Homepage from './Homepage';
-import Datascience from './Datascience';
-import DataAnalytics from './DataAnalytics';
+import Datascience from './IT/Datascience';
+import DataAnalytics from './IT/DataAnalytics';
+import BussinessAnalytics from './IT/BussinessA';
+import GptAi from './IT/GptAi';
+import Fullstack from './IT/Fullstack';
+import Java from './IT/Java';
+import Mern from './IT/MernStack';
+import UIUX from './IT/UIUX';
+import Python from './IT/Python';
+import Sales from './IT/Salesforce';
 import Chatbot from './components/Chatbot';
 
 function App() {
@@ -34,6 +42,14 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/Datascience" element={<Datascience />} />
             <Route path="/DataAnalytics" element={<DataAnalytics />} />
+            <Route path="/BussinessAnalytics" element={<BussinessAnalytics />} />
+            <Route path="/GPT" element={<GptAi />} />
+            <Route path="/FullStack" element={<Fullstack />} />
+            <Route path="/Java" element={<Java />} />
+            <Route path="/Mern" element={<Mern />} />
+            <Route path="/Python" element={<Python />} />
+            <Route path="/Salesforce" element={<Sales />} />
+            <Route path="/UIUX" element={<UIUX />} />
           </Routes>
         </main>
 
