@@ -16,11 +16,19 @@
         "index": 0
       }
     ],
+    "src/components/Footer2.css": [
+      {
+        "id": "4c6b86f0-e4ee-461d-8a0e-d3d05384526c",
+        "line": 15,
+        "version": 4903,
+        "index": 312
+      }
+    ],
     "src/components/Navbar.css": [
       {
         "id": "3b441130-764c-4b49-9b10-2c70b2175bd8",
         "line": 1,
-        "version": 3587,
+        "version": 4097,
         "index": 0
       }
     ],

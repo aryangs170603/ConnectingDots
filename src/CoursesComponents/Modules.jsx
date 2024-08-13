@@ -22,7 +22,7 @@ const DataScienceModules = ({ pageId }) => {
           return;
         }
 
-        const response = await fetch('Jsonfolder/curriculumdata.json');
+        const response = await fetch('public/Jsonfolder/curriculumdata.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

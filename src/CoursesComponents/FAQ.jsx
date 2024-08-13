@@ -10,7 +10,7 @@ const FAQAccordion = ({ pageId, pageType }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('Jsonfolder/faqdata.json');
+        const response = await fetch('public/Jsonfolder/faqdata.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

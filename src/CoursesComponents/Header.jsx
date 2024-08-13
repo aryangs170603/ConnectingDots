@@ -25,7 +25,7 @@ const DSHeader = ({ pageId, pageType }) => {
                     return;
                 }
 
-                const response = await fetch('Jsonfolder/dsHeaderData.json');
+                const response = await fetch('public/Jsonfolder/dsHeaderData.json');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

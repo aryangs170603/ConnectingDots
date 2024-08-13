@@ -1,28 +1,22 @@
-// server.jsx
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5001;
 
-app.use(cors({
-  origin: 'https://c756b4a9-bd7d-43c1-bf2c-ab1c8a1252b1-00-1znc9zo60okew.pike.replit.dev:3000/' // Replace with your React app's URL if needed
-}));
+// Serve static files from the dist directory
+app.use(express.static(path.join(__dirname, 'dist')));
 
-// Load course data
-const courseData = require('./Datasciencecontent.json');
-
-// API endpoint to get content based on city
-app.get('/api/content/:city', (req, res) => {
-  const city = req.params.city.toLowerCase();
-  const content = courseData[city];
-
-  if (content) {
-    res.json(content);
-  } else {
-    res.status(404).json({ message: 'City not found' });
-  }
+// Serve index.html for any unmatched routes (for client-side routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

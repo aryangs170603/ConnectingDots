@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 const Chatbot = () => {
   useEffect(() => {
     // Tawk.to integration code

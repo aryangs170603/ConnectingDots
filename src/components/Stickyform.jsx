@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Stickyform.css";
 
 const SContactForm = () => {
@@ -11,29 +11,37 @@ const SContactForm = () => {
   const [isMobileView, setIsMobileView] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(true);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsMobileView(true);
-        setIsFormVisible(false);
-      } else {
-        setIsMobileView(false);
-        setIsFormVisible(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
+  const handleResize = useCallback(() => {
+    if (window.innerWidth <= 768) {
+      setIsMobileView(true);
+      setIsFormVisible(false);
+    } else {
+      setIsMobileView(false);
+      setIsFormVisible(true);
+    }
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  useEffect(() => {
+    // Debounced resize event listener
+    const debouncedResize = () => {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(handleResize, 150);
+    };
 
-  const handleSubmit = async (e) => {
+    window.addEventListener("resize", debouncedResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+    };
+  }, [handleResize]);
+
+  const handleChange = useCallback((e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  }, []);
+
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:3000/submit", {
@@ -43,6 +51,7 @@ const SContactForm = () => {
         },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         console.log("Form data submitted successfully");
         setFormData({ name: "", contact: "", course: "" });
@@ -55,11 +64,11 @@ const SContactForm = () => {
       console.error("Error:", error);
       // Optionally, show an error message to the user
     }
-  };
+  }, [formData]);
 
-  const toggleFormVisibility = () => {
-    setIsFormVisible(!isFormVisible);
-  };
+  const toggleFormVisibility = useCallback(() => {
+    setIsFormVisible((prevVisibility) => !prevVisibility);
+  }, []);
 
   return (
     <>
@@ -77,7 +86,7 @@ const SContactForm = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Eg:Ram"
+                placeholder="Eg: Ram"
                 value={formData.name}
                 onChange={handleChange}
                 required

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import Wave from "react-wavify";
 import "./Wave.css";
 
-const wave = () => {
+const WaveComponent = () => {
   return (
     <div className="wave12-section">
       {/* Wave Container */}
@@ -35,4 +35,5 @@ const wave = () => {
   );
 };
 
-export default wave;
+// Use React.memo to prevent unnecessary re-renders
+export default memo(WaveComponent);

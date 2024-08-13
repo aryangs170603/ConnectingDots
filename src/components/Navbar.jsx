@@ -32,6 +32,8 @@ const Header = () => {
       onMouseLeave={() => handleMouseLeave("dropdown2")}
       style={{ position: "relative", marginLeft: "20px" }}
     >
+      
+      
       <Nav.Link
         className={`mx-lg-2 dropdown-toggle ${activeLink === "dropdown2" ? "active" : ""}`}
         href="#"
@@ -43,37 +45,43 @@ const Header = () => {
         SAP
       </Nav.Link>
       {isDropdownVisible.dropdown2 && (
-        <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton2" style={{ display: "block" }}>
+        <ul
+          className="dropdown-menu show"
+          aria-labelledby="dropdownMenuButton2"
+          style={{ display: "block" }}
+        >
           {[
             {
               title: "SAP Functional",
-              link: "/sap-functional",
+
               items: [
                 { name: "SAP FICO", link: "/sap-functional/fi-co" },
                 { name: "SAP MM", link: "/sap-functional/mm" },
                 { name: "SAP SD", link: "/sap-functional/sd" },
                 { name: "SAP HR/HCM", link: "/sap-functional/hr-hcm" },
-                
+
                 { name: "SAP PP", link: "/sap-functional/pp" },
                 { name: "SAP QM", link: "/sap-functional/qm" },
                 { name: "SAP PM", link: "/sap-functional/pm" },
                 { name: "SAP PS", link: "/sap-functional/ps" },
-                
-                { name: "SAP EWM", link: "/sap-functional/ewm" },
+
+                { name: "SAP EWM", link: "/sapewm" },
                 { name: "SAP SCM", link: "/sap-functional/scm" },
-                { name: "SAP SUCCESSFACTOR", link: "/sap-functional/successfactor" },
-                
+                {
+                  name: "SAP SUCCESSFACTOR",
+                  link: "/sap-functional/successfactor",
+                },
               ],
             },
             {
               title: "SAP Technical",
-              link: "/sap-technical",
+
               items: [
                 { name: "SAP ABAP", link: "/sap-technical/abap" },
                 { name: "SAP HANA", link: "/sap-technical/hana" },
                 { name: "SAP NetWeaver", link: "/sap-technical/netweaver" },
                 { name: "SAP BW/BI", link: "/sap-technical/bw-bi" },
-                
+
                 { name: "SAP BASIS", link: "/sap-technical/basis" },
               ],
             },
@@ -92,12 +100,7 @@ const Header = () => {
                 ))}
               </ul>
             </li>
-          ))}
-          <li>
-            <Link className="dropdown-item view-more" to="/view-more-sap">
-              View More &raquo;
-            </Link>
-          </li>
+          ))}  
         </ul>
       )}
     </div>
@@ -121,29 +124,35 @@ const Header = () => {
         IT Courses
       </Nav.Link>
       {isDropdownVisible.dropdown3 && (
-        <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton3" style={{ display: "block" }}>
+        <ul
+          className="dropdown-menu show"
+          aria-labelledby="dropdownMenuButton3"
+          style={{ display: "block" }}
+        >
           {[
             {
               title: "Data Science",
-              
+
               items: [
                 { name: "MASTERS IN DATA ANALYTICS", link: "/DataAnalytics" },
                 { name: "MASTERS IN DATA SCIENCE", link: "/Datascience" },
-                { name: "MASTERS IN BUSINESS ANALYTICS", link: "/BussinessAnalytics" },
+                {
+                  name: "MASTERS IN BUSINESS ANALYTICS",
+                  link: "/BussinessAnalytics",
+                },
                 { name: "CHAT GPT & AI", link: "/GPT" },
               ],
             },
             {
               title: "Software Courses",
-              
+
               items: [
-                
                 { name: "FULL STACK TRAINING", link: "/Fullstack" },
                 { name: "JAVA", link: "/Java" },
                 { name: "MERN STACK", link: "/Mern" },
                 { name: "UI/UX DESIGN", link: "/UIUX" },
                 { name: "PYTHON", link: "/Python" },
-                
+
                 { name: "SALESFORCE", link: "/Salesforce" },
               ],
             },
@@ -163,11 +172,9 @@ const Header = () => {
               </ul>
             </li>
           ))}
-          <li>
-            <Link className="dropdown-item view-more" to="/view-more-it-courses">
-              View More &raquo;
-            </Link>
-          </li>
+          
+            
+        
         </ul>
       )}
     </div>
@@ -191,24 +198,22 @@ const Header = () => {
         Data Visualisation
       </Nav.Link>
       {isDropdownVisible.dropdown4 && (
-        <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton4" style={{ display: "block" }}>
+        <ul
+          className="dropdown-menu show"
+          aria-labelledby="dropdownMenuButton4"
+          style={{ display: "block" }}
+        >
           {[
             { name: "Tableau", link: "/data-visualisation/tableau" },
             { name: "Power BI", link: "/data-visualisation/power-bi" },
             { name: "SQL", link: "/data-visualisation/sql" },
-            
           ].map((item, index) => (
             <li key={index}>
               <Link className="dropdown-item" to={item.link}>
                 {item.name}
               </Link>
             </li>
-          ))}
-          <li>
-            <Link className="dropdown-item view-more" to="/view-more-data-visualisation">
-              View More &raquo;
-            </Link>
-          </li>
+          ))}  
         </ul>
       )}
     </div>
@@ -232,13 +237,32 @@ const Header = () => {
         Digital Marketing
       </Nav.Link>
       {isDropdownVisible.dropdown5 && (
-        <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton5" style={{ display: "block" }}>
+        <ul
+          className="dropdown-menu show"
+          aria-labelledby="dropdownMenuButton5"
+          style={{ display: "block" }}
+        >
           {[
-            { name: "Advance Digital Marketing", link: "/digital-marketing/advance-digital-marketing" },
-            { name: "Pay Per Click Training", link: "/digital-marketing/pay-per-click-training" },
-            { name: "Search Engine Optimization", link: "/digital-marketing/search-engine-optimization" },
-            { name: "Social Media Marketing", link: "/digital-marketing/social-media-marketing" },
-            { name: "Advance Analytics Training", link: "/digital-marketing/advance-analytics-training" },
+            {
+              name: "Advance Digital Marketing",
+              link: "/digital-marketing/advance-digital-marketing",
+            },
+            {
+              name: "Pay Per Click Training",
+              link: "/digital-marketing/pay-per-click-training",
+            },
+            {
+              name: "Search Engine Optimization",
+              link: "/digital-marketing/search-engine-optimization",
+            },
+            {
+              name: "Social Media Marketing",
+              link: "/digital-marketing/social-media-marketing",
+            },
+            {
+              name: "Advance Analytics Training",
+              link: "/digital-marketing/advance-analytics-training",
+            },
           ].map((item, index) => (
             <li key={index}>
               <Link className="dropdown-item" to={item.link}>
@@ -246,11 +270,9 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          <li>
-            <Link className="dropdown-item view-more" to="/view-more-digital-marketing">
-              View More &raquo;
-            </Link>
-          </li>
+          
+            
+        
         </ul>
       )}
     </div>
@@ -274,7 +296,11 @@ const Header = () => {
         HR Courses
       </Nav.Link>
       {isDropdownVisible.dropdown6 && (
-        <ul className="dropdown-menu show" aria-labelledby="dropdownMenuButton6" style={{ display: "block" }}>
+        <ul
+          className="dropdown-menu show"
+          aria-labelledby="dropdownMenuButton6"
+          style={{ display: "block" }}
+        >
           {[
             { name: "Core HR", link: "/hr-courses/core-hr" },
             { name: "HR Payroll", link: "/hr-courses/hr-payroll" },
@@ -287,12 +313,7 @@ const Header = () => {
                 {item.name}
               </Link>
             </li>
-          ))}
-          <li>
-            <Link className="dropdown-item view-more" to="/view-more-hr-courses">
-              View More &raquo;
-            </Link>
-          </li>
+          ))}  
         </ul>
       )}
     </div>
@@ -332,8 +353,10 @@ const Header = () => {
             </Nav.Link>
           </div>
         </Nav>
+        
       </Container>
     </Navbar>
+   
   );
 };
 

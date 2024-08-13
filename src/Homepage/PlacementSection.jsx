@@ -18,12 +18,12 @@ import companylogo4 from '../Logos/Placementsection/agconsultancy.png';
 import companylogo5 from '../Logos/Placementsection/marketlegos.png';
 
 const placementStories = [
-  { name: 'Preetesh Pardeshi', degree: 'Trained on- SAP ABAP', company: 'Placed in', logo: companylogo4, topImage: faceImage1 },
-  { name: 'Nikhilesh Landge', degree: 'Trained on- SAP SD', company: 'Placed in', logo: companylogo3, topImage: faceImage2 },
-  { name: 'Shubham Desale', degree: 'Trained on- SAP MM', company: 'Placed in', plogo: companylogo2, topImage: faceImage3 },
-  { name: 'Nitesh Kumar', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo5, topImage: faceImage4 },
-  { name: 'Seshu Tamma', degree: 'Trained on- SAP Security', company: 'Placed in', logo: companylogo2, topImage: faceImage5 },
-  { name: 'Pratham Singh', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage8 },
+  { name: 'Preetesh Pardeshi', salary: '10 LPA', degree: 'Trained on- SAP ABAP', company: 'Placed in', logo: companylogo4, topImage: faceImage1 },
+  { name: 'Nikhilesh Landge', salary: '12 LPA', degree: 'Trained on- SAP SD', company: 'Placed in', logo: companylogo3, topImage: faceImage2 },
+  { name: 'Shubham Desale', salary: '9 LPA', degree: 'Trained on- SAP MM', company: 'Placed in', logo: companylogo2, topImage: faceImage3 },
+  { name: 'Nitesh Kumar', salary: '15 LPA', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companylogo5, topImage: faceImage4 },
+  { name: 'Seshu Tamma', salary: '11 LPA', degree: 'Trained on- SAP Security', company: 'Placed in', logo: companylogo2, topImage: faceImage5 },
+  { name: 'Pratham Singh', salary: '18 LPA', degree: 'Trained on- SAP FICO', company: 'Placed in', logo: companyLogo, topImage: faceImage8 },
 ];
 
 const chunkArray = (array, size) => {
@@ -66,6 +66,7 @@ const PlacementSection = () => {
                         <Card.Title>{story.name}</Card.Title>
                         <div className="dotted-underline"></div>
                         <Card.Text>
+                          <p><strong>Salary:</strong> {story.salary}</p>
                           <p>{story.degree}</p>
                           <p>{story.company}</p>
                           <p><img src={story.logo} alt={story.company} className="company-icon" /></p>
@@ -100,6 +101,7 @@ const PlacementSection = () => {
                         <Card.Title>{story.name}</Card.Title>
                         <div className="dotted-underline"></div>
                         <Card.Text>
+                          <p><strong>Salary:</strong> {story.salary}</p>
                           <p>{story.degree}</p>
                           <p>{story.company}</p>
                           <p><img src={story.logo} alt={story.company} className="company-icon" /></p>

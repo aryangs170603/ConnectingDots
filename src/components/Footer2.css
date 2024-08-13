@@ -3,11 +3,11 @@ footer {
   background-color: #182E4A;
   color: #ecf0f1;
   padding: 20px 0;
-  position: relative;
   font-family: Arial, sans-serif;
   max-width: 1800px;
   width: 97.5%;
   margin: 0 auto;
+  position: relative;  /* Ensure logo and icons stay in place */
 }
 
 /* Container for the footer */
@@ -15,15 +15,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* Footer logo styling */
-.footer-logo img {
-  width: 290px;
-  margin-bottom: 10px;
+.footer-logo {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+
+.footer-logo img {
+  width: 290px;
+  margin-bottom: 10px;
 }
 
 /* Social icons styling */
@@ -48,68 +52,46 @@ footer {
 .footer-content {
   text-align: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .columns {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 1500px;
   margin: 20px 0;
+  margin-top: 50px;
 }
 
 /* Widget styling */
-.widget {
-  width: 270px;
-  text-align: center;
-  align-items: center;
-}
-
-.widget .headline h3 {
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
-  margin-top: 100px;
-  text-align: center;
-  width: 80%;
-}
-
-.widget .headline-HR h3 {
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
-  margin-top: -170px;
-  text-align: center;
-  width: 60%;
-  margin-left: 200px;
-}
-
-.widget .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.widget .menu-HR {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  margin-left: 200px;
-}
-
-.widget .menu-item {
-  margin-bottom: 2px; /* Further reduced space between items */
+.widget, .contact-us {
+  width: 30%;  /* Adjusted to ensure they fit in one row */
+  margin: 20px;
   text-align: left;
-  margin-left: 50px;
+}
+
+.widget .headline h3, .contact-us .headline h3, .widget .headline-HR h3 {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.widget .menu, .contact-us .menu, .widget .menu-HR {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.widget .menu-item, .contact-us li {
+  margin-bottom: 5px;
   font-size: 0.7rem;
+  text-align: center;
 }
 
 .widget .menu-item a {
@@ -122,203 +104,132 @@ footer {
   color: #ff4d00;
 }
 
-.contact-us {
-  list-style: none;
-  padding: 0;
-  margin-top: -100px; /* Reduce the gap above "Contact Us" */
-  font-size: 0.8rem;
-}
-
-.contact-us .headline h3 {
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 2px solid #3498db;
-  margin-top: -67.2px;
-  text-align: center;
-  margin-left: 190px;
-  width: 200px;
-}
-
-.contact-us li {
-  margin-bottom: 5px;
-  margin-left: 180px;
-  list-style: none;
-}
-
 /* Specific styling for SAP courses */
 .course-categories {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .sap-functional, .sap-technical {
-  margin-bottom: 2px; /* Reduced space between courses */
-  width: 60%; 
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .sap-functional h6, .sap-technical h6 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 0.675rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #3498db;
   border-bottom: 1px solid #ecf0f1;
   padding-bottom: 5px;
-  margin-top: 0;
 }
 
-/* Background animation styling */
-.background-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  z-index: -7;
+/* HR Courses section */
+.widget .headline-HR h3 {
+  margin-bottom: 0px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
 }
 
-.starsec, .starthird, .starfourth, .starfifth {
-  width: 2px;
-  height: 2px;
+.widget .menu-HR {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-.starsec {
-  top: 20%;
-  left: 20%;
-  animation-duration: 2.5s;
+.widget .menu-HR .menu-item {
+  margin-bottom: 5px;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
-.starthird {
-  top: 40%;
-  left: 40%;
-  animation-duration: 5s;
+.contact-us {
+  list-style: none;
+  padding: 0;
+  font-size: 0.8rem;
 }
 
-.starfourth {
-  top: 60%;
-  left: 60%;
-  animation-duration: 7.5s;
-}
-
-.starfifth {
-  top: 80%;
-  left: 80%;
-  animation-duration: 3s;
-}
-
-@keyframes aimstar {
-  0%, 100% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* Footer paragraph styling */
-footer p {
+/* Footer bottom styling */
+.footer-bottom {
   text-align: center;
   margin-top: 20px;
+}
+
+.footer-bottom p {
   color: #95a5a6;
   font-size: 14px;
 }
 
+
 /* Responsive styling */
 @media (max-width: 768px) {
-  .widget {
-    width: 100%;
-    text-align: left;
+  footer {
+    padding: 40px 20px;
   }
 
-  .widget .menu {
-    max-height: 0;
-    overflow: hidden;
-    display: flex;
+  .footer-container {
     flex-direction: column;
-    padding: 0;
-    transition: max-height 0.5s ease, padding 0.3s ease; /* Adjusted transition */
-  }
-
-  .widget.active .menu {
-    max-height: 300px; /* Increased transition size */
-    padding: 10px 0; 
-  }
-
-  /* Dropdown headline styling */
-  .widget .headline {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #182E4A;
-    color: #ecf0f1;
-    border: none;
-    font-size: 1rem;
-    text-align: center;
-    position: relative;
-    margin-bottom: 20px;
-  }
-
-  .widget .headline-HR {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #182E4A;
-    color: #ecf0f1;
-    border: none;
-    font-size: 1rem;
-    text-align: center;
-    position: relative;
-    margin-top: 150px;
-    margin-left: -317px;
-  }
-
-  .widget .headline::after, .widget .headline-HR::after {
-    content: '▶';
-    font-size: 0.8rem;
-    position: absolute;
-    left: 8px;
-    top: 77%;
-    transform: translateY(-50%);
-    color: #ecf0f1;
-    transition: transform 0.3s ease;
-  }
-
-  .widget.active .headline::after {
-    transform: translateY(-50%) rotate(90deg);
-  }
-
-  .social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    margin-bottom: 50px;
-    margin-right: 40px;
-  }
-
-  /* Align dropdown items */
-  .widget .menu-item a {
-    padding: 7px;
-    display: block;
-    border-bottom: 1px solid #3498db;
-    padding-bottom: 3px;
-    margin-right: 120px;
-    margin-left: -40px;
-  }
-
-  .contact-us {
-    margin-top: 90px;
-    margin-right: 40px;
-  }
-
-  .footer-logo img {
-    width: 290px;
+    align-items: center;
   }
 
   .footer-logo {
-    margin-bottom: 60px;
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+
+  .social-icons {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .widget, .contact-us {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu, .menu-HR, .contact-us .menu {
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  .menu-item, .contact-us li {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .headline-HR h3, .contact-us .headline h3 {
+    width: auto;
+  }
+
+  .menu-HR, .contact-us .menu {
+    width: 100%;
+    justify-content: center;
   }
 }

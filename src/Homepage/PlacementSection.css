@@ -57,8 +57,10 @@
   height: 30px;
   width: auto; 
   vertical-align: middle;
-  margin-top: -15px; 
+  margin-top: -20px; 
   margin-right: 5px;
+  object-fit: contain;
+  
 }
 
 .card-body {
@@ -83,7 +85,7 @@
   color: #000000;
   font-weight: bold;
   margin-top: 5px; 
-  padding-top: 10px;
+  padding-top: -5px;
   padding-left: 15px;
   margin-bottom: 0; 
 }
@@ -207,6 +209,14 @@
   .card-body {
     padding-left: 70px; 
   }
+
+  .salary-package {
+    font-size: 1.2em; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 10px; /* Add some space above the salary */
+    color: #007bff; /* Change the text color (Bootstrap primary color) */
+  }
+
   
 
   .dotted-underline {

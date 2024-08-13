@@ -1,14 +1,21 @@
 .containerCH {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+  justify-content: center; /* Optional: centers items horizontally */
+  align-items: center;
   padding: 20px;
   margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: 'Lato', sans-serif;
   max-width: 1800px;
   width: 97.5%;
   padding-bottom: 50px;
 }
+
+
+
+
+
+
 
 .containerCH h1 {
   font-size: 2.5rem;

@@ -21,7 +21,7 @@ import UIUX from './IT/UIUX';
 import Python from './IT/Python';
 import Sales from './IT/Salesforce';
 import Chatbot from './components/Chatbot';
-
+import SAPEWM from './SAP/sapewm';
 function App() {
   return (
     <Router>
@@ -40,6 +40,7 @@ function App() {
           <Chatbot/>
           <Routes>
             <Route path="/" element={<Homepage />} />
+            {/* IT PAGE */}
             <Route path="/Datascience" element={<Datascience />} />
             <Route path="/DataAnalytics" element={<DataAnalytics />} />
             <Route path="/BussinessAnalytics" element={<BussinessAnalytics />} />
@@ -50,6 +51,8 @@ function App() {
             <Route path="/Python" element={<Python />} />
             <Route path="/Salesforce" element={<Sales />} />
             <Route path="/UIUX" element={<UIUX />} />
+            {/* SAP PAGE*/}
+            <Route path="/SAPEWM" element={<SAPEWM />} />
           </Routes>
         </main>
 

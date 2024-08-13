@@ -1,35 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Footer2.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const [activeWidget, setActiveWidget] = useState(null);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
-  // Update the mobile view state on window resize
   const handleResize = () => {
     setIsMobileView(window.innerWidth <= 768);
   };
 
-  // Add event listener for window resize
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const toggleDropdown = (widgetName) => {
-    if (isMobileView) {
-      setActiveWidget(activeWidget === widgetName ? null : widgetName);
-    }
-  };
-
-  const getWidgetClassName = (widgetName) => {
-    return `widget ${isMobileView && activeWidget === widgetName ? 'active' : ''}`;
-  };
-
-  const getDropdownClassName = (widgetName) => {
-    return `footer-dropdown ${!isMobileView || activeWidget === widgetName ? 'active' : ''}`;
-  };
 
   return (
     <footer>
@@ -48,38 +31,34 @@ const Footer = () => {
         </div>
         <div className="columns">
           {/* SAP COURSES */}
-          <div
-            className={getWidgetClassName('sapCourses')}
-            onClick={() => toggleDropdown('sapCourses')}
-          >
+          <div className="widget">
             <div className="headline"><h3>SAP COURSES</h3></div>
-            <div className={getDropdownClassName('sapCourses')}>
+            <div className={`footer-dropdown ${isMobileView ? 'mobile-view' : ''}`}>
               <div className="course-categories">
                 <div className="sap-functional">
                   <h6>SAP FUNCTIONAL COURSES</h6>
                   <ul className="menu">
-                    <li className="menu-item"><a href="#">SAP FICO</a></li>
-                    <li className="menu-item"><a href="#">SAP SD</a></li>
-                    <li className="menu-item"><a href="#">SAP MM</a></li>
-                    <li className="menu-item"><a href="#">SAP PP</a></li>
-                    <li className="menu-item"><a href="#">SAP HR/HCM</a></li>
-                    <li className="menu-item"><a href="#">SAP QM</a></li>
-                    <li className="menu-item"><a href="#">SAP PM</a></li>
-                    <li className="menu-item"><a href="#">SAP SCM</a></li>
-                    <li className="menu-item"><a href="#">SAP EWM</a></li>
-                    <li className="menu-item"><a href="#">SAP LE</a></li>
-                    <li className="menu-item"><a href="#">SAP SUCCESSFACTOR</a></li>
+                    <li className="menu-item"><a href="#">SAP FICO COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP SD COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP MM COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP PP COURSE</a></li> 
+                    <li className="menu-item"><a href="#">SAP HR/HCM COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP QM COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP PM COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP SCM COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP EWM COURSE</a></li>  
+                    <li className="menu-item"><a href="#">SAP SUCCESSFACTOR COURSE</a></li>
                   </ul>
                 </div>
                 <div className="sap-technical">
                   <h6>SAP TECHNICAL COURSES</h6>
                   <ul className="menu">
-                    <li className="menu-item"><a href="#">SAP ABAP</a></li>
-                    <li className="menu-item"><a href="#">SAP BASIS</a></li>
-                    <li className="menu-item"><a href="#">SAP BW/BI</a></li>
-                    <li className="menu-item"><a href="#">SAP HANA</a></li>
-                    <li className="menu-item"><a href="#">SAP PI/PO</a></li>
-                    <li className="menu-item"><a href="#">SAP FIORI/UI5</a></li>
+                    <li className="menu-item"><a href="#">SAP ABAP COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP BASIS COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP BW/BI COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP HANA COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP PI/PO COURSE</a></li>
+                    <li className="menu-item"><a href="#">SAP FIORI/UI5 COURSE</a></li>
                   </ul>
                 </div>
               </div>
@@ -87,32 +66,24 @@ const Footer = () => {
           </div>
 
           {/* IT COURSES */}
-          <div
-            className={getWidgetClassName('itCourses')}
-            onClick={() => toggleDropdown('itCourses')}
-          >
+          <div className="widget">
             <div className="headline"><h3>IT COURSES</h3></div>
-            <div className={getDropdownClassName('itCourses')}>
+            <div className={`footer-dropdown ${isMobileView ? 'mobile-view' : ''}`}>
               <ul className="menu">
-                <li className="menu-item"><a href="#">ARTIFICIAL INTELLIGENCE</a></li>
                 <li className="menu-item"><a href="#">FULL STACK TRAINING</a></li>
                 <li className="menu-item"><a href="#">JAVA</a></li>
                 <li className="menu-item"><a href="#">MERN STACK</a></li>
                 <li className="menu-item"><a href="#">UI/UX DESIGN</a></li>
-                <li className="menu-item"><a href="#">PYTHON</a></li>
-                <li className="menu-item"><a href="#">REACT JS</a></li>
+                <li className="menu-item"><a href="#">PYTHON</a></li>  
                 <li className="menu-item"><a href="#">SALESFORCE</a></li>
               </ul>
             </div>
           </div>
 
           {/* DIGITAL MARKETING COURSES */}
-          <div
-            className={getWidgetClassName('digitalMarketingCourses')}
-            onClick={() => toggleDropdown('digitalMarketingCourses')}
-          >
+          <div className="widget">
             <div className="headline"><h3>DIGITAL MARKETING COURSES</h3></div>
-            <div className={getDropdownClassName('digitalMarketingCourses')}>
+            <div className={`footer-dropdown ${isMobileView ? 'mobile-view' : ''}`}>
               <ul className="menu">
                 <li className="menu-item"><a href="#">ADVANCE DIGITAL MARKETING</a></li>
                 <li className="menu-item"><a href="#">PAY PER CLICK TRAINING</a></li>
@@ -124,12 +95,9 @@ const Footer = () => {
           </div>
 
           {/* DATA SCIENCE COURSES */}
-          <div
-            className={getWidgetClassName('dataScienceCourses')}
-            onClick={() => toggleDropdown('dataScienceCourses')}
-          >
+          <div className="widget">
             <div className="headline"><h3>DATA SCIENCE COURSES</h3></div>
-            <div className={getDropdownClassName('dataScienceCourses')}>
+            <div className={`footer-dropdown ${isMobileView ? 'mobile-view' : ''}`}>
               <ul className="menu">
                 <li className="menu-item"><Link to="./DataAnalytics">MASTERS IN DATA ANALYTICS</Link></li>
                 <li className="menu-item"><Link to="./Datascience">MASTERS IN DATA SCIENCE</Link></li>
@@ -140,12 +108,9 @@ const Footer = () => {
           </div>
 
           {/* DATA VISUALISATION COURSES */}
-          <div
-            className={getWidgetClassName('dataVisualisationCourses')}
-            onClick={() => toggleDropdown('dataVisualisationCourses')}
-          >
+          <div className="widget">
             <div className="headline"><h3>DATA VISUALISATION COURSES</h3></div>
-            <div className={getDropdownClassName('dataVisualisationCourses')}>
+            <div className={`footer-dropdown ${isMobileView ? 'mobile-view' : ''}`}>
               <ul className="menu">
                 <li className="menu-item"><a href="#">POWER BI</a></li>
                 <li className="menu-item"><a href="#">TABLEAU</a></li>
@@ -157,12 +122,10 @@ const Footer = () => {
           </div>
 
           {/* HR COURSES */}
-          <div
-            className={getWidgetClassName('HRCourses')}
-            onClick={() => toggleDropdown('HRCourses')}
-          >
+
+          <div className="widget">
             <div className="headline-HR"><h3>HR COURSES</h3></div>
-            <div className={getDropdownClassName('HRCourses')}>
+            
               <ul className="menu-HR">
                 <li className="menu-item"><a href="#">CORE HR</a></li>
                 <li className="menu-item"><a href="#">HR PAYROLL</a></li>
@@ -170,9 +133,9 @@ const Footer = () => {
                 <li className="menu-item"><a href="#">SAP HR/HCM</a></li>
                 <li className="menu-item"><a href="#">HR ANALYTICS</a></li>
               </ul>
-            </div>
+            
           </div>
-
+        </div>
           {/* CONTACT US */}
           <div className="contact-us">
             <div className="headline"><h3>CONTACT US</h3></div>
@@ -183,11 +146,8 @@ const Footer = () => {
               <li className="menu-item">1st Floor,101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad, Maharashtra 411027</li>
             </ul>
           </div>
-        </div>
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p>© 2024 Connecting Dots ERP. All rights reserved.</p>
-          </div>
+          <p>&copy; 2023 Connecting Dots ERP. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

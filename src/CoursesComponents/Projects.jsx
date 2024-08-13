@@ -9,7 +9,7 @@ const Induspro = ({ pageId, pageType }) => {
   
 
   useEffect(() => {
-    fetch('Jsonfolder/indusprodata.json')  // Path to your JSON file
+    fetch('public/Jsonfolder/indusprodata.json')  // Path to your JSON file
       .then((response) => response.json())
       .then((data) => {
         // Fetch data based on pageType and pageId

@@ -41,7 +41,7 @@
   height: 420px;
   border-radius: 50%;
   border: 3px solid #13136c;
-  animation: rotate 20s linear infinite;
+  animation: spiral 10s linear infinite;
   margin-top: 60px;
   margin-left: -700px;
   margin-bottom: 160px;
@@ -61,8 +61,10 @@
   border: 3px solid #13136c;
   text-align: center;
   font-size: 1.1rem;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); /* Remove rotate transform */
+  transform: translate(-40%, -10%);
   transition: background-color 0.3s ease; 
+   
 }
 
 .feature:hover {
@@ -101,6 +103,36 @@
 }
 
 @keyframes spiral {
+  0% { transform: rotate(0deg); }
+  
+  100% { transform: rotate(360deg); }
+}
+
+.feature-inner {
+  transform: none; /* Keep the text steady */
+}
+/* Adjust each feature's rotation to keep the text upright */
+.feature0 { 
+  transform: rotate(0deg) translate(0, -200px) rotate(0deg); 
+}
+.feature1 { 
+  transform: rotate(60deg) translate(0, -200px) rotate(-60deg); 
+}
+.feature2 { 
+  transform: rotate(120deg) translate(0, -200px) rotate(-120deg); 
+}
+.feature3 { 
+  transform: rotate(180deg) translate(0, -200px) rotate(-180deg); 
+}
+.feature4 { 
+  transform: rotate(240deg) translate(0, -200px) rotate(-240deg); 
+}
+.feature5 { 
+  transform: rotate(300deg) translate(0, -200px) rotate(-300deg); 
+}
+
+
+/* @keyframes spiral {
   0% { transform: rotate(0deg) translate(0, -200px) rotate(0deg); }
   16.7% { transform: rotate(60deg) translate(0, -200px) rotate(-60deg); }
   33.4% { transform: rotate(120deg) translate(0, -200px) rotate(-120deg); }
@@ -115,7 +147,8 @@
 .feature2 { animation: spiral 20s linear infinite; animation-delay: 6.66s; }
 .feature3 { animation: spiral 20s linear infinite; animation-delay: 10s; }
 .feature4 { animation: spiral 20s linear infinite; animation-delay: 13.33s; }
-.feature5 { animation: spiral 20s linear infinite; animation-delay: 16.66s; }
+.feature5 { animation: spiral 20s linear infinite; animation-delay: 16.66s; } */
+
 
 .key-notes {
   margin-top: 20px;
@@ -207,13 +240,9 @@
   }
 
   @keyframes spiral {
-    0% { transform: rotate(0deg) translate(0, -130px) rotate(0deg); }
-    16.7% { transform: rotate(60deg) translate(0, -130px) rotate(-60deg); }
-    33.4% { transform: rotate(120deg) translate(0, -130px) rotate(-120deg); }
-    50% { transform: rotate(180deg) translate(0, -130px) rotate(-180deg); }
-    66.7% { transform: rotate(240deg) translate(0, -130px) rotate(-240deg); }
-    83.4% { transform: rotate(300deg) translate(0, -130px) rotate(-300deg); }
-    100% { transform: rotate(360deg) translate(0, -130px) rotate(-360deg); }
+    0% { transform: rotate(0deg); }
+
+    100% { transform: rotate(360deg); }
   }
 
   .feature {
@@ -268,3 +297,5 @@
     font-size: 0.8rem;
   }
 }
+ 
+ 

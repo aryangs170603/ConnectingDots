@@ -93,7 +93,7 @@ body.modal-open {
   color: #666;
 }
 
-.outline-btn {
+.outline-btnn {
   width: 160px;
   height: 40px;
   color: #ffffff;
@@ -116,8 +116,9 @@ body.modal-open {
   outline: none;
 }
 
-.outline-btn:before,
-.outline-btn:after {
+
+.outline-btnn:before,
+.outline-btnn:after {
   position: absolute;
   content: "";
   right: 0;
@@ -126,32 +127,32 @@ body.modal-open {
   transition: all 0.3s ease;
 }
 
-.outline-btn:before {
+.outline-btnn:before {
   height: 0%;
   width: 2px;
 }
 
-.outline-btn:after {
+.outline-btnn:after {
   width: 0%;
   height: 2px;
 }
 
-.outline-btn:hover {
+.outline-btnn:hover {
   background: transparent;
   box-shadow: none;
   color: #132e90;
   font-weight: bold;
 }
 
-.outline-btn:hover:before {
+.outline-btnn:hover:before {
   height: 100%;
 }
 
-.outline-btn:hover:after {
+.outline-btnn:hover:after {
   width: 100%;
 }
 
-.course-card:hover .outline-btn {
+.course-card:hover .outline-btnn {
   color: #ffffff;
   background-color: #3464a2;
 }
