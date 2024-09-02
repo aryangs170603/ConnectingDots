@@ -1,4 +1,5 @@
 # GitHub Codespaces ♥️ React
+![file_2024-09-02_05 30 11](https://github.com/user-attachments/assets/9ec642c9-c5f9-4e32-a17a-c5f897b17c54)
 
 Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
 
